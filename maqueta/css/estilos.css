@@ -17,3 +17,31 @@ body {
     padding: 2rem;
   }
   
+  /* Variables globales para los estilos, se puede llamar desde cualquier parte que ya importe la hoja de estilos */
+  :root {
+    --primary-color-1: #6419bd;
+    --primary-color-2: #02ce91;
+    --bg-color: #0b0c1a;
+    --text-color: #d1d5db;
+    --highlight-color: #ffffff;
+    --card-bg: #111827;
+    --card-radial-gradient-bg: radial-gradient(circle at top, #1e293b 0%, #0b0c1a 100%);
+    --card-border: rgba(255, 255, 255, 0.05);
+    --border-radius: 1.25rem;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    --font-main: 'Segoe UI', sans-serif;
+  }
+
+  /* Animacion de entrada para todo el body */
+  @keyframes fadeInBody {
+    to {
+      opacity: 1;
+    }
+  }
+
+  body {
+    opacity: 0;
+    animation: fadeInBody .8s ease-in-out forwards;
+  }
+
+  
