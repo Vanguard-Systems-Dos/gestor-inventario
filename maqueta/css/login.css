@@ -1,0 +1,120 @@
+:root {
+    --primary-color-1: #6419bd;
+    --primary-color-2: #02ce91;
+    --bg-color: #0b0c1a;
+    --text-color: #dde0e4;
+    --highlight-color: #ffffff;
+    --text-dark: #1a1a1a;
+    --placeholder-color: #9ca3af;
+    --card-bg: #111827;
+    --card-dark-bg: #190e36;
+    --card-radial-gradient-bg: radial-gradient(circle at top, #1e293b 0%, #0b0c1a 100%);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --border-radius: 1.25rem;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    --font-main: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+  }
+  
+  .login-section {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: var(--card-dark-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    color: var(--highlight-color);
+  }
+  
+  .login-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color-1);
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .login-form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .login-form label {
+    color: var(--highlight-color);
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--card-border);
+    border-radius: 0.5rem;
+    background-color: var(--highlight-color);
+    color: var(--text-dark);
+    font-size: 1rem;
+    font-family: var(--font-main);
+  }
+  
+  .login-form input::placeholder {
+    color: var(--placeholder-color);
+  }
+  
+  .button-login {
+    background-color: var(--primary-color-1);
+    color: var(--highlight-color);
+    padding: 0.9rem 2.2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 2rem;
+  }
+  
+  .button-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px var(--primary-color-1);
+  }
+  
+  .enlace-olvidecontraseña {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--primary-color-2);
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  
+  .enlace-olvidecontraseña:hover {
+    text-decoration: underline;
+  }
+  
+
+  
