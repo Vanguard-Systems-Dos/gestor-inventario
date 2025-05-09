@@ -50,7 +50,8 @@ body {
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.1rem;
-    color: var(--text-color);
+    color: var(--highlight-color);
+    margin-bottom: 3rem;
   }
   
   /* Login Button */
@@ -174,13 +175,7 @@ body {
     margin-bottom: 0.5rem;
     color: var(--highlight-color);
   }
-  
-  .features-section .subtitle {
-    color: var(--card-bg);
-    font-size: 1rem;
-    margin-bottom: 3rem;
-  }
-  
+    
   .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
