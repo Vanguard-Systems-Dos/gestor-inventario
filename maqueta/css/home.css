@@ -50,7 +50,7 @@ body {
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.1rem;
-    color: #94a3b8;
+    color: var(--text-color);
   }
   
   /* Login Button */
@@ -65,7 +65,7 @@ body {
     font-size: 1.125rem;
     font-weight: 600;
     background: linear-gradient(90deg, var(--primary-color-1), var(--primary-color-2));
-    color: #0b0c1a;
+    color: var(--bg-color);
     box-shadow: 0 10px 20px var(--primary-color-1);
     border: none;
     border-radius: 999px;
@@ -176,7 +176,7 @@ body {
   }
   
   .features-section .subtitle {
-    color: #94a3b8;
+    color: var(--card-bg);
     font-size: 1rem;
     margin-bottom: 3rem;
   }
@@ -217,7 +217,7 @@ body {
   
   .feature-card p {
     font-size: 0.95rem;
-    color: #cbd5e1;
+    color: var(--text-color);
     line-height: 1.6;
   }
   
