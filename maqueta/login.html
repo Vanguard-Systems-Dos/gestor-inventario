@@ -9,11 +9,11 @@
 </head> 
  
 <body>
-    <header>
-        <h1>Gestor de Inventario</h1> 
-        <nav>
-      <!-- Menú de navegación -->
-        </nav>
+    <header class="main-header" >
+      <div class="container header-container">
+        <div class="logo-container">
+          <img src="/maqueta/images/Logo_Vanguard-Stock.jpg" alt="Logo Vanguard Stock" class="logo-img">
+          <h1 class="logo">Vanguard Stock</h1>
   </header>
 
   <main class = "login-container">
@@ -34,15 +34,39 @@
 
             <a href="recuperar.html" class = "enlace-olvidecontraseña">¿Olvidaste tu contraseña?</a>  
             <div>
-                <button type = "submit" class = "button-login"> Iniciar Sesión</button> 
+                <button type = "submit" class = "button-login"> Iniciar Sesión
+                  <a href="/maqueta/dashboard.html" ></a>
+                </button> 
+
             </div>
 
         </form>
         </section>     
   </main>
 
-  <footer>
-    <p>&copy; 2025 - Vanguard-Systems</p>
+  <footer class="main-footer"> 
+    <div class="container footer-container">
+      <!-- Enlaces rápidos -->
+      <div class="footer-section sitemap">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="/maqueta/home.html">Inicio</a></li>
+          <li><a href="/maqueta/about.html">Sobre Vanguard</a></li>
+        </ul>
+      </div>
+    
+      <!-- Contacto -->
+      <div class="footer-section contact">
+        <h4>Contacto</h4>
+        <p>Email: <a href="mailto:soporte@vanguard-systems.com">soporte@vanguard-systems.com</a></p>
+        <p>Tel: <a href="tel:+5493512345678">+54 9 351 234 5678</a></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2023 Vanguard Systems. Todos los derechos reservados.</p>
+      <p>Desarrollado por <a href="https://vanguard-systems.com" target="_blank">Vanguard Systems</a></p>
+    </div>
   </footer>
 
   <!-- <script src="js/script.js"></script> -->
