@@ -1,0 +1,250 @@
+:root {
+    --bg-color: #f9fafb;
+    --text-color: #1f2937;
+    --highlight-color: #0f172a;
+    --primary-color-1: #6366f1;
+    --primary-color-2: #3b82f6;
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --border-radius: 0.75rem;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    margin: 0;
+    padding: 0;
+}
+
+.tabla-dashboard {
+    max-height: 18.75em;
+    overflow-y: auto;
+    border: 1px solid var(--card-border);
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid var(--card-border);/* Borde uniforme ya no muestra la L invertida*/
+}
+
+th,
+td {
+    padding: 0.5em;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--card-bg);
+    color: var(--highlight-color);
+}
+
+/*estilo que aporta responsividad*/
+.encabezado-dashboard {
+    display: flex;
+    flex-direction: column;
+    /*los pone en vertical*/
+    gap: 0.5em;
+    /*espacio uniforme entre elementos*/
+    margin-bottom: 1em;
+}
+
+.fila-botones {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.izquierda,
+.derecha {
+    display: flex;
+    gap: 0.5em;
+}
+
+.izquierda input[type="button"],
+.derecha input[type="button"] {
+    padding: 0.6em 1.5em;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5em;
+    background-color: var(--primary-color-2);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.izquierda input[type="button"]:hover,
+.derecha input[type="button"]:hover {
+    background-color: var(--primary-color-1);
+}
+
+.izquierda input[type="button"]:disabled,
+.derecha input[type="button"]:disabled {
+    background-color: #cbd5e1;
+    color: #6b7280;/* gris texto */
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/*responsivo*/
+@media (max-width: 600px) {
+    .fila-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .izquierda,
+    .derecha {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.cuadro-tabla-dashboard {
+    border: 1px solid var(--card-border);
+    border-radius: 0.75em;
+    padding: 1.5em;
+    box-shadow: 0 2px 6px var(--card-bg);
+    background-color: var(--card-bg);
+    margin-bottom: 2em;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* una al lado de la otra */
+.tarjetas-info-dashboard {
+    display: flex;
+    flex-wrap: nowrap;
+    /* evita que bajen de línea */
+    gap: 1em;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.tarjetas-info-dashboard .tarjeta-info {
+    flex: 1 1 calc(25% - 1em);
+    /* 4 columnas con espacio */
+    min-width: 0;
+    /* permite que reduzcan si es necesario */
+}
+
+.tarjetas-graficas-dashboard {
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 2em;
+}
+
+.tarjeta-grafico img {
+    width: 20%;
+    height: auto;
+    border-radius: 0.5em;
+}
+
+.tarjeta-info {
+    flex: 1 1 200px;
+    min-width: 200px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 1em 1.2em;
+    border: 1px solid var(--card-border);
+    border-radius: 0.6em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-info:hover {
+    transform: translateY(-2px);
+}
+
+.tarjeta-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    color: var(--primary-color-2);
+}
+
+.tarjeta-grafico:hover {
+    transform: translateY(-2px);
+}
+
+.tarjeta-grafico h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5em;
+    color: var(--primary-color-2);
+}
+
+.tarjeta-info p {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .tarjetas-info-dashboard {
+        flex-wrap: wrap;
+    }
+
+    .tarjetas-info-dashboard .tarjeta-info {
+        flex: 1 1 100%;
+    }
+
+    .tarjetas-graficas-dashboard {
+        flex-direction: column;
+    }
+
+    .tarjeta-grafico {
+        flex: 1 1 100%;
+    }
+}
+
+.tarjeta-grafico {
+    flex: 1 1 calc(50% - 0.5em);
+    min-width: 200px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 1em 1.2em;
+    border: 1px solid var(--card-border);
+    border-radius: 0.6em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.btn-accion{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/*tamaño de icones columna acciones para que sean visibles*/
+.btn-accion img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-accion:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-accion:disabled{
+    filter: grayscale(100%) brightness(80%);
+}
