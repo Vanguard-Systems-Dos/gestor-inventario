@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="/maqueta/images/Logo_Vanguard-Stock.jpg" alt="Logo Vanguard Stock" class="logo-img">
+                <h1 class="logo">Vanguard Stock</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/maqueta/home.html">Inicio</a></li>
+                    <li><a href="/maqueta/about.html">Sobre es Vanguard</a></li>
+                    <li><a href="/maqueta/login.html" class="login-btn">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="cuadro-tabla-dashboard">
+                <div class="tarjetas-info-dashboard">
+                    <div class="tarjeta-info">
+                        <h3>Total de Productos</h3>
+                        <p>150</p>
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3>Bajo Stock</h3>
+                        <p>5</p>
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3>Entradas Recientes</h3>
+                        <p>10</p>
+                    </div>
+                    <div class="tarjeta-info">
+                        <h3>Frecuencia de Reposicion</h3>
+                        <p>8</p>
+                    </div>
+                </div>
+                <div class="tarjetas-graficas-dashboard">
+                    <div class="tarjeta-grafico">
+                        <h3>Productos Más Utilizados</h3>
+                        <img src="images/graph.svg" alt="Gráfico de Pedidos" />
+                    </div>
+                    <div class="tarjeta-grafico">
+                        <h3>Frecuencia de Pedidos</h3>
+                        <img src="images/stock_box.svg" alt="Gráfico de Pedidos" />
+                    </div>
+                </div>
+                <div class="encabezado-dashboard">
+                    <h2>Inventario</h2>
+                    <div class="fila-botones">
+                        <div class="izquierda">
+                            <input type="button" value="Registrar Entradas">
+                            <input type="button" value="Registrar Salidas">
+                            <input type="button" value="Buscar">
+                        </div>
+                        <div class="derecha">
+                            <input type="button" value="Añadir Producto" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabla-dashboard">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Categoria</th>
+                                <th>Cantidad</th>
+                                <th>Ubicacion</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ProductoA</td>
+                                <td>Categoria#1</td>
+                                <td>1000</td>
+                                <td>Ubicacion#1</td>
+                                <td class="acciones">
+                                    <button class="btn-accion editar" title="Editar" disabled>
+                                        <img src="images/edit.svg" alt="Editar">
+                                    </button>
+                                    <button class="btn-accion eliminar" title="Eliminar" disabled>
+                                        <img src="images/delete.svg" alt="Eliminar">
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ProductoB</td>
+                                <td>Categoria#2</td>
+                                <td>1000</td>
+                                <td>Ubicacion#2</td>
+                                <td class="acciones">
+                                    <button class="btn-accion editar" title="Editar" disabled>
+                                        <img src="images/edit.svg" alt="Editar">
+                                    </button>
+                                    <button class="btn-accion eliminar" title="Eliminar" disabled>
+                                        <img src="images/delete.svg" alt="Eliminar">
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ProductoC</td>
+                                <td>Categoria#3</td>
+                                <td>1000</td>
+                                <td>Ubicacion#3</td>
+                                <td class="acciones">
+                                    <button class="btn-accion editar" title="Editar" disabled>
+                                        <img src="images/edit.svg" alt="Editar">
+                                    </button>
+                                    <button class="btn-accion eliminar" title="Eliminar" disabled>
+                                        <img src="images/delete.svg" alt="Eliminar">
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ProductoD</td>
+                                <td>Categoria#4</td>
+                                <td>1000</td>
+                                <td>Ubicacion#4</td>
+                                <td class="acciones">
+                                    <button class="btn-accion editar" title="Editar" disabled>
+                                        <img src="images/edit.svg" alt="Editar">
+                                    </button>
+                                    <button class="btn-accion eliminar" title="Eliminar" disabled>
+                                        <img src="images/delete.svg" alt="Eliminar">
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>ProductoE</td>
+                                <td>Categoria#5</td>
+                                <td>1000</td>
+                                <td>Ubicacion#5</td>
+                                <td class="acciones">
+                                    <button class="btn-accion editar" title="Editar" disabled>
+                                        <img src="images/edit.svg" alt="Editar">
+                                    </button>
+                                    <button class="btn-accion eliminar" title="Eliminar" disabled>
+                                        <img src="images/delete.svg" alt="Eliminar">
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <!-- Enlaces rápidos -->
+            <div class="footer-section sitemap">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="/maqueta/home.html">Inicio</a></li>
+                    <li><a href="/maqueta/about.html">Sobre Vanguard</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-section contact">
+                <h4>Contacto</h4>
+                <p>Email: <a href="mailto:soporte@vanguard-systems.com">soporte@vanguard-systems.com</a></p>
+                <p>Tel: <a href="tel:+5493512345678">+54 9 351 234 5678</a></p>
+            </div>
+        </div>
+
+        <!-- Volver arriba -->
+        <div class="footer-section back-to-top">
+            <a href="#top" class="back-to-top-link" aria-label="Volver arriba">↑ Volver arriba</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Vanguard Systems. Todos los derechos reservados.</p>
+            <p>Desarrollado por <a href="https://vanguard-systems.com" target="_blank">Vanguard Systems</a></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
