@@ -7,15 +7,23 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/dashboard.css">
-
 </head>
 
 <body>
     <header>
-        <h1>Gestor de Inventario</h1>
-        <nav>
-            <!-- Menú de navegación -->
-        </nav>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="/maqueta/images/Logo_Vanguard-Stock.jpg" alt="Logo Vanguard Stock" class="logo-img">
+                <h1 class="logo">Vanguard Stock</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/maqueta/home.html">Inicio</a></li>
+                    <li><a href="/maqueta/about.html">Sobre es Vanguard</a></li>
+                    <li><a href="/maqueta/login.html" class="login-btn">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -128,7 +136,7 @@
                                     <button class="btn-accion editar" title="Editar" disabled>
                                         <img src="images/edit.svg" alt="Editar">
                                     </button>
-                                   <button class="btn-accion eliminar" title="Eliminar" disabled> 
+                                    <button class="btn-accion eliminar" title="Eliminar" disabled>
                                         <img src="images/delete.svg" alt="Eliminar">
                                     </button>
                                 </td>
@@ -155,8 +163,35 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - Vanguard-Systems</p>
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <!-- Enlaces rápidos -->
+            <div class="footer-section sitemap">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="/maqueta/home.html">Inicio</a></li>
+                    <li><a href="/maqueta/about.html">Sobre Vanguard</a></li>
+                    <li><a href="#features">Funcionalidades</a></li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-section contact">
+                <h4>Contacto</h4>
+                <p>Email: <a href="mailto:soporte@vanguard-systems.com">soporte@vanguard-systems.com</a></p>
+                <p>Tel: <a href="tel:+5493512345678">+54 9 351 234 5678</a></p>
+            </div>
+        </div>
+
+        <!-- Volver arriba -->
+        <div class="footer-section back-to-top">
+            <a href="#top" class="back-to-top-link" aria-label="Volver arriba">↑ Volver arriba</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Vanguard Systems. Todos los derechos reservados.</p>
+            <p>Desarrollado por <a href="https://vanguard-systems.com" target="_blank">Vanguard Systems</a></p>
+        </div>
     </footer>
 
 </body>
