@@ -234,17 +234,3 @@ thead th {
     border: none;
     cursor: pointer;
 }
-/*tamaño de icones columna acciones para que sean visibles*/
-.btn-accion img {
-    width: 24px;
-    height: 24px;
-}
-
-.btn-accion:disabled{
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.btn-accion:disabled{
-    filter: grayscale(100%) brightness(80%);
-}
