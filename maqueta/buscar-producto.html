@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Productos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo-container">
+                <img src="/maqueta/images/Logo_Vanguard-Stock.jpg" alt="Logo Vanguard Stock" class="logo-img">
+                <h1 class="logo">Vanguard Stock</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/maqueta/home.html">Inicio</a></li>
+                    <li><a href="/maqueta/dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="buscar-productos-section">
+            <div class="container">
+                <h2>Buscar Productos</h2>
+                <form action="#" method="get">
+                    <label for="busqueda">Nombre del producto:</label>
+                    <input type="text" id="busqueda" name="busqueda" placeholder="Ej: ProductoA">
+                    <input type="submit" value="Buscar">
+                </form>
+
+                <!-- Resultados de ejemplo -->
+                <div class="tabla-dashboard" style="margin-top: 20px;">
+                    <h3>Resultados encontrados:</h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Categoria</th>
+                                <th>Cantidad</th>
+                                <th>Ubicacion</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ProductoA</td>
+                                <td>Categoria#1</td>
+                                <td>1000</td>
+                                <td>Ubicacion#1</td>
+                                <td class="acciones">
+                                    <button class="btn-accion editar" title="Editar" disabled>
+                                        <img src="images/edit.svg" alt="Editar">
+                                    </button>
+                                    <button class="btn-accion eliminar" title="Eliminar" disabled>
+                                        <img src="images/delete.svg" alt="Eliminar">
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <a href="/maqueta/dashboard.html">← Volver al Dashboard</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-section sitemap">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="/maqueta/home.html">Inicio</a></li>
+                    <li><a href="/maqueta/about.html">Sobre Vanguard</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section contact">
+                <h4>Contacto</h4>
+                <p>Email: <a href="mailto:soporte@vanguard-systems.com">soporte@vanguard-systems.com</a></p>
+                <p>Tel: <a href="tel:+5493512345678">+54 9 351 234 5678</a></p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2023 Vanguard Systems. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
