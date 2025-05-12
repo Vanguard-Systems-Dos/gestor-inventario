@@ -1,0 +1,52 @@
+.quienes-somos {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.quienes-somos h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.quienes-somos p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.desarrolladores {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.dev-card {
+    flex: 1 1 180px;
+    width: 180px;
+    min-width: 260px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dev-card img {
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transform: transform 0.3s;
+}
+
+.dev-card:hover img {
+    transform: scale(1.1);
+}
+
+.dev-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
