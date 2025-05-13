@@ -4,8 +4,14 @@ body {
     font-family: var(--font-main);
     margin: 0;
     padding: 0;
-  }
-  
+}
+
+header {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+}
+
 .quienes-somos {
     text-align: center;
     padding: 40px 0;
@@ -22,7 +28,7 @@ body {
 
 .quienes-somos p {
     font-size: 1.1em;
-    color:var(--highlight-color);
+    color: var(--highlight-color);
 }
 
 .desarrolladores {
@@ -63,4 +69,11 @@ body {
 .dev-card:hover {
     transform: scale(1.05);
     box-shadow: 0 12px 24px var(--primary-color-2, rgba(94, 226, 255, 0.3));
+}
+
+footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 2rem;
+    text-align: center;
 }
