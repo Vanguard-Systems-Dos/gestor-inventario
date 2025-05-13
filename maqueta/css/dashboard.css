@@ -19,6 +19,14 @@ body {
     padding: 0;
 }
 
+header {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px var(--shadow);
+    /* opcional: para un efecto sutil */
+}
+
 .tabla-dashboard {
     max-height: 18.75em;
     overflow-y: auto;
@@ -30,7 +38,8 @@ body {
 table {
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid var(--card-border);/* Borde uniforme ya no muestra la L invertida*/
+    border: 1px solid var(--card-border);
+    /* Borde uniforme ya no muestra la L invertida*/
 }
 
 th,
@@ -92,7 +101,8 @@ thead th {
 .izquierda input[type="button"]:disabled,
 .derecha input[type="button"]:disabled {
     background-color: #cbd5e1;
-    color: #6b7280;/* gris texto */
+    color: #6b7280;
+    /* gris texto */
     cursor: not-allowed;
     opacity: 0.7;
 }
@@ -229,22 +239,23 @@ thead th {
     gap: 0.5em;
 }
 
-.btn-accion{
+.btn-accion {
     background: none;
     border: none;
     cursor: pointer;
 }
+
 /*tamaño de icones columna acciones para que sean visibles*/
 .btn-accion img {
     width: 24px;
     height: 24px;
 }
 
-.btn-accion:disabled{
+.btn-accion:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
 
-.btn-accion:disabled{
+.btn-accion:disabled {
     filter: grayscale(100%) brightness(80%);
 }
