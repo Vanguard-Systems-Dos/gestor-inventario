@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --bg-color: #f9fafb;
     --text-color: #1f2937;
     --highlight-color: #0f172a;
@@ -9,7 +9,7 @@
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --border-radius: 0.75rem;
-}
+} */
 
 body {
     background-color: var(--bg-color);
