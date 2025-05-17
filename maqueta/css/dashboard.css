@@ -273,6 +273,19 @@ thead th {
     background-color: var(--card-bg);
     color: var(--highlight-color);
 }
+/*correccion de bordes segun w3*/
+.tabla-con-borde {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabla-con-borde th,
+.tabla-con-borde td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
 
 /*estilo que aporta responsividad*/
 .encabezado-dashboard {
