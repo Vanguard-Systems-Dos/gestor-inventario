@@ -1,42 +1,71 @@
 body {
-    background-color: #121212;
-    color: #f0f0f0;
-  }
+  background-color: #121212;
+  color: #f0f0f0;
+}
 
-  section, header {
-    background-color: #1e1e1e;
-  }
+section,
+header {
+  background-color: #1e1e1e;
+}
 
-  h1, h2, h5, p, .nav-link, .navbar-brand {
-    color: #f0f0f0 !important;
-  }
+h1,
+h2,
+h5,
+p,
+.nav-link,
+.navbar-brand {
+  color: #f0f0f0 !important;
+}
 
-  .card {
-    background-color: #222;
-    color: #ddd;
-    border: 1px solid #333;
-  }
+.card {
+  background-color: #222;
+  color: #ddd;
+  border: 1px solid #333;
+}
 
-  .btn-primary {
-    background-color: #0d6efd;
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-outline-primary {
+    color: #0d6efd;
     border-color: #0d6efd;
-  }
+}
 
-  .btn-primary:hover {
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
-  }
+.btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: #fff;
+}
 
-  .bg-light {
-    background-color: #1e1e1e !important;
-  }
+/* Botón eliminar */
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
 
-  .nav-link:hover {
-    color: #0d6efd !important;
-  }
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
 
-  .card-img-top {
-    height: 500px; /* ajustable según preferencia */
-    object-fit: cover;
-    width: 100%;
-  }
+.bg-light {
+  background-color: #1e1e1e !important;
+}
+
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+.card-img-top {
+  height: 500px;
+  /* ajustable según preferencia */
+  object-fit: cover;
+  width: 100%;
+}
+
