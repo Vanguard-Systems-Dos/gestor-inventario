@@ -1,0 +1,16 @@
+/* Estilos para el header */
+.main-header {
+  background-color: var(--bg-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px var(--shadow);
+  z-index: 999;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}

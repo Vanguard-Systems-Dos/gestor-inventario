@@ -1,0 +1,71 @@
+:root {
+  /* Colores Principales */
+  --primary-color-1: #6419bd;
+  --primary-color-2: #02ce91;
+
+  /* Gradientes */
+  --card-radial-gradient-bg: radial-gradient(circle at top, #1e293b 0%, #0b0c1a 100%);
+  --title-gradient: linear-gradient(135deg, var(--primary-color-1), var(--primary-color-2));
+  --gradient-start: #6419bd;
+  --gradient-end: #02ce91;
+
+  /* Fondo y texto */
+  --bg-color: #0b0c1a;
+  --text-color: #f1f5f9;
+  --text-dark: #1a1a1a;
+  --highlight-color: #ffffff;
+
+  /* Input y formulario */
+  --placeholder-color: #3a3a3a;
+  --input-bg-color: #c2c5c9;
+  --input-border-color-focus: #baecab;
+  --input-shadow-focus: rgba(132, 243, 197, 0.3);
+  --input-shadow-hover: rgba(2, 206, 145, 0.3);
+
+  /* Tarjeta */
+  --card-bg: #111827;
+  --card-dark-bg: #190e36;
+  --card-border: rgba(79, 77, 80, 0.12);
+  --card-shadow: 0 8px 24px rgba(2, 206, 145, 0.4);
+
+  /* Botón */
+  --button-bg: var(--primary-color-1);
+  --button-bg-hover: var(--primary-color-2);
+  --button-text-color: var(--highlight-color);
+  --button-shadow-hover: 0 10px 25px rgba(2, 206, 145, 0.4);
+
+  /* Títulos y efecto de texto */
+  --title-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* Tipografía */
+  --font-main: 'Segoe UI', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 2.2rem;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 900;
+
+  /* Espaciado */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Bordes y sombras */
+  --border-radius-sm: 0.5rem;
+  --border-radius: 1.25rem;
+  --border-radius-full: 999px;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Animaciones */
+@keyframes fadeInBody {
+  to {
+    opacity: 1;
+  }
+}
