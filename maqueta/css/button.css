@@ -1,0 +1,36 @@
+.btn-accion {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*tamaño de icones columna acciones para que sean visibles*/
+.btn-accion img {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-accion:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(100%) brightness(80%);
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary-color-1), var(--primary-color-2));
+  color: var(--bg-color);
+  box-shadow: 0 10px 20px var(--primary-color-1);
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px var(--primary-color-2);
+}
