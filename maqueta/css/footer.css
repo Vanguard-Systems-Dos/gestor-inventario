@@ -1,0 +1,83 @@
+footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Títulos de sección */
+.footer-section h4 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: var(--highlight-color);
+}
+
+/* Listas de enlaces */
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: var(--highlight-color);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  margin-top: 2rem;
+  padding: 1.5rem;
+  display: flex;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-color);
+}
+
+.footer-bottom a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: var(--gradient-end);
+}
+
+.footer-table {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-table-button {
+  background-color: var(--card-bg);
+  border-color: var(--primary-color-2);
+  color: var(--primary-color-2);
+  margin: 2px;
+}
+
+/* Ajuste responsive: en pantallas más anchas, poner los dos párrafos en fila */
+@media (min-width: 600px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
