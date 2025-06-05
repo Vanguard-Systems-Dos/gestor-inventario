@@ -1,0 +1,65 @@
+.subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--highlight-color);
+  margin-bottom: 3rem;
+}
+
+.login-title {
+  text-align: center;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-xl);
+  background: var(--title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1.2px;
+  text-shadow: var(--title-shadow);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary-color-1), var(--primary-color-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.enlace-olvidecontraseña {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--primary-color-2);
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.enlace-olvidecontraseña:hover {
+  text-decoration: underline;
+}
+
+.badge-update {
+  display: inline-block;
+  background-color: rgba(94, 226, 255, 0.1);
+  color: var(--primary-color-2);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
