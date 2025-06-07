@@ -15,161 +15,13 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     rel="stylesheet"
   />
+  <!-- Estilos Personlizados -->
+   <link href="styles.css" rel="stylesheet"/>
   <!-- Model Viewer para insertar modelo 3D -->
   <script
     type="module"
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
   ></script>
-
-  <style>
-  :root {
-      /* Paleta de colores */
-      --violeta: #6c63ff;
-      --lila: #b57edc;
-      --azul: #00cfff;
-      --fondo: linear-gradient(
-        to bottom right,
-        #1f1c2c,
-        #3b2f5b,
-        #6c63ff
-      );
-      --oscuro: #121113;
-      --gris: #222725;
-      --claro: #f7f7f2;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      width: 100%;
-      height: 100%;
-    }
-
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background: var(--fondo);
-      color: var(--claro);
-      overflow-x: hidden;
-    }
-
-    /* Navbar */
-    .navbar {
-      background: transparent;
-      padding: 1rem 2rem;
-    }
-    .navbar-nav .nav-link {
-      color: var(--claro) !important;
-      margin-right: 1rem;
-      font-weight: 500;
-    }
-
-    /* Botón principal */
-    .btn-glow {
-      background: linear-gradient(90deg, var(--lila), var(--azul));
-      border: none;
-      color: white;
-      padding: 0.6rem 1.4rem;
-      border-radius: 2rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      box-shadow: 0 0 10px var(--lila);
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-      animation: pulse 2s infinite;
-    }
-    .btn-glow:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px var(--azul), 0 0 30px var(--lila);
-    }
-    @keyframes pulse {
-      0%, 100% {
-        box-shadow: 0 0 10px var(--lila);
-      }
-      50% {
-        box-shadow: 0 0 20px var(--lila);
-      }
-    }
-
-    /* Hero: fondo y posicionamiento */
-    header.hero {
-      background: var(--fondo);
-      position: relative;
-      padding: 4rem 2rem 6rem;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    /* Título principal */
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: var(--claro);
-      z-index: 1;
-      position: relative;
-      margin-bottom: 1rem;
-    }
-    .hero p {
-      color: var(--azul);
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin: 1rem auto 2rem;
-      z-index: 1;
-      position: relative;
-    }
-
-    /* SVG olas */
-    .waves {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 200px;
-      z-index: 0;
-    }
-    
-    section {
-      padding: 4rem 2rem;
-    }
-    .section-title {
-      font-size: 2.25rem;
-      color: var(--lila);
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    /* Tarjetas */
-    .card-feature {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 20px;
-      padding: 2rem;
-      text-align: center;
-      color: var(--claro);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .card-feature:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(181, 126, 220, 0.4);
-    }
-    .feature-icon {
-      font-size: 2.5rem;
-      color: var(--azul);
-      margin-bottom: 1rem;
-    }
-
-    /* Footer */
-    footer {
-      background: #1b1b2f;
-      text-align: center;
-      padding: 2rem;
-      color: var(--claro);
-    }
-  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -331,9 +183,11 @@
     <!-- Proyecto 1 -->
 <div class="col-md-4">
   <div class="card-feature">
-    <i class="fa-brands fa-python feature-icon"></i>
-    <h5>ARGBroker - Plataforma de Inversión - Proyecto ISPC 2024</h5>
-    <p>ARGBroker es una plataforma de inversión desarrollada en Python con una base de datos en MySQL, diseñada para facilitar el acceso al mercado de valores argentino. El sistema permite a los usuarios gestionar portafolios en pesos argentinos, realizar operaciones de compra y venta de acciones locales, y hacer un seguimiento detallado de los rendimientos de sus inversiones. Con una interfaz sencilla y funcionalidades orientadas a la usabilidad, ARGBroker busca democratizar el acceso a herramientas de inversión para el público general.</p>
+    <div>
+      <i class="fa-brands fa-python feature-icon"></i>
+      <h5>ARGBroker - Plataforma de Inversión - Proyecto ISPC 2024</h5>
+      <p>ARGBroker es una plataforma de inversión desarrollada en Python con una base de datos en MySQL, diseñada para facilitar el acceso al mercado de valores argentino. El sistema permite a los usuarios gestionar portafolios en pesos argentinos, realizar operaciones de compra y venta de acciones locales, y hacer un seguimiento detallado de los rendimientos de sus inversiones. Con una interfaz sencilla y funcionalidades orientadas a la usabilidad, ARGBroker busca democratizar el acceso a herramientas de inversión para el público general.</p>
+    </div>
     <a href="https://github.com/BrokerTeamCoders-BTC/ARGBroker-Demo" target="_blank" class="btn btn-glow mt-3">Ver en GitHub</a>
   </div>
 </div>
@@ -341,9 +195,11 @@
 <!-- Proyecto 2 -->
     <div class="col-md-4">
       <div class="card-feature">
-        <i class="fa-solid fa-boxes-stacked feature-icon"></i>
-        <h5>Gestor de Inventarios - Proyecto ISPC 2025</h5>
-        <p>El Gestor de Inventarios es una aplicación web desarrollada por estudiantes de la Tecnicatura en Desarrollo de Software del ISPC. El sistema permite a las empresas gestionar su inventario de manera eficiente, ofreciendo funcionalidades como la adición, edición y eliminación de productos, control de stock disponible, alertas de inventario bajo, historial de movimientos y asignación de roles de usuario. Este proyecto tiene como objetivo optimizar la gestión de inventarios, mejorando la eficiencia operativa y reduciendo costos asociados a la falta de control en el stock.</p>
+        <div>
+          <i class="fa-solid fa-boxes-stacked feature-icon"></i>
+          <h5>Gestor de Inventarios - Proyecto ISPC 2025</h5>
+          <p>El Gestor de Inventarios es una aplicación web desarrollada por estudiantes de la Tecnicatura en Desarrollo de Software del ISPC. El sistema permite a las empresas gestionar su inventario de manera eficiente, ofreciendo funcionalidades como la adición, edición y eliminación de productos, control de stock disponible, alertas de inventario bajo, historial de movimientos y asignación de roles de usuario. Este proyecto tiene como objetivo optimizar la gestión de inventarios, mejorando la eficiencia operativa y reduciendo costos asociados a la falta de control en el stock.</p>
+        </div>
         <a href="https://github.com/Vanguard-Systems-Dos/gestor-inventario" target="_blank" aria-label="Ver repositorio Gestor de Inventarios en GitHub" class="btn btn-glow mt-3">Ver en GitHub</a>
       </div>
     </div>
@@ -351,9 +207,11 @@
     <!-- Proyecto 3 -->
     <div class="col-md-4">
       <div class="card-feature">
-        <i class="fa-solid fa-lock feature-icon"></i>
-        <h5>Página de Login - Proyecto Vanguard System ISPC 2025 </h5>
-        <p>La Página de Login es una interfaz de autenticación diseñada como parte del proyecto Gestor de Inventarios. Desarrollada con HTML y CSS, esta pantalla de acceso está enfocada en brindar una experiencia de usuario atractiva, intuitiva y responsive. Incluye una estructura clara, validación básica y un diseño visual que refleja profesionalismo, siendo ideal tanto para entornos educativos como para aplicaciones reales.</p>
+        <div>
+          <i class="fa-solid fa-lock feature-icon"></i>
+          <h5>Página de Login - Proyecto Vanguard System ISPC 2025 </h5>
+          <p>La Página de Login es una interfaz de autenticación diseñada como parte del proyecto Gestor de Inventarios. Desarrollada con HTML y CSS, esta pantalla de acceso está enfocada en brindar una experiencia de usuario atractiva, intuitiva y responsive. Incluye una estructura clara, validación básica y un diseño visual que refleja profesionalismo, siendo ideal tanto para entornos educativos como para aplicaciones reales.</p>
+        </div>
         <a href= "https://github.com/Vanguard-Systems-Dos/gestor-inventario/blob/main/maqueta/login.html" target="_blank" aria-label="Ver repositorio Página de Login Moderna en GitHub" class="btn btn-glow mt-3">Ver en GitHub</a>
       </div>
     </div>
