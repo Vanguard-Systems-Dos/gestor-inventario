@@ -1,0 +1,117 @@
+.navbar {
+    background-color: #1a1a1a;
+}
+
+.navbar-brand, .nav-link {
+    color: #e63946;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #f1faee;
+}
+
+section {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 2.5rem 1rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+section h2 {
+    color: #e63946;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card, .card-body {
+    color: #e0e0e0;
+}
+
+.card {
+    background-color: #222222;
+    border: 2px solid #e63946;
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
+}
+
+.btn-rojo {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-rojo:hover {
+    background-color: #d62839;
+    transform: scale(1.05s);
+}
+
+a {
+    color: #e63946;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.rounded-circle {
+    border: 3px solid #e63946;
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+footer.bg-dark {
+    background-color: #1a1a1a !important;
+    color: #ccc !important;
+}
+
+#btn-volver-arriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 1000;
+    padding: 0.7rem 1rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.5);
+}
+
