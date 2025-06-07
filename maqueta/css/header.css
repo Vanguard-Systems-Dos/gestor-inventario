@@ -1,0 +1,36 @@
+/* Estilos para el header */
+.main-header {
+  background-color: var(--bg-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px var(--shadow);
+  z-index: 999;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--primary-color-1), var(--primary-color-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
