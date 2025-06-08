@@ -74,10 +74,35 @@ footer {
   margin: 2px;
 }
 
+.footer-section,
+.sitemap,
+.contact {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 /* Ajuste responsive: en pantallas más anchas, poner los dos párrafos en fila */
 @media (min-width: 600px) {
   .footer-bottom {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+/*alineacion de footer Enlaces hasta Tel*/
+@media (max-width: 768px) {
+
+  .footer-container,
+  .footer-section {
+    display: block !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 }

@@ -190,6 +190,30 @@ main {
   color: var(--highlight-color);
 }
 
+.footer-section,
+.sitemap,
+.contact {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.footer-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 768px) {
+
+  .footer-container,
+  .footer-section {
+    display: block !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
 /* Volver arriba */
 .back-to-top {
   margin-top: 1rem;
@@ -983,6 +1007,7 @@ footer {
   color: var(--text-color);
   flex-direction: column;
 }
+
 .form-container form h2 {
   margin-top: 0%;
   text-align: center;
@@ -990,6 +1015,7 @@ footer {
   font-size: 1.5rem;
   margin-top: 1.5rem;
 }
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -1012,6 +1038,7 @@ footer {
   margin: 0 auto;
   display: block;
 }
+
 .form-container form button[type="submit"]:hover {
   background-color: var(--primary-color-2-hover, #0056b3);
 }
@@ -1025,6 +1052,7 @@ footer {
   color: var(--text-color);
   gap: 0.5rem;
 }
+
 .form-container form label.checkbox-container input[type="checkbox"] {
   width: 18px;
   height: 18px;
@@ -1051,15 +1079,16 @@ footer {
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="password"] {
- width: 100%;
- padding: 0.75rem;
- font-size: 1rem;
- border: 1px solid var(--card-border, #ccc);
- border-radius: var(--border-radius, 6px);
- box-sizing: border-box;
- background-color: white;
- color: var(--text-color, #333);
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--card-border, #ccc);
+  border-radius: var(--border-radius, 6px);
+  box-sizing: border-box;
+  background-color: white;
+  color: var(--text-color, #333);
 }
+
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="password"] {
