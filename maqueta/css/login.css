@@ -1,0 +1,32 @@
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.login-section {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 1.5rem;
+  background-color: var(--card-dark-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  color: var(--highlight-color);
+  animation: fadeInUp 0.6s ease-out;
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.login-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: var(--border-radius);
+  background: var(--title-gradient);
+  z-index: -1;
+}
