@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maximiliano Scarpatti - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome para íconos -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+   <nav>
+  <div class="nav-left">
+      <img src="/gestor-inventario/maqueta/portfolio/maxi/logo_recorte.jpg" alt="Logo Maxi Scarpatti" class="logo" />
+    </div>
+  <div class="nav-right">
+    <a href="#about">Sobre mí</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#contact">Contacto</a>
+    <button id="toggleTheme" aria-label="Cambiar tema">
+      🌓
+    </button>
+  </div>
+</nav>
+
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Hola, soy <span class="highlight">Maxi</span>.</h1>
+      <p class="subtitle">Desarrollo sitios web y apps accesibles y modernas.</p>
+      <p class="description">
+        Soy estudiante de 2do año de la Tecnicatura en Desarrollo de Software en el ISPC. Con experiencia en HTML, CSS,
+        JavaScript, Angular y React.
+        Me apasiona crear interfaces limpias, responsivas y accesibles.
+      </p>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Proyectos destacados</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Gestor de Inventario</h3>
+          <p>App CRUD en proceso para stock interno. Hecha con HTML, CSS y JS.</p>
+          <a href="#">Ver más →</a>
+        </div>
+        <div class="project-card">
+          <h3>App ARGBROKER</h3>
+          <p>Este mismo sitio, 100% hecho a mano.</p>
+          <a href="#">Ver más →</a>
+        </div>
+        <div class="project-card">
+          <h3>Sitio web Federación Cordobesa de Motociclismo</h3>
+          <p>Este mismo sitio, 100% hecho a mano.</p>
+          <a href="#">Ver más →</a>
+        </div>
+        <div class="project-card">
+          <h3>App Alquiler Muebles GalaRentals</h3>
+          <p>Este mismo sitio, 100% hecho a mano.</p>
+          <a href="#">Ver más →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+  <h2>Contacto</h2>
+  <p>Podés escribirme a <a href="mailto:tuemail@email.com">maxi.scarpatti@gmail.com</a></p>
+  <div class="social-icons">
+    <a href="https://github.com/tuusuario" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/tuusuario" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MS</p>
+  </footer>
+  <script>
+  const toggleBtn = document.getElementById("toggleTheme");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+  });
+</script>
+</body>
+</html>
