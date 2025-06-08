@@ -64,6 +64,11 @@
   font-weight: 600;
 }
 
-.quitar-subrayado{
+.quitar-subrayado,
+.quitar-subrayado:visited,
+.quitar-subrayado:hover,
+.quitar-subrayado:active {
   text-decoration: none;
+  color: inherit;
+  /* Esto evita el azul típico de los enlaces */
 }
