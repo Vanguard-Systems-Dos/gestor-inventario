@@ -24,6 +24,27 @@
   opacity: 0.7;
 }
 
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.login-form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login-form label {
+  color: var(--highlight-color);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 .login-form input {
   width: 100%;
   max-width: 300px;
@@ -52,6 +73,68 @@
   color: var(--placeholder-color);
 }
 
+.form-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--card-border);
+  width: 100%;
+  max-width: 500px;
+  color: var(--text-color);
+  flex-direction: column;
+}
+
+.form-container form h2 {
+  margin-top: 0%;
+  text-align: center;
+  color: var(--primary-color-2);
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.form-container form button[type="submit"] {
+  background-color: var(--primary-color-2);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+.form-container form button[type="submit"]:hover {
+  background-color: var(--primary-color-2-hover, #0056b3);
+}
+
+.form-container form label.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  gap: 0.5rem;
+}
+
 .form-container form label.checkbox-container input[type="checkbox"] {
   width: 18px;
   height: 18px;
@@ -59,18 +142,31 @@
   accent-color: var(--primary-color-2);
 }
 
+.form-container form label.checkbox-container a {
+  color: var(--primary-color-2);
+  text-decoration: none;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="password"] {
- width: 100%;
- padding: 0.75rem;
- font-size: 1rem;
- border: 1px solid var(--card-border, #ccc);
- border-radius: var(--border-radius, 6px);
- box-sizing: border-box;
- background-color: white;
- color: var(--text-color, #333);
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--card-border, #ccc);
+  border-radius: var(--border-radius, 6px);
+  box-sizing: border-box;
+  background-color: white;
+  color: var(--text-color, #333);
 }
+
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="password"] {
