@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maximiliano Scarpatti - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome para íconos -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <header>
+   <nav>
+  <div class="nav-left">
+      <img src="/gestor-inventario/maqueta/portfolio/maxi/logo_recorte.jpg" alt="Logo Maxi Scarpatti" class="logo" />
+    </div>
+  <div class="nav-right">
+    <a href="#about">Sobre mí</a>
+    <a href="#projects">Proyectos</a>
+    <a href="#contact">Contacto</a>
+    <button id="toggleTheme" aria-label="Cambiar tema">
+      🌓
+    </button>
+  </div>
+</nav>
+
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Hola, soy <span class="highlight">Maxi</span>.</h1>
+      <p class="subtitle">Desarrollo sitios web y apps accesibles y modernas.</p>
+      <p class="description">
+        Soy estudiante de 2do año de la Tecnicatura en Desarrollo de Software en el ISPC. Con experiencia en HTML, CSS,
+        JavaScript, Angular y React.
+        Me apasiona crear interfaces limpias, responsivas y accesibles.
+      </p>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Proyectos destacados</h2>
+      <div class="project-grid">
+  <div class="project-card">
+    <h3>Gestor de Inventario</h3>
+    <p>Aplicación en desarrollo CRUD para gestionar stock interno, con enfoque modular y reutilizable.</p>
+    <ul class="tech-list">
+      <li><i class="fab fa-html5"></i> HTML</li>
+      <li><i class="fab fa-css3-alt"></i> CSS</li>
+      <li><i class="fab fa-angular"></i> Angular</li>
+    </ul>
+    <a href="https://github.com/MaxiScarpatti/gestor-inventario" target="_blank">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+  </div>
+  <div class="project-card">
+    <h3>App ARGBROKER</h3>
+    <p>Aplicación de consola para gestionar un portafolio de inversiones. Permite crear cuentas de inversores, iniciar sesión y operar con activos de forma segura.</p>
+    <ul class="tech-list">
+      <li><i class="fab fa-python"></i> Python</li>
+      <li><i class="fab fa-git-alt"></i> Git</li>
+    </ul>
+    <a href="https://github.com/ISPC-Vanguard-Systems/ARG_Broker_Proyecto" target="_blank">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+  </div>
+
+  <div class="project-card">
+    <h3>Sitio Federación Cordobesa de Motociclismo</h3>
+    <p>Rediseño completo del sitio para pilotos y fanáticos. Mejora la navegación, el rendimiento y la compatibilidad móvil.</p>
+    <ul class="tech-list">
+      <li><i class="fab fa-html5"></i> HTML</li>
+      <li><i class="fab fa-css3-alt"></i> CSS</li>
+      <li><i class="fab fa-react"></i> React</li>
+    </ul>
+    <a href="https://github.com/MaxiScarpatti/FCM-Web" target="_blank">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+  </div>
+
+  <div class="project-card">
+    <h3>App GalaRentals</h3>
+    <p>Desarrollada en equipo en el Bootcamp Devs de Santex. Aplicación para gestionar el alquiler de muebles para eventos.</p>
+    <ul class="tech-list">
+      <li><i class="fab fa-html5"></i> HTML</li>
+      <li><i class="fab fa-css3-alt"></i> CSS</li>
+      <li><i class="fab fa-js"></i> JavaScript</li>
+      <li><i class="fab fa-angular"></i> Angular</li>
+    </ul>
+    <a href="https://github.com/xacademy2023/alquiler-muebles" target="_blank">
+      <i class="fab fa-github"></i> Ver en GitHub
+    </a>
+  </div>
+</div>
+
+    </section>
+
+    <section id="contact" class="contact">
+  <h2>Contacto</h2>
+  <p>Podés escribirme a <a href="mailto:maxi.scarpatti@gmail.com">maxi.scarpatti@gmail.com</a></p>
+  <div class="social-icons">
+    <a href="https://github.com/MaxiScarpatti" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/maximiliano-scarpatti/" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MS</p>
+  </footer>
+  <script>
+  const toggleBtn = document.getElementById("toggleTheme");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light");
+  });
+</script>
+</body>
+</html>

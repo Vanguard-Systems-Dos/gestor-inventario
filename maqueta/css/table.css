@@ -1,0 +1,62 @@
+.tabla-dashboard {
+  overflow-y: auto;
+  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--card-border);
+  /* Borde uniforme ya no muestra la L invertida*/
+}
+
+.tabla-con-borde {
+  border: 1px solid #333;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabla-con-borde th,
+.tabla-con-borde td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.footer-table {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-table-button {
+  background-color: var(--card-bg);
+  border-color: var(--primary-color-2);
+  color: var(--primary-color-2);
+  margin: 2px;
+}
+
+.cuadro-tabla-dashboard {
+  border: 1px solid var(--card-border);
+  border-radius: 0.75em;
+  padding: 1.5em;
+  box-shadow: 0 2px 6px var(--card-bg);
+  background-color: var(--card-bg);
+  margin-bottom: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.encabezado-dashboard {
+  display: flex;
+  flex-direction: column;
+  /*los pone en vertical*/
+  gap: 0.5em;
+  /*espacio uniforme entre elementos*/
+  margin-bottom: 1em;
+}
