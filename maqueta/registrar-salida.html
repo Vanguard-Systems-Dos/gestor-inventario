@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Producto</title>
-    <link rel="stylesheet" href="css/estilos3.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="css/button.css">
 </head>
 
 <body>
@@ -33,28 +40,28 @@
                 </div>
 
                 <form class="formulario-busqueda">
-                    <div class="form-grupo">
+                    <div class="form-group">
                         <label for="nombre">Nombre del Producto:</label>
                         <input type="text" id="nombre" name="nombre" placeholder="Ej. ProductoX" required>
                     </div>
 
-                    <div class="form-grupo">
+                    <div class="form-group">
                         <label for="categoria">Categoría:</label>
                         <input type="text" id="categoria" name="categoria" placeholder="Ej. Categoria#X" required>
                     </div>
 
-                    <div class="form-grupo">
+                    <div class="form-group">
                         <label for="cantidad">Cantidad Inicial:</label>
                         <input type="number" id="cantidad" name="cantidad" min="0" required>
                     </div>
 
-                    <div class="form-grupo">
+                    <div class="form-group">
                         <label for="ubicacion">Ubicación:</label>
                         <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej. Depósito A1" required>
                     </div>
 
-                    <div class="form-grupo">
-                        <input type="submit" value="Registrar Salida">
+                    <div class="form-group">
+                        <input class="btn-login" type="submit" value="Registrar Salida">
                     </div>
                 </form>
             </div>

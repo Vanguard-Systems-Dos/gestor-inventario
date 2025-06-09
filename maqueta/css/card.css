@@ -182,3 +182,19 @@
   transform: scale(1.05);
   box-shadow: 0 12px 24px var(--primary-color-2, rgba(94, 226, 255, 0.3));
 }
+
+.quienes-somos {
+  text-align: center;
+  padding: 40px 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.desarrolladores {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+  background-color: var(--bg-color);
+}
