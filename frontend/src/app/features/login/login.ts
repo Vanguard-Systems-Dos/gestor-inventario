@@ -1,12 +1,35 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-login',
-  imports: [],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './login.html',
-  styleUrl: './login.css',
+  styleUrls: ['./login.css'],
 })
-export class Login {
+export class Login implements OnInit {
+  loginForm!: FormGroup
+  constructor(private fb: FormBuilder, private router: Router) { }
+
+  ngOnInit(): void {
+    this.loginForm = this.fb.group(
+      {
+        email: ['', [Validators.required, Validators.email]],
+        password: ['', [Validators.required, Validators.minLength(6)]]
+      }
+    )
+  }
+
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+      console.log('Formulario valido:', this.loginForm.valid)
+      this.router.navigate(['/dashboard'])
+    } else {
+      this.loginForm.markAllAsTouched()
+    }
+  }
 
 }
