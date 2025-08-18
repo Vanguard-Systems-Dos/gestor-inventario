@@ -3,6 +3,15 @@ body {
   color: #f0f0f0;
 }
 
+.header {
+  background: #0d6efd;
+  text-align: center;
+  padding: 58px;
+}
+.lead{
+  margin: 0%;
+}
+
 section,
 header {
   background-color: #1e1e1e;
@@ -34,24 +43,24 @@ p,
 }
 
 .btn-outline-primary {
-    color: #0d6efd;
-    border-color: #0d6efd;
+  color: #0d6efd;
+  border-color: #0d6efd;
 }
 
 .btn-outline-primary:hover {
-    background-color: #0d6efd;
-    color: #fff;
+  background-color: #0d6efd;
+  color: #fff;
 }
 
 /* Botón eliminar */
 .btn-outline-danger {
-    color: #dc3545;
-    border-color: #dc3545;
+  color: #dc3545;
+  border-color: #dc3545;
 }
 
 .btn-outline-danger:hover {
-    background-color: #dc3545;
-    color: #fff;
+  background-color: #dc3545;
+  color: #fff;
 }
 
 .bg-light {
@@ -68,4 +77,3 @@ p,
   object-fit: cover;
   width: 100%;
 }
-
