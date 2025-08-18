@@ -46,8 +46,10 @@ input[formControlName] {
   margin-top: 0.3rem;
   border-radius: 0.5rem;
   border: none;
-  background-color: #bbb; /* gris claro */
-  color: #333; /* texto oscuro */
+  background-color: #bbb;
+  /* gris claro */
+  color: #333;
+  /* texto oscuro */
   font-size: 1rem;
 }
 
@@ -67,6 +69,21 @@ input[formControlName]::placeholder {
 .enlace-olvidecontraseña:hover {
   text-decoration: underline;
 }
+
+.enlace-registrate {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #142ec1;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.enlace-registrate:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 label {
   font-weight: bold;
   color: white;
@@ -77,20 +94,22 @@ label {
 .button-login {
   width: 100%;
   padding: 0.75rem 0;
-  background-color: #7b3df2; /* morado vibrante */
-  border-radius: 2rem; /* bordes muy redondeados */
+  background-color: #7b3df2;
+  /* morado vibrante */
+  border-radius: 2rem;
+  /* bordes muy redondeados */
   border: none;
   color: white;
   font-weight: 700;
   cursor: pointer;
   margin-top: 1.5rem;
-  text-decoration: underline; /* texto subrayado */
+  text-decoration: underline;
+  /* texto subrayado */
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
 .button-login:hover {
-  background-color: #5a29b8; /* morado más oscuro al hover */
+  background-color: #5a29b8;
+  /* morado más oscuro al hover */
 }
-
-
