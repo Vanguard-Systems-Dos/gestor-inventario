@@ -24,7 +24,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/app/app.css"
+              "src/styles.css"
             ],
             //"server": "src/main.server.ts",
             //"outputMode": "server",
@@ -84,7 +84,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/app/app.css"
+              "src/styles.css"
             ]
           }
         }
