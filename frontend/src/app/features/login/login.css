@@ -113,3 +113,11 @@ label {
   background-color: #5a29b8;
   /* morado más oscuro al hover */
 }
+
+input.error {
+  border: 2px solid red;
+}
+small, span {
+  color: red;
+  font-size: 0.85rem;
+}
