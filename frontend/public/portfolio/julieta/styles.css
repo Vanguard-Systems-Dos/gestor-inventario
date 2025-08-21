@@ -1,0 +1,152 @@
+:root {
+  /* Paleta de colores */
+  --violeta: #6c63ff;
+  --lila: #b57edc;
+  --azul: #00cfff;
+  --fondo: linear-gradient(
+    to bottom right,
+    #1f1c2c,
+    #3b2f5b,
+    #6c63ff
+  );
+  --oscuro: #121113;
+  --gris: #222725;
+  --claro: #f7f7f2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--fondo);
+  color: var(--claro);
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background: transparent;
+  padding: 1rem 2rem;
+}
+.navbar-nav .nav-link {
+  color: var(--claro) !important;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+
+/* Botón principal */
+.btn-glow {
+  background: linear-gradient(90deg, var(--lila), var(--azul));
+  border: none;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 10px var(--lila);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+.btn-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--azul), 0 0 30px var(--lila);
+}
+@keyframes pulse {
+  0%, 100% {
+box-shadow: 0 0 10px var(--lila);
+  }
+  50% {
+box-shadow: 0 0 20px var(--lila);
+  }
+}
+
+/* Hero: fondo y posicionamiento */
+header.hero {
+  height: 100vh;
+  background: var(--fondo);
+  position: relative;
+  padding: 4rem 2rem 6rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Título principal */
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--claro);
+  z-index: 1;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.hero p {
+  color: var(--azul);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* SVG olas */
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: 0;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+.section-title {
+  font-size: 2.25rem;
+  color: var(--lila);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Tarjetas */
+.card-feature {
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 10, 10, 0.575);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--claro);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  justify-content: space-between;
+}
+.card-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(181, 126, 220, 0.4);
+}
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #1b1b2f;
+  text-align: center;
+  padding: 2rem;
+  color: var(--claro);
+}

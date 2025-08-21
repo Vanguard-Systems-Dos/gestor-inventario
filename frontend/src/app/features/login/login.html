@@ -1,1 +1,57 @@
-<p>login works!</p>
+<main class="login-container">
+
+  <section class="login-section">
+    <h2 class="login-title"> Inicio de sesión</h2>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div>
+        <label>Correo Electronico:</label>
+        <input formControlName="email" type="email" (blur)="email?.markAsTouched()"
+          placeholder="Email@direccion.com" [ngClass]="{'error': email?.touched &&
+           email?.invalid}">
+
+        @if (email?.touched && email?.invalid) {
+        <div>
+          @if (email?.errors?.['required']) {
+          <small>Campo Requerido</small>
+          }
+          @if(email?.errors?.['email']){
+          <small>Formato Invalido</small>
+          }
+        </div>
+        }
+      </div>
+
+      <div>
+        <label>Contraseña:</label>
+        <input formControlName="password" type="password" (blur)="password?.markAsTouched()"
+          placeholder="Contraseña" [ngClass]="{'error': password?.touched &&
+            password?.invalid
+          }">
+
+        @if (password?.touched && password?.invalid) {
+        <div>
+          @if (password?.errors?.['required']) {
+          <span>Campo Requerido</span>
+          }
+          @if (password?.errors?.['minlength']) {
+          <span>Minimo 6 caracteres</span>
+          }
+        </div>
+        }
+      </div>
+
+      <a href="recuperar.html" class="enlace-olvidecontraseña">¿Olvidaste tu contraseña?</a>
+      <a routerLink="/formulario-de-registro" class="enlace-registrate">¿No tenes cuenta?
+        Regístrate</a>
+
+
+
+      <div>
+        <button type="submit" class="button-login">Iniciar Sesión</button>
+      </div>
+
+    </form>
+  </section>
+
+</main>
