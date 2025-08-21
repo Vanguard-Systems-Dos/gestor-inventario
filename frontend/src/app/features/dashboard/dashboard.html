@@ -1,1 +1,153 @@
-<p>dashboard works!</p>
+<header class="main-header py-3">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+
+      <!-- Logo -->
+      <div class="col-8 col-md-6 d-flex align-items-center">
+        <img src="assets/images/Logo_Vanguard-Stock.jpg" alt="Logo Vanguard Stock" class="logo-img me-2">
+        <h1 class="logo m-0">Vanguard Stock</h1>
+      </div>
+
+      <!-- Botón Hamburguesa -->
+      <div class="col-4 d-md-none text-end">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+      </div>
+
+      <!-- Menú de navegación -->
+      <div class="col-12 col-md-6">
+        <nav class="main-nav">
+          <div class="collapse d-md-flex justify-content-md-end" id="menuNav">
+            <ul class="list-unstyled d-flex flex-column flex-md-row gap-3 m-0 justify-content-center justify-content-md-end">
+              <li><a routerLink="/quienes-somos">Sobre Vanguard</a></li>
+              <li><a routerLink="/home" class="login-btn">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="container cuadro-tabla-dashboard my-4">
+      <div class="row g-4">
+
+        <!-- Tarjetas Info -->
+        <div class="row tarjetas-info-dashboard">
+          @for (item of tarjetasInfo; track item) {
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="tarjeta-info">
+                <h3>{{ item.titulo }}</h3>
+                <p>{{ item.valor }}</p>
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- Gráficos -->
+        <div class="row tarjetas-graficas-dashboard">
+          @for (graf of graficos; track graf) {
+            <div class="col-12 col-md-6">
+              <div class="tarjeta-grafico">
+                <h3>{{ graf.titulo }}</h3>
+                <img [src]="graf.img" [alt]="graf.titulo">
+              </div>
+            </div>
+          }
+        </div>
+
+        <!-- Inventario -->
+        <div class="encabezado-dashboard">
+          <h2>Inventario</h2>
+          <div class="fila-botones d-flex flex-wrap justify-content-between gap-2">
+            <div class="izquierda d-flex flex-wrap gap-2">
+              <input type="button" value="Registrar Entradas" routerLink="/registrar-producto">
+              <input type="button" value="Registrar Salidas" routerLink="/registrar-salida">
+              <input type="button" value="Buscar" routerLink="/buscar-producto">
+            </div>
+            <div class="derecha">
+              <input type="button" value="Añadir Producto" disabled>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabla de Inventario -->
+        <div class="tabla-dashboard table-responsive">
+          <table class="tabla-con-borde align-middle text-center">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Cantidad</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (prod of productos; track prod) {
+                <tr>
+                  <td>{{ prod.nombre }}</td>
+                  <td>{{ prod.categoria }}</td>
+                  <td>
+                    @if (prod.cantidad > 500) {
+                      <span class="stock-alto">{{ prod.cantidad }}</span>
+                    } @else if (prod.cantidad > 100) {
+                      <span class="stock-medio">{{ prod.cantidad }}</span>
+                    } @else {
+                      <span class="stock-bajo">{{ prod.cantidad }}</span>
+                    }
+                  </td>
+                  <td>{{ prod.ubicacion }}</td>
+                  <td class="acciones">
+                    <button class="btn btn-sm btn-outline-primary editar" title="Editar" disabled>Editar
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar" disabled> Eliminar
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="main-footer">
+  <div class="container footer-container">
+    <!-- Enlaces rápidos -->
+    <div class="col-12 col-md-4 mb-4 footer-section sitemap">
+      <h4>Enlaces rápidos</h4>
+      <ul class="list-unstyled">
+        <li><a routerLink="/home">Inicio</a></li>
+        <li><a routerLink="/about">Sobre Vanguard</a></li>
+        <li><a href="#features">Funcionalidades</a></li>
+      </ul>
+    </div>
+
+    <!-- Contacto -->
+    <div class="col-12 col-md-4 mb-4 footer-section contact">
+      <h4>Contacto</h4>
+      <p>Email: <a href="mailto:soporte@vanguard-systems.com">soporte@vanguard-systems.com</a></p>
+      <p>Tel: <a href="tel:+5493512345678">+54 9 351 234 5678</a></p>
+    </div>
+  </div>
+
+  <div class="footer-section back-to-top">
+    <a href="#top" class="back-to-top-link" aria-label="Volver arriba">↑ Volver arriba</a>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Vanguard Systems. Todos los derechos reservados.</p>
+    <p>Desarrollado por <a href="https://vanguard-systems.com" target="_blank">Vanguard Systems</a></p>
+  </div>
+</footer>
+
