@@ -1,22 +1,18 @@
-.main-footer {
+footer {
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 2rem;
   text-align: center;
-  margin-top: auto;
-  width: 100%;
 }
 
-:host {
-  display: block;
-  margin-top: auto;
-}
-
+/* Títulos de sección */
 .footer-section h4 {
+  margin-bottom: 0.75rem;
   font-size: 1rem;
   color: var(--highlight-color);
 }
 
+/* Listas de enlaces */
 .footer-section ul {
   list-style: none;
   margin: 0;
@@ -43,8 +39,6 @@
   margin-top: 2rem;
   padding: 1.5rem;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .footer-bottom p {
@@ -64,72 +58,51 @@
   color: var(--gradient-end);
 }
 
-/* Volver arriba */
-.back-to-top {
-  margin-top: 1.5rem;
+.footer-table {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  justify-content: center;
+  align-items: center;
 }
 
-.back-to-top-link {
-  display: inline-block;
-  padding: 0.5rem 1rem;
+.footer-table-button {
   background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 4px;
-  color: var(--text-color);
-  text-decoration: none;
-  transition: all 0.3s;
+  border-color: var(--primary-color-2);
+  color: var(--primary-color-2);
+  margin: 2px;
 }
 
-.back-to-top-link:hover {
-  background-color: var(--text-color) !important;
-  color: var(--card-bg) !important;
-  border-color: var(--text-color);
+.footer-section,
+.sitemap,
+.contact {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
+
+.footer-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 /* Ajuste responsive: en pantallas más anchas, poner los dos párrafos en fila */
 @media (min-width: 600px) {
   .footer-bottom {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
-  }
-  
-  .footer-section {
-    flex: 1;
-    min-width: 200px;
   }
 }
 
-/* alineacion de footer Enlaces hasta Tel */
+/*alineacion de footer Enlaces hasta Tel*/
 @media (max-width: 768px) {
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
+
+  .footer-container,
   .footer-section {
-    text-align: center;
+    display: block !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
-  
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
 }

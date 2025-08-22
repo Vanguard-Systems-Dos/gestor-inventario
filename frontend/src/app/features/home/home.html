@@ -1,1 +1,112 @@
-<p>home works!</p>
+<main class="main-landing" id="top">
+  <!-- Hero Principal -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <span class="badge-update">Power-by Vanguard Systems</span>
+      <h2><span class="gradient-text">Revoluciona</span> la gestión de tu inventario interno</h2>
+      <p class="subtitle">
+        Optimiza el flujo de materiales, reduce errores y toma decisiones con datos reales. Vanguard Stock lleva tu gestión al siguiente nivel.
+      </p>
+      <div class="cta-container">
+        <a [routerLink]="'/login'" class="btn-login">Iniciar sesión</a>
+      </div>      
+    </div>
+  </section>
+
+  <!-- Casos de uso -->
+  <section class="use-cases">
+    <div class="container">
+      <h2><span class="gradient-text">Diseñado</span> para cada rol</h2>
+      <p class="subtitle">Vanguard Stock se adapta a las necesidades de distintos perfiles dentro de tu organización.</p>
+  
+      <div class="use-cases-grid">
+        <div class="use-case-card" *ngFor="let useCase of useCases">
+          <img [src]="useCase.image" [alt]="useCase.alt">
+          <h3>{{ useCase.title }}</h3>
+          <p>{{ useCase.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Qué es Vanguard Stock -->
+  <section class="about-section">
+    <div class="container about-content">
+      <div class="about-text">
+        <h2>¿<span class="gradient-text">Qué es</span> Vanguard Stock?</h2>
+        <p>
+          Vanguard Stock es una plataforma digital desarrollada por Vanguard Systems y diseñada para gestionar, controlar y optimizar el inventario interno de organizaciones modernas. Brindamos soluciones simples pero potentes para que tu equipo trabaje mejor, más rápido y con menos errores.
+        </p>
+        <ul class="about-list">
+          <li>✔ Control total y real de tu inventario</li>
+          <li>✔ Automatización de tareas repetitivas</li>
+          <li>✔ Información centralizada y accesible</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="assets/images/Logo_Vanguard-Stock.jpg" alt="Vanguard Stock">
+      </div>
+    </div>
+  </section>
+
+  <!-- Funcionalidades / Beneficios -->
+  <section class="features-section">
+    <div class="container">
+      <h2><span class="gradient-text">Potentes</span> soluciones de gestión</h2>
+      <p class="subtitle">
+        Controla tu inventario como nunca antes con nuestras herramientas inteligentes y poderosas.
+      </p>
+
+      <!-- INICIO CARRUSEL (Bootstrap vanilla) -->
+    <div
+      id="featuresCarousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      data-bs-interval="5000"
+    >
+      <div class="carousel-inner">
+
+        <!-- Slides del carrusel -->
+        <div 
+          class="carousel-item" 
+          [class.active]="i === 0" 
+          *ngFor="let slide of features; let i = index"
+        >
+          <div class="row gx-3 justify-content-center">
+            <div class="col-12 col-sm-4 col-md-3" *ngFor="let feature of slide">
+              <div class="feature-card">
+                <img [src]="feature.image" [alt]="feature.alt" />
+                <h3>{{ feature.title }}</h3>
+                <p>{{ feature.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTROLES DEL CARRUSEL -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#featuresCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#featuresCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+    <!-- FIN CARRUSEL -->
+
+    </div>
+  </section>
+</main>
