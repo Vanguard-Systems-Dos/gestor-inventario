@@ -26,6 +26,9 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
             //"server": "src/main.server.ts",
             //"outputMode": "server",
             //"ssr": {
@@ -92,6 +95,6 @@
     }
   },
   "cli": {
-    "analytics": "d23dda06-ae40-41f3-93e5-b38b5a334e5c"
+    "analytics": "ad04e482-479e-4001-b319-33f0f124e49a"
   }
 }
