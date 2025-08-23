@@ -98,7 +98,7 @@ gestor-inventario/
 │   └── readme.md
 └── README.md
 
-```bash
+```
 
 ## 🤝 Nuestro equipo
 
