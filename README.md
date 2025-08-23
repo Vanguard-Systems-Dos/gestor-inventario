@@ -3,7 +3,7 @@
 
 ¡Bienvenidos al repositorio de nuestro proyecto colaborativo!
 
-Somos estudiantes de 2° año de la **Tecnicatura Superior en Desarrollo de Software** del **ISPC**, y a lo largo de este ciclo lectivo desarrollaremos un **Gestor de Inventarios Web** como proyecto integrador final. Actualmente estamos cerrando el segundo sprint, enfocados en la **etapa de maquetado de interfaces**.
+Somos estudiantes de 2° año de la **Tecnicatura Superior en Desarrollo de Software** del **ISPC**, y a lo largo de este ciclo lectivo desarrollaremos un **Gestor de Inventarios Web** como proyecto integrador final. Actualmente estamos cerrando el tercer sprint, enfocados en la **etapa de maquetado en Angular de interfaces**.
 
 ![Esquema del sistema](https://media.licdn.com/dms/image/v2/D4E12AQFjgF1zpKkfNA/article-inline_image-shrink_1500_2232/article-inline_image-shrink_1500_2232/0/1702434135345?e=1750896000&v=beta&t=DC9Ec1eil4inftPHcNT3P-CXhWR1fEY_j20u2Tryn8o)
 ---
@@ -26,7 +26,8 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 
 - ✅ Sprint 1: documentación y diseño general del sistema  
 - 🛠️ Sprint 2 (en curso): maquetado con HTML5, CSS y Bootstrap  
-- 🔜 Sprint 3: implementación funcional con Angular y conexión al backend  
+- 🔜 Sprint 3: SPA estática en Angular (landing, registro/login, dashboard, CRUD y "quiénes somos") con routing y formularios reactivos  
+- 🔜 Sprint 4: SPA fullstack con Angular + API REST en Django (login/registro con lógica de negocio y CRUD conectado al backend)  
 
 ---
 
@@ -34,47 +35,83 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 
 | Frontend | Backend | Base de Datos | Herramientas |
 |----------|---------|---------------|--------------|
-| HTML5, CSS3, Typescript, Bootstrap 5.3, Angular | Python 3.x con Django | PostgreSQL | Git, GitHub, Mural |
+| HTML5, CSS3, Typescript, Bootstrap 5.3, Angular v.20 | Python 3.x con Django | PostgreSQL | Git, GitHub, Mural |
 
 ---
 
 ## 📁 Estructura del proyecto
 
-/maqueta/
-
-├── bootstrap-5.3.6/ # Archivos de Bootstrap locales
-
-├── css/ # Hojas de estilo personalizadas
-
-├── images/ # Recursos gráficos
-
-├── portfolio/ # Carpeta personal (estructuras individuales)
-
-├── buscar-producto.html # Vista de búsqueda de productos
-
-├── dashboard.html # Vista general del inventario
-
-├── formulario-de-registro.html # Registro de usuarios
-
-├── home.html # Página de inicio
-
-├── login.html # Login de usuarios
-
-├── quienes-somos.html # Información sobre el proyecto/equipo
-
-├── registrar-producto.html # Formulario para agregar productos
-
-├── registrar-salida.html # Registro de egreso de productos
-
-└── readme.md # Documentación específica de la maqueta
-
+gestor-inventario/
+├── backend/
+├── frontend/
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── features/
+│   │   │   │   ├── dashboard/
+│   │   │   │   │   ├── dashboard.css
+│   │   │   │   │   ├── dashboard.html
+│   │   │   │   │   ├── dashboard.spec.ts
+│   │   │   │   │   └── dashboard.ts
+│   │   │   │   ├── buscar-producto/
+│   │   │   │   ├── registrar-producto/
+│   │   │   │   ├── registrar-salida/
+│   │   │   │   ├── formulario-de-registro/
+│   │   │   │   │   ├── formulario-de-registro.css
+│   │   │   │   │   ├── formulario-de-registro.html
+│   │   │   │   │   ├── formulario-de-registro.spec.ts
+│   │   │   │   │   └── formulario-de-registro.ts
+│   │   │   │   ├── home/
+│   │   │   │   │   ├── home.css
+│   │   │   │   │   ├── home.html
+│   │   │   │   │   ├── home.spec.ts
+│   │   │   │   │   └── home.ts
+│   │   │   │   ├── login/
+│   │   │   │   │   ├── login.css
+│   │   │   │   │   ├── login.html
+│   │   │   │   │   ├── login.spec.ts
+│   │   │   │   │   └── login.ts
+│   │   │   │   ├── quienes-somos/
+│   │   │   │   │   ├── quienes-somos.css
+│   │   │   │   │   ├── quienes-somos.html
+│   │   │   │   │   ├── quienes-somos.spec.ts
+│   │   │   │   │   └── quienes-somos.ts
+│   │   │   ├── img/
+│   │   │   ├── models/
+│   │   │   ├── services/
+│   │   │   ├── shared/
+│   │   │   └── app.config.server.ts
+│   ├── angular.json
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── tsconfig.app.json
+│   ├── tsconfig.json
+│   ├── tsconfig.spec.json
+│   └── README.md
+├── maqueta/
+│   ├── bootstrap-5.3.6/
+│   ├── css/
+│   ├── images/
+│   ├── portfolio/
+│   ├── buscar-producto.html
+│   ├── dashboard.html
+│   ├── formulario-de-registro.html
+│   ├── home.html
+│   ├── login.html
+│   ├── quienes-somos.html
+│   ├── registrar-producto.html
+│   ├── registrar-salida.html
+│   └── readme.md
+├── .git/
+├── .gitignore
+├── package-lock.json
+└── package.json
 
 
 ## 🤝 Nuestro equipo
 
 |Participantes|Correo electrónico|Perfil|
 |:---:|:---:|:---:|
-|**Julieta Victoria Cabrera**|[![Correo](https://img.shields.io/badge/correo-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:juliecabrera56@gmail.com )|[![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/JuliCabrera)|
 |**Aldo Alejandro Minoldo**|[![Correo](https://img.shields.io/badge/correo-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:minoldoaldo@gmail.com)|[![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AAMinoldo)|
 |**Nicolas Federico Minoldo**|[![Correo](https://img.shields.io/badge/correo-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:minoldonico@gmail.com)| [![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/NicolasMinoldo)|
 |**Patricio Esteban Rodriguez**|[![Correo](https://img.shields.io/badge/correo-red?style=for-the-badge&logo=gmail&logoColor=white)](Mailto:rpatricioesteban@gmail.com)| [![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/1PatoRod)|
