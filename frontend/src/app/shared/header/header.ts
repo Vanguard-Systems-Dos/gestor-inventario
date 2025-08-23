@@ -49,10 +49,7 @@ export class Header implements OnInit, OnDestroy {
 
   private verificarRutaImagen(): void {
     // Ruta relativa desde el componente
-    this.logoUrl = 'assets/images/Logo_Vanguard-Stock.jpg';
-    
-    // Para debug: verifica en consola
-    console.log('Ruta de la imagen:', this.logoUrl);
+    this.logoUrl = '/img/Logo_Vanguard-Stock.jpg';
   }
 
 

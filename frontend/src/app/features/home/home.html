@@ -44,7 +44,7 @@
         </ul>
       </div>
       <div class="about-image">
-        <img src="assets/images/Logo_Vanguard-Stock.jpg" alt="Vanguard Stock">
+        <img src="/img/Logo_Vanguard-Stock.jpg" alt="Vanguard Stock">
       </div>
     </div>
   </section>
@@ -57,21 +57,12 @@
         Controla tu inventario como nunca antes con nuestras herramientas inteligentes y poderosas.
       </p>
 
-      <!-- INICIO CARRUSEL (Bootstrap vanilla) -->
-    <div
-      id="featuresCarousel"
-      class="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="5000"
-    >
-      <div class="carousel-inner">
+    <!-- INICIO CARRUSEL -->
+    <div id="featuresCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
 
-        <!-- Slides del carrusel -->
-        <div 
-          class="carousel-item" 
-          [class.active]="i === 0" 
-          *ngFor="let slide of features; let i = index"
-        >
+      <div class="carousel-inner">
+      
+        <div class="carousel-item" [class.active]="i === 0" *ngFor="let slide of features; let i = index">
           <div class="row gx-3 justify-content-center">
             <div class="col-12 col-sm-4 col-md-3" *ngFor="let feature of slide">
               <div class="feature-card">
@@ -82,28 +73,19 @@
             </div>
           </div>
         </div>
-
+      
       </div>
-
-      <!-- CONTROLES DEL CARRUSEL -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#featuresCarousel"
-        data-bs-slide="prev"
-      >
+    
+      <!-- Controles -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#featuresCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Anterior</span>
       </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#featuresCarousel"
-        data-bs-slide="next"
-      >
+      <button class="carousel-control-next" type="button" data-bs-target="#featuresCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Siguiente</span>
       </button>
+    
     </div>
     <!-- FIN CARRUSEL -->
 
