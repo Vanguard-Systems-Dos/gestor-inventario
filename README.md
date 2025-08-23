@@ -40,7 +40,9 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 ---
 
 ## 📁 Estructura del proyecto
+## 📂 Estructura del proyecto
 
+```bash
 gestor-inventario/
 ├── backend/
 ├── frontend/
@@ -53,9 +55,6 @@ gestor-inventario/
 │   │   │   │   │   ├── dashboard.html
 │   │   │   │   │   ├── dashboard.spec.ts
 │   │   │   │   │   └── dashboard.ts
-│   │   │   │   ├── buscar-producto/
-│   │   │   │   ├── registrar-producto/
-│   │   │   │   ├── registrar-salida/
 │   │   │   │   ├── formulario-de-registro/
 │   │   │   │   │   ├── formulario-de-registro.css
 │   │   │   │   │   ├── formulario-de-registro.html
@@ -82,30 +81,24 @@ gestor-inventario/
 │   │   │   ├── shared/
 │   │   │   └── app.config.server.ts
 │   ├── angular.json
-│   ├── package-lock.json
 │   ├── package.json
-│   ├── tsconfig.app.json
-│   ├── tsconfig.json
-│   ├── tsconfig.spec.json
-│   └── README.md
+│   └── tsconfig.json
 ├── maqueta/
 │   ├── bootstrap-5.3.6/
 │   ├── css/
 │   ├── images/
 │   ├── portfolio/
-│   ├── buscar-producto.html
-│   ├── dashboard.html
-│   ├── formulario-de-registro.html
 │   ├── home.html
 │   ├── login.html
+│   ├── dashboard.html
+│   ├── buscar-producto.html
+│   ├── formulario-de-registro.html
 │   ├── quienes-somos.html
 │   ├── registrar-producto.html
 │   ├── registrar-salida.html
 │   └── readme.md
-├── .git/
-├── .gitignore
-├── package-lock.json
-└── package.json
+└── README.md
+
 
 
 ## 🤝 Nuestro equipo
