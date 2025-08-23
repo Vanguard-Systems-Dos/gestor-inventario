@@ -40,7 +40,6 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 ---
 
 ## 📁 Estructura del proyecto
-## 📂 Estructura del proyecto
 
 ```bash
 gestor-inventario/
@@ -99,7 +98,7 @@ gestor-inventario/
 │   └── readme.md
 └── README.md
 
-
+```bash
 
 ## 🤝 Nuestro equipo
 
