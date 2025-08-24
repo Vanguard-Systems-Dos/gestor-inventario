@@ -432,6 +432,32 @@ table {
   opacity: 0.7;
 }
 
+.izquierda button,
+.derecha button {
+  padding: 0.6em 1.5em;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5em;
+  background-color: var(--primary-color-2);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.izquierda button:hover,
+.derecha button:hover {
+  background-color: var(--primary-color-1);
+}
+
+.izquierda button:disabled,
+.derecha button:disabled {
+  background-color: #cbd5e1;
+  color: #6b7280;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
 .login-form {
   display: flex;
   flex-direction: column;
