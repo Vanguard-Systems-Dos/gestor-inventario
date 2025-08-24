@@ -7,11 +7,12 @@ declare const bootstrap: any;
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterModule, NgbModule ],
+  standalone: true,
+  imports: [CommonModule, RouterModule, NgbModule],
   templateUrl: './home.html',
   styleUrls: ['./home.css', '../../shared/css/button.css', '../../shared/css/card.css',
-  '../../shared/css/hero.css', '../../shared/css/input.css',
-  '../../shared/css/text.css']
+    '../../shared/css/hero.css', '../../shared/css/input.css',
+    '../../shared/css/text.css']
 })
 export class Home {
 
@@ -106,9 +107,11 @@ export class Home {
       (this.currentIndex - 1 + this.features.length) % this.features.length;
   }
   ngOnInit() {
-  setInterval(() => this.next(), 5000);
-}
+    setInterval(() => this.next(), 5000);
+  }
 
 
 
 }
+
+//NgbModule
