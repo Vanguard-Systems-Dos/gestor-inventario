@@ -3,14 +3,14 @@
    <form [formGroup]="registroFormulario" (ngSubmit)="onSubmit()" class="formulario-de-registro">
       <div>
          <label>Nombre Completo:</label>
-         <input formControlName="nombre" type="nombre" (blur)="registroFormulario.get('nombre')?.markAsTouched()"
-            placeholder="Nombre Completo">
-         @if (registroFormulario.get('nombre')?.touched && registroFormulario.get('nombre')?.invalid) {
+         <input formControlName="nombre" type="nombre" (blur)="nombre?.markAsTouched()" placeholder="Nombre Completo"
+            [ngClass]="{'error' : nombre?.touched && nombre?.invalid}">
+         @if (nombre?.touched && nombre?.invalid) {
          <div>
-            @if (registroFormulario.get('nombre')?.errors?.['required']) {
+            @if (nombre?.errors?.['required']) {
             <span>Campo Requerido</span>
             }
-            @if (registroFormulario.get('nombre')?.errors?.['minlength']) {
+            @if (nombre?.errors?.['minlength']) {
             <span>Minimo 6 caracteres</span>
             }
          </div>
@@ -19,14 +19,14 @@
 
       <div>
          <label>Correo Electronico:</label>
-         <input formControlName="email" type="email" (blur)="registroFormulario.get('email')?.markAsTouched()"
-            placeholder="Correo Electronico">
-         @if (registroFormulario.get('email')?.touched && registroFormulario.get('email')?.invalid) {
+         <input formControlName="email" type="email" (blur)="email?.markAsTouched()" placeholder="Correo Electronico"
+            [ngClass]="{'error': email?.touched && email?.invalid}">
+         @if (email?.touched && email?.invalid) {
          <div>
-            @if (registroFormulario.get('email')?.errors?.['required']) {
+            @if (email?.errors?.['required']) {
             <small>Campo Requerido</small>
             }
-            @if(registroFormulario.get('email')?.errors?.['email']){
+            @if(email?.errors?.['email']){
             <small>Formato Invalido</small>
             }
          </div>
@@ -36,14 +36,14 @@
 
       <div>
          <label>Contraseña:</label>
-         <input formControlName="password" type="password" (blur)="registroFormulario.get('password')?.markAsTouched()"
-            placeholder="Contraseña">
-         @if (registroFormulario.get('password')?.touched && registroFormulario.get('password')?.invalid) {
+         <input formControlName="password" type="password" (blur)="password?.markAsTouched()" placeholder="Contraseña"
+            [ngClass]="{'error': password?.touched && password?.invalid}">
+         @if (password?.touched && password?.invalid) {
          <div>
-            @if (registroFormulario.get('password')?.errors?.['required']) {
+            @if (password?.errors?.['required']) {
             <span>Campo Requerido</span>
             }
-            @if (registroFormulario.get('password')?.errors?.['minlength']) {
+            @if (password?.errors?.['minlength']) {
             <span>Minimo 6 caracteres</span>
             }
          </div>
@@ -53,15 +53,16 @@
 
       <div>
          <label>Confirmar Contraseña:</label>
-         <input formControlName="confirmPassword" type="password"
-            (blur)="registroFormulario.get('confirmPassword')?.markAsTouched()" placeholder="Confirmar Contraseña">
+         <input formControlName="confirmPassword" type="password" (blur)="confirmPassword?.markAsTouched()"
+            placeholder="Confirmar Contraseña"
+            [ngClass]="{'error': confirmPassword?.touched && confirmPassword?.invalid}">
 
-         @if (registroFormulario.get('confirmPassword')?.touched
-         && registroFormulario.get('confirmPassword')?.hasError('required')) {
+         @if (confirmPassword?.touched
+         && confirmPassword?.hasError('required')) {
          <span>Campo requerido</span>
          }
 
-         @if (registroFormulario.get('confirmPassword')?.touched
+         @if (confirmPassword?.touched
          && registroFormulario.hasError('mismatch')) {
          <span>No coinciden las contraseñas</span>
          }
