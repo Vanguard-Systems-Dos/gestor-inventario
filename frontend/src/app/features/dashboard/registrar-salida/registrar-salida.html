@@ -25,36 +25,39 @@
           </div>
 
           <div class="form-group">
-            <button type="submit" [disabled]="salidaForm.invalid">Registrar Salida</button>
+            <button type="submit" class="btn-login" [disabled]="salidaForm.invalid">Registrar Salida</button>
           </div>
         </form>
       </div>
 
-      <!-- tabla de confirmación -->
-      <div class="tabla-dashboard" *ngIf="salidasRegistradas.length > 0">
-        <h3>Salidas Registradas</h3>
-        <table class="tabla-con-borde">
-          <thead>
-            <tr>
-              <th>Producto</th>
-              <th>Categoría</th>
-              <th>Cantidad</th>
-              <th>Ubicación</th>
-              <th>Fecha</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let item of salidasRegistradas">
-              <td>{{ item.nombre }}</td>
-              <td>{{ item.categoria }}</td>
-              <td>{{ item.cantidad }}</td>
-              <td>{{ item.ubicacion }}</td>
-              <td>{{ item.fecha | date:'short' }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <!-- tabla de confirmación con @if y @for -->
+      @if (salidasRegistradas.length > 0) {
+        <div class="tabla-dashboard">
+          <h3>Salidas Registradas</h3>
+          <table class="tabla-con-borde">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Cantidad</th>
+                <th>Ubicación</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of salidasRegistradas; track $index) {
+                <tr>
+                  <td>{{ item.nombre }}</td>
+                  <td>{{ item.categoria }}</td>
+                  <td>{{ item.cantidad }}</td>
+                  <td>{{ item.ubicacion }}</td>
+                  <td>{{ item.fecha | date:'short' }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
     </div>
   </section>
 </main>
-
