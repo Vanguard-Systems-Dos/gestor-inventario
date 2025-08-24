@@ -1,0 +1,56 @@
+.btn-accion {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/*tamaño de icones columna acciones para que sean visibles*/
+.btn-accion img {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-accion:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(100%) brightness(80%);
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary-color-1), var(--primary-color-2));
+  color: var(--bg-color);
+  box-shadow: 0 10px 20px var(--primary-color-1);
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px var(--primary-color-2);
+}
+
+.button-login {
+  background-color: var(--primary-color-1);
+  color: var(--highlight-color);
+  padding: 0.9rem 2.2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.button-login:hover {
+  transform: translateY(-2px);
+  background-color: var(--primary-color-2);
+  box-shadow: var(--button-shadow-hover);
+}

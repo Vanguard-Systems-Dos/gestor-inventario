@@ -6,15 +6,16 @@
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
       <div>
         <label>Correo Electronico:</label>
-        <input formControlName="email" type="email" (blur)="loginForm.get('email')?.markAsTouched()"
-          placeholder="Email@direccion.com">
+        <input formControlName="email" type="email" (blur)="email?.markAsTouched()"
+          placeholder="Email@direccion.com" [ngClass]="{'error': email?.touched &&
+           email?.invalid}">
 
-        @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
+        @if (email?.touched && email?.invalid) {
         <div>
-          @if (loginForm.get('email')?.errors?.['required']) {
+          @if (email?.errors?.['required']) {
           <small>Campo Requerido</small>
           }
-          @if(loginForm.get('email')?.errors?.['email']){
+          @if(email?.errors?.['email']){
           <small>Formato Invalido</small>
           }
         </div>
@@ -23,15 +24,17 @@
 
       <div>
         <label>Contraseña:</label>
-        <input formControlName="password" type="password" (blur)="loginForm.get('password')?.markAsTouched()"
-          placeholder="Contraseña">
+        <input formControlName="password" type="password" (blur)="password?.markAsTouched()"
+          placeholder="Contraseña" [ngClass]="{'error': password?.touched &&
+            password?.invalid
+          }">
 
-        @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
+        @if (password?.touched && password?.invalid) {
         <div>
-          @if (loginForm.get('password')?.errors?.['required']) {
+          @if (password?.errors?.['required']) {
           <span>Campo Requerido</span>
           }
-          @if (loginForm.get('password')?.errors?.['minlength']) {
+          @if (password?.errors?.['minlength']) {
           <span>Minimo 6 caracteres</span>
           }
         </div>
@@ -39,10 +42,13 @@
       </div>
 
       <a href="recuperar.html" class="enlace-olvidecontraseña">¿Olvidaste tu contraseña?</a>
+      <a routerLink="/formulario-de-registro" class="enlace-registrate">¿No tenes cuenta?
+        Regístrate</a>
+
+
 
       <div>
         <button type="submit" class="button-login">Iniciar Sesión</button>
-        <!-- <a href="dashboard.html" class="button-login"> Iniciar Sesión </a> -->
       </div>
 
     </form>

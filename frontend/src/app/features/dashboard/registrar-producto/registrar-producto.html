@@ -1,1 +1,34 @@
-<p>registrar-producto works!</p>
+<section>
+  <div class="cuadro-tabla-dashboard">
+    <div class="encabezado-dashboard">
+      <h2>Registrar Nuevo Producto</h2>
+    </div>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" formControlName="nombre" placeholder="Ej. ProductoX" required>
+      </div>
+
+      <div class="form-group">
+        <label for="categoria">Categoría:</label>
+        <input type="text" id="categoria" formControlName="categoria" placeholder="Ej. Categoria#X" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cantidad">Cantidad Inicial:</label>
+        <input type="number" id="cantidad" formControlName="cantidad" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" formControlName="ubicacion" placeholder="Ej. Depósito A1" required>
+      </div>
+
+      <div class="form-group">
+        <button class="btn-login" type="submit" [disabled]="productForm.invalid">
+          Registrar Producto
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
