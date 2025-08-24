@@ -48,6 +48,19 @@ export class FormularioDeRegistro implements OnInit {
     }
   }
 
+  get nombre(){
+    return this.registroFormulario.get('nombre');
+  }
+  get email(){
+    return this.registroFormulario.get('email');
+  }
+  get password(){
+    return this.registroFormulario.get('password');
+  }
+  get confirmPassword(){
+    return this.registroFormulario.get('confirmPassword');
+  }
+
 
 
 }
