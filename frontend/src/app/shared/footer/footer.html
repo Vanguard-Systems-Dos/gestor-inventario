@@ -1,0 +1,38 @@
+<footer class="main-footer" *ngIf="mostrarFooter">
+  <div class="container footer-container">
+    <!-- Enlaces rápidos -->
+    <div class="footer-section sitemap">
+      <h4>Enlaces rápidos</h4>
+      <ul>
+        <li *ngFor="let enlace of enlacesRapidos">
+          <a 
+            *ngIf="!esRutaActual(enlace.path)"
+            [routerLink]="enlace.path" 
+            [class.active]="esRutaActual(enlace.path)"
+            (click)="scrollToTop()">
+            {{ enlace.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Contacto -->
+    <div class="footer-section contact">
+      <h4>Contacto</h4>
+      <p>Email: <a href="mailto:soporte@vanguard-systems.com">soporte@vanguard-systems.com</a></p>
+      <p>Tel: <a href="tel:+5493512345678">+54 9 351 234 5678</a></p>
+    </div>
+  </div>
+
+  <!-- Volver arriba -->
+  <div class="footer-section back-to-top">
+    <a href="javascript:void(0)" class="back-to-top-link" (click)="scrollToTop()" aria-label="Volver arriba">
+      ↑ Volver arriba
+    </a>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Vanguard Systems. Todos los derechos reservados.</p>
+    <p>Desarrollado por <a href="https://vanguard-systems.com" target="_blank">Vanguard Systems</a></p>
+  </div>
+</footer>

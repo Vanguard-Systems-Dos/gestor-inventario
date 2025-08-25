@@ -1,0 +1,135 @@
+.main-footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+:host {
+  display: block;
+  margin-top: auto;
+}
+
+.footer-section h4 {
+  font-size: 1rem;
+  color: var(--highlight-color);
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: var(--highlight-color);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  margin-top: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-color);
+}
+
+.footer-bottom a {
+  color: var(--highlight-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: var(--gradient-end);
+}
+
+/* Volver arriba */
+.back-to-top {
+  margin-top: 1.5rem;
+}
+
+.back-to-top-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.back-to-top-link:hover {
+  background-color: var(--text-color) !important;
+  color: var(--card-bg) !important;
+  border-color: var(--text-color);
+}
+/* Ajuste responsive: en pantallas más anchas, poner los dos párrafos en fila */
+@media (min-width: 600px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+/* alineacion de footer Enlaces hasta Tel */
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}

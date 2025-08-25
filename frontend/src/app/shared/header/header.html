@@ -1,0 +1,26 @@
+<header class="main-header" *ngIf="mostrarHeader">
+  <div class="container header-container">
+    <div class="logo-container">
+      <img
+            [src]="logoUrl"
+            alt="Logo Vanguard Stock"
+            class="logo-img"
+        />
+      <h1 class="logo">Vanguard Stock</h1>
+    </div>
+
+    <nav class="main-nav">
+      <ul>
+        <li *ngFor="let link of links">
+          <a 
+            *ngIf="shouldShowLink(link.path)" 
+            [routerLink]="link.path"
+            routerLinkActive="active-link"
+          >
+            {{ link.label }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

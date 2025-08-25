@@ -1,0 +1,89 @@
+<main>
+  <section>
+    <div class="container cuadro-tabla-dashboard my-4">
+      <div class="row g-4">
+
+        <!-- Tarjetas Info -->
+        <div class="row tarjetas-info-dashboard">
+          @for (item of tarjetasInfo; track item) {
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="tarjeta-info">
+              <h3>{{ item.titulo }}</h3>
+              <p>{{ item.valor }}</p>
+            </div>
+          </div>
+          }
+        </div>
+
+        <!-- Gráficos -->
+        <div class="row tarjetas-graficas-dashboard">
+          @for (graf of graficos; track graf) {
+          <div class="col-12 col-md-6">
+            <div class="tarjeta-grafico">
+              <h3>{{ graf.titulo }}</h3>
+              <img [src]="graf.img" [alt]="graf.titulo">
+            </div>
+          </div>
+          }
+        </div>
+
+        <!-- Inventario -->
+        <div class="encabezado-dashboard">
+          <h2>Inventario</h2>
+          <div class="fila-botones d-flex flex-wrap justify-content-between gap-2">
+            <div class="izquierda d-flex flex-wrap gap-2">
+              <button [routerLink]="'/registrar-producto'">Registrar Entradas</button>
+              <button [routerLink]="'/registrar-salida'">Registrar Salidas</button>
+              <button [routerLink]="'/buscar-producto'">Buscar</button>
+            </div>
+            <div class="derecha">
+              <input type="button" value="Añadir Producto" disabled>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabla de Inventario -->
+        <div class="tabla-dashboard table-responsive">
+          <table class="tabla-con-borde align-middle text-center">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Cantidad</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (prod of productos; track prod) {
+              <tr>
+                <td>{{ prod.nombre }}</td>
+                <td>{{ prod.categoria }}</td>
+                <td>
+                  @if (prod.cantidad > 500) {
+                  <span class="stock-alto">{{ prod.cantidad }}</span>
+                  } @else if (prod.cantidad > 100) {
+                  <span class="stock-medio">{{ prod.cantidad }}</span>
+                  } @else {
+                  <span class="stock-bajo">{{ prod.cantidad }}</span>
+                  }
+                </td>
+                <td>{{ prod.ubicacion }}</td>
+                <td class="acciones">
+                  <button class="btn btn-sm btn-outline-primary editar" title="Editar" disabled>Editar
+                    <i class="bi bi-pencil"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar" disabled> Eliminar
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
