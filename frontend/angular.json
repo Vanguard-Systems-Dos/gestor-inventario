@@ -18,18 +18,22 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/app/app.css"
+              "src/styles.css"
             ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
+            //"server": "src/main.server.ts",
+            //"outputMode": "server",
+            //"ssr": {
+            //  "entry": "src/server.ts"
+            //}
           },
           "configurations": {
             "production": {
@@ -77,12 +81,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/app/app.css"
+              "src/styles.css"
             ]
           }
         }
@@ -90,6 +95,6 @@
     }
   },
   "cli": {
-    "analytics": "4c1bc9b9-0491-4a0b-926d-b4dde1f6a981"
+    "analytics": "ad04e482-479e-4001-b319-33f0f124e49a"
   }
 }

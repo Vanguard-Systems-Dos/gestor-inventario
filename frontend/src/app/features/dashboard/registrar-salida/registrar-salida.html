@@ -1,1 +1,63 @@
-<p>registrar-salida works!</p>
+<main>
+  <section>
+    <div class="cuadro-tabla-dashboard">
+      <div class="encabezado-dashboard">
+        <h2>Registrar Salida de Producto</h2>
+        <form [formGroup]="salidaForm" (ngSubmit)="onRegistrar()" class="formulario-busqueda">
+          <div class="form-group">
+            <label for="nombre">Nombre del Producto:</label>
+            <input type="text" id="nombre" formControlName="nombre" placeholder="Ej. ProductoX">
+          </div>
+
+          <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" formControlName="categoria" placeholder="Ej. Categoria#X">
+          </div>
+
+          <div class="form-group">
+            <label for="cantidad">Cantidad a Retirar:</label>
+            <input type="number" id="cantidad" formControlName="cantidad" min="1" placeholder="Ej. 10">
+          </div>
+
+          <div class="form-group">
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" formControlName="ubicacion" placeholder="Ej. Depósito A1">
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn-login" [disabled]="salidaForm.invalid">Registrar Salida</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- tabla de confirmación con @if y @for -->
+      @if (salidasRegistradas.length > 0) {
+        <div class="tabla-dashboard">
+          <h3>Salidas Registradas</h3>
+          <table class="tabla-con-borde">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Cantidad</th>
+                <th>Ubicación</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of salidasRegistradas; track $index) {
+                <tr>
+                  <td>{{ item.nombre }}</td>
+                  <td>{{ item.categoria }}</td>
+                  <td>{{ item.cantidad }}</td>
+                  <td>{{ item.ubicacion }}</td>
+                  <td>{{ item.fecha | date:'short' }}</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    </div>
+  </section>
+</main>

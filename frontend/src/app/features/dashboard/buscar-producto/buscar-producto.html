@@ -1,1 +1,67 @@
-<p>buscar-producto works!</p>
+<main>
+  <section>
+    <div class="cuadro-tabla-dashboard">
+      <div class="encabezado-dashboard">
+        <h2>Buscar Producto</h2>
+        <form [formGroup]="buscarForm" (ngSubmit)="onBuscar()" class="formulario-busqueda">
+          <div class="form-group">
+            <label for="nombre">Nombre del Producto:</label>
+            <input type="text" id="nombre" formControlName="nombre" placeholder="Ej. ProductoA">
+          </div>
+
+          <div class="form-group">
+            <label for="categoria">Categoría:</label>
+            <input type="text" id="categoria" formControlName="categoria" placeholder="Ej. Categoria#1">
+          </div>
+
+          <div class="form-group">
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" formControlName="ubicacion" placeholder="Ej. Ubicación#1">
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn-login" [disabled]="buscarForm.invalid">Buscar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- tabla de resultados con @if y @for -->
+      @if (resultados.length > 0) {
+        <div class="tabla-dashboard">
+          <h3>Resultados de la Búsqueda</h3>
+          <table class="tabla-con-borde">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Categoría</th>
+                <th>Cantidad</th>
+                <th>Ubicación</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of resultados; track $index) {
+                <tr>
+                  <td>{{ item.nombre }}</td>
+                  <td>{{ item.categoria }}</td>
+                  <td>{{ item.cantidad }}</td>
+                  <td>{{ item.ubicacion }}</td>
+                  <td class="acciones">
+                    <button class="btn-accion editar" title="Editar" disabled>
+                      <img src="img/edit.svg" alt="Editar">
+                    </button>
+                    <button class="btn-accion eliminar" title="Eliminar" disabled>
+                      <img src="img/delete.svg" alt="Eliminar">
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    </div>
+  </section>
+</main>
+
+

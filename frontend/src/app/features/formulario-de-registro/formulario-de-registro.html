@@ -1,1 +1,83 @@
-<p>formulario-de-registro works!</p>
+<main class="form-container">
+
+   <form [formGroup]="registroFormulario" (ngSubmit)="onSubmit()" class="formulario-de-registro">
+      <div>
+         <label>Nombre Completo:</label>
+         <input formControlName="nombre" type="nombre" (blur)="nombre?.markAsTouched()" placeholder="Nombre Completo"
+            [ngClass]="{'error' : nombre?.touched && nombre?.invalid}">
+         @if (nombre?.touched && nombre?.invalid) {
+         <div>
+            @if (nombre?.errors?.['required']) {
+            <span>Campo Requerido</span>
+            }
+            @if (nombre?.errors?.['minlength']) {
+            <span>Minimo 6 caracteres</span>
+            }
+         </div>
+         }
+      </div>
+
+      <div>
+         <label>Correo Electronico:</label>
+         <input formControlName="email" type="email" (blur)="email?.markAsTouched()" placeholder="Correo Electronico"
+            [ngClass]="{'error': email?.touched && email?.invalid}">
+         @if (email?.touched && email?.invalid) {
+         <div>
+            @if (email?.errors?.['required']) {
+            <small>Campo Requerido</small>
+            }
+            @if(email?.errors?.['email']){
+            <small>Formato Invalido</small>
+            }
+         </div>
+         }
+      </div>
+
+
+      <div>
+         <label>Contraseña:</label>
+         <input formControlName="password" type="password" (blur)="password?.markAsTouched()" placeholder="Contraseña"
+            [ngClass]="{'error': password?.touched && password?.invalid}">
+         @if (password?.touched && password?.invalid) {
+         <div>
+            @if (password?.errors?.['required']) {
+            <span>Campo Requerido</span>
+            }
+            @if (password?.errors?.['minlength']) {
+            <span>Minimo 6 caracteres</span>
+            }
+         </div>
+         }
+      </div>
+
+
+      <div>
+         <label>Confirmar Contraseña:</label>
+         <input formControlName="confirmPassword" type="password" (blur)="confirmPassword?.markAsTouched()"
+            placeholder="Confirmar Contraseña"
+            [ngClass]="{'error': confirmPassword?.touched && confirmPassword?.invalid}">
+
+         @if (confirmPassword?.touched
+         && confirmPassword?.hasError('required')) {
+         <span>Campo requerido</span>
+         }
+
+         @if (confirmPassword?.touched
+         && registroFormulario.hasError('mismatch')) {
+         <span>No coinciden las contraseñas</span>
+         }
+      </div>
+
+
+
+      <div class="form-group">
+         <label class="checkbox-container">
+            <input type="checkbox" name="terminos" id="terminos" required>
+            <a href="/terminos" target="_blank">Acepto los terminos y condiciones</a>
+         </label>
+      </div>
+      <div class="form-group">
+         <button class="btn-login" type="submit">Registrarse</button>
+      </div>
+   </form>
+</main>

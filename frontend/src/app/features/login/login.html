@@ -3,21 +3,52 @@
   <section class="login-section">
     <h2 class="login-title"> Inicio de sesión</h2>
 
-    <form class="login-form" action="#">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
       <div>
-        <label for="correo"> Correo Electronico: </label>
-        <input type="email" id="correo" name="correo" placeholder="Email@direccion.com" required>
+        <label>Correo Electronico:</label>
+        <input formControlName="email" type="email" (blur)="email?.markAsTouched()"
+          placeholder="Email@direccion.com" [ngClass]="{'error': email?.touched &&
+           email?.invalid}">
+
+        @if (email?.touched && email?.invalid) {
+        <div>
+          @if (email?.errors?.['required']) {
+          <small>Campo Requerido</small>
+          }
+          @if(email?.errors?.['email']){
+          <small>Formato Invalido</small>
+          }
+        </div>
+        }
       </div>
 
       <div>
-        <label for="password"> Contraseña: </label>
-        <input type="password" id="password" name="contraseña" placeholder="Contraseña" required>
+        <label>Contraseña:</label>
+        <input formControlName="password" type="password" (blur)="password?.markAsTouched()"
+          placeholder="Contraseña" [ngClass]="{'error': password?.touched &&
+            password?.invalid
+          }">
+
+        @if (password?.touched && password?.invalid) {
+        <div>
+          @if (password?.errors?.['required']) {
+          <span>Campo Requerido</span>
+          }
+          @if (password?.errors?.['minlength']) {
+          <span>Minimo 6 caracteres</span>
+          }
+        </div>
+        }
       </div>
 
       <a href="recuperar.html" class="enlace-olvidecontraseña">¿Olvidaste tu contraseña?</a>
+      <a routerLink="/formulario-de-registro" class="enlace-registrate">¿No tenes cuenta?
+        Regístrate</a>
+
+
 
       <div>
-        <a href="dashboard.html" class="button-login"> Iniciar Sesión </a>
+        <button type="submit" class="button-login">Iniciar Sesión</button>
       </div>
 
     </form>

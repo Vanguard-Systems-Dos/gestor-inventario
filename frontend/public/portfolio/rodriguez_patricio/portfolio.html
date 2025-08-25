@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patricio Rodríguez | Portfolio</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body class="dark-mode">
+
+   <!-- Preloader SPA -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!--========== NAVBAR ==========-->
+  <nav class="navbar navbar-expand-lg navbar-dark u-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">PatoDev</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tech">Tecnologías</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tools">Herramientas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#expedu">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--========== /NAVBAR ==========-->
+
+
+  <!--========== HERO (PARTÍCULAS) ==========-->
+  <header id="hero" class="hero-section position-relative" data-aos="fade-in">
+    <div id="particles-js" class="particles-container"></div>
+    <div class="hero-content text-center" data-aos="zoom-in" data-aos-delay="200">
+      <h1 class="hero-title">Patricio Rodríguez</h1>
+      <p class="hero-subtitle">Desarrollador Full-Stack · Python · TypeScript · Microservicios</p>
+      <a href="#contact" class="btn btn-hero" data-aos="fade-up" data-aos-delay="400">Conversemos</a>
+    </div>
+  </header>
+  <!--========== /HERO ==========-->
+
+
+  <!--========== SOBRE MÍ ==========-->
+<section id="about" class="section-diagonal-top u-dark-bg" data-aos="fade-right">
+  <div class="container py-5">
+    <h2 class="section-title text-center">Sobre Mí</h2>
+    <div class="row align-items-start mt-4">
+      
+      <!-- Columna 1: párrafo -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <p>
+          <strong>Rodríguez Patricio Esteban</strong><br />
+          Desarrollador Full-Stack con +3 años de experiencia en Córdoba, Argentina. Especializado en
+          <em>FastAPI</em>, <em>Node.js</em>, <em>React</em> y arquitecturas de Microservicios.
+          Apasionado por el código limpio, las buenas prácticas y la experiencia de usuario.
+        </p>
+      </div>
+      
+      <!-- Columna 2: lista -->
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <ul class="list-unstyled mt-3">
+          <li>• Diseño e implementación de sistemas web complejos con metodologías ágiles (Scrum).</li>
+          <li>• Microservicios y colas con RabbitMQ, contenedores Docker y orquestación básica.</li>
+          <li>• Frontends modernos: Quasar (Vue), React + TypeScript, Next.js, Tailwind CSS.</li>
+          <li>• Bases de datos: PostgreSQL, MySQL, Firebird, MongoDB (básico).</li>
+          <li>• Documentación con Swagger, control de calidad de código y revisiones de PRs.</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</section>
+  <!--========== /SOBRE MÍ ==========-->
+
+
+  <!--========== TECNOLOGÍAS (CARRUSEL) ==========-->
+  <section id="tech" class="section-diagonal-bottom u-darker-bg" data-aos="fade-right" data-aos-delay="200">
+    <div class="container py-5">
+      <h2 class="section-title text-center text-light">Tecnologías</h2>
+      <div id="techCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center gx-4 gy-4">
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-python fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Python</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-node-js fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Node.js</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-react fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">React</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-vuejs fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Quasar (Vue)</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-angular fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Angular</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center gx-4 gy-4">
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-js-square fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">JavaScript</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-js fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">TypeScript</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-server fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Express</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-php fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Laravel (Básico)</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-database fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">PostgreSQL</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center gx-4 gy-4">
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-database fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">MySQL</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-database fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Firebird</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-database fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">MongoDB</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-docker fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Docker</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-project-diagram fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">RabbitMQ</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center gx-4 gy-4">
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-file-code fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Swagger</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-code fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">SQLAlchemy</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-python fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">FastAPI</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-vuejs fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Tailwind CSS</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-bootstrap fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Bootstrap</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center gx-4 gy-4">
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-server fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Sequelize</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fas fa-database fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Firebird</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-docker fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Redis (Básico)</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-php fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">C# (Básico)</p>
+              </div>
+              <div class="col-4 col-md-2 text-center">
+                <i class="fab fa-python fa-3x tech-icon"></i>
+                <p class="mt-2 tech-label">Django (Básico)</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controles Carrusel -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#techCarousel"
+          data-bs-slide="prev"
+          data-aos="fade-up" data-aos-delay="400"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#techCarousel"
+          data-bs-slide="next"
+          data-aos="fade-up" data-aos-delay="400"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+  </section>
+  <!--========== /TECNOLOGÍAS ==========-->
+
+
+  <!--========== HERRAMIENTAS ==========-->
+  <section id="tools" class="section-diagonal-top u-dark-bg" data-aos="fade-in" data-aos-delay="200">
+    <div class="container py-5">
+      <h2 class="section-title text-center">Herramientas</h2>
+      <div class="row justify-content-center mt-4 gx-4 gy-4">
+        <div class="col-4 col-md-2 text-center">
+          <i class="fab fa-docker fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">Docker</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <i class="fab fa-git-alt fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">Git</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <i class="fas fa-database fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">IBExpert</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <i class="fab fa-slack fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">Slack</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <i class="fas fa-code fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">Visual Studio</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <i class="fas fa-database fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">Postman</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <i class="fas fa-file-code fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">Swagger</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <i class="fab fa-jira fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">Jira</p>
+        </div>
+        <div class="col-4 col-md-2 text-center">
+          <i class="fas fa-terminal fa-3x tool-icon"></i>
+          <p class="mt-2 tool-label">Sourcetree</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--========== /HERRAMIENTAS ==========-->
+
+
+  <!--========== PROYECTOS ==========-->
+  <section id="projects" class="section-diagonal-bottom u-darker-bg" data-aos="fade-left" data-aos-delay="200">
+    <div class="container py-5">
+      <h2 class="section-title text-center text-light">Proyectos Destacados</h2>
+      <div class="row mt-4 g-4">
+
+        <!-- Proyecto 1 -->
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+          <div class="card project-card h-100">
+            <div class="row g-0 h-100">
+              <div class="col-md-12">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-light">Portal de Compras y Gestión Municipal</h5>
+                  <p class="card-text mb-2 text-secondary">
+                    <small>Oct 2024 – Actualidad</small>
+                  </p>
+                  <p class="card-text mb-3 text-light">
+                    Desarrollo de plataforma de licitaciones, subastas y pagos municipales.
+                    Arquitectura basada en microservicios con Docker. Frontend en Vue (Quasar),
+                    TypeScript, Next.js y Tailwind. Backend en PHP (Laravel) y Python (FastAPI).
+                    Base de datos en PostgreSQL.
+                  </p>
+                  <a href="#contact" class="mt-auto btn btn-sm btn-outline-hero">
+                    Ver más / Contactar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="400">
+          <div class="card project-card h-100">
+            <div class="row g-0 h-100">
+              <div class="col-md-12">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-light">Microservicio Gateway de Pagos</h5>
+                  <p class="card-text mb-2 text-secondary">
+                    <small>Abr 2024 – Jul 2024</small>
+                  </p>
+                  <p class="card-text mb-3 text-light">
+                    Microservicio para integrar múltiples métodos de pago. Frontend en React y
+                    Ant Design con Websockets. Backend en Node.js, RabbitMQ, Express y Sequelize.
+                    Base de datos en MySQL.
+                  </p>
+                  <a href="#contact" class="mt-auto btn btn-sm btn-outline-hero">
+                    Ver más / Contactar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 (Placeholder) -->
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="500">
+          <div class="card project-card h-100">
+            <div class="row g-0 h-100">
+              <div class="col-md-12">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title text-light">ERP Gestor de empresas Descktop y Web</h5>
+                  <p class="card-text mb-2 text-secondary">
+                    <small>Jun 2023 – Oct 2024</small>
+                  </p>
+                  <p class="card-text mb-3 text-light">
+                    Desarrollo de un ERP para gestión empresarial. Frontend en React y backend en Express.
+                    Integración con Firebird y MySQL. Implementación de workers y workerstree para tareas
+                    asíncronas. Documentación con Swagger y pruebas con Postman.
+                    Management de proyectos con Jira y control de versiones con Git.
+                    Soluciones de CI/CD con Docker.
+                  </p>
+                  <a href="#contact" class="mt-auto btn btn-sm btn-outline-hero">
+                    Ver más / Contactar
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!--========== /PROYECTOS ==========-->
+
+
+  <!--========== EXPERIENCIA & EDUCACIÓN ==========-->
+  <section id="expedu" class="section-diagonal-bottom u-darker-bg" data-aos="fade-up" data-aos-delay="200">
+    <div class="container py-5">
+      <h2 class="section-title text-center text-light">Experiencia &amp; Educación</h2>
+      <div class="row mt-4 g-5">
+
+        <!-- EXPERIENCIA LABORAL -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <h4 class="subsection-title mb-3 text-light">Experiencia Laboral</h4>
+          <ul class="timeline">
+            <li>
+              <div class="timeline-content">
+                <h5 class="text-light">Full Stack Developer | Trabajo Independiente</h5>
+                <p class="text-secondary"><small>Oct 2024 – Actualidad | Córdoba, Argentina</small></p>
+                <p class="text-light">
+                  • Desarrollo de aplicaciones backend en Python con FastAPI, arquitectura gateway,
+                  orquestación de microservicios y consumo de servicios externos.<br/>
+                  • Automatización de tareas para acelerar el desarrollo del equipo.<br/>
+                  • Desarrollo y mantenimiento de frontend con TypeScript, Quasar y React.<br/>
+                  • Gestión de base de datos y desarrollo de procedimientos almacenados en PostgreSQL.<br/>
+                  • Participación en reuniones con clientes y toma de decisiones técnicas.<br/>
+                  • Control de calidad de código, revisiones de PRs y asistencia técnica al equipo.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h5 class="text-light">Full Stack Developer | Flexxus S.A.</h5>
+                <p class="text-secondary"><small>Jun 2023 – Oct 2024 | Córdoba, Argentina</small></p>
+                <p class="text-light">
+                  • Desarrollo de endpoints RESTful con Node.js, Express y TypeScript.<br/>
+                  • Diseño de CRUD completos y lógica de negocio en procedimientos almacenados con Firebird (IbExpert).<br/>
+                  • Implementación de API de pagos, colas con RabbitMQ, y microservicios con Sequelize y MySQL.<br/>
+                  • Documentación técnica con Swagger y pruebas con Postman.<br/>
+                  • Comprensión de modelos de datos complejos en entornos ERP.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h5 class="text-light">Full Stack Developer Jr. | Henry</h5>
+                <p class="text-secondary"><small>Mar 2023 – Abr 2023 | Córdoba, Argentina</small></p>
+                <p class="text-light">
+                  • Entrenamiento intensivo en tecnologías Full Stack y buenas prácticas de desarrollo colaborativo.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- EDUCACIÓN -->
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <h4 class="subsection-title mb-3 text-light">Educación</h4>
+          <ul class="timeline">
+            <li>
+              <div class="timeline-content">
+                <h5 class="text-light">ISPC | Tecnicatura Superior en Desarrollo de Software</h5>
+                <p class="text-secondary"><small>Mar 2024 – Actualidad | Córdoba, Argentina</small></p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h5 class="text-light">ISPC (PIL) | Full Stack Web Developer (.NET)</h5>
+                <p class="text-secondary"><small>May 2023 – Nov 2023 | Córdoba, Argentina</small></p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h5 class="text-light">Henry Bootcamp | Full Stack Web Developer (PERN Stack)</h5>
+                <p class="text-secondary"><small>Nov 2022 – Abr 2023 | Córdoba, Argentina</small></p>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-content">
+                <h5 class="text-light">Integral Capacitando | Fundamentos de Programación y BD</h5>
+                <p class="text-secondary"><small>2021 | Avalado por UTN Facultad Regional Córdoba</small></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--========== /EXPERIENCIA & EDUCACIÓN ==========-->
+
+  
+  <!-- Modal Bootstrap -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Dejá tu mensaje</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label text-gray-light">Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Tu nombre"
+                required
+              />
+              <div class="invalid-feedback">Ingresa tu nombre.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label text-gray-light">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="tu@correo.com"
+                required
+              />
+              <div class="invalid-feedback">Email inválido.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label text-gray-light">Mensaje</label>
+              <textarea
+                class="form-control"
+                id="message"
+                rows="4"
+                placeholder="Escribí tu consulta..."
+                required
+              ></textarea>
+              <div class="invalid-feedback">El mensaje no puede quedar vacío.</div>
+            </div>
+            <button type="submit" class="btn btn-hero w-100">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--========== CONTACTO (MODAL) ==========-->
+  <footer id="contact" class="section-diagonal-top u-dark-bg">
+    <div class="container py-5">
+      <h2 class="section-title text-center">Contáctame</h2>
+      <p class="text-center text-gray-light mb-4">¿Tenés un proyecto? ¡Hablemos!</p>
+      <div class="text-center">
+        <!-- Botón que abre modal -->
+        <button type="button" class="btn btn-hero" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Conversemos
+        </button>
+      </div>
+    </div>
+  </footer>
+  <!--========== /CONTACTO ==========-->
+
+
+  <!-- BOOTSTRAP JS BUNDLE -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 600 });
+  </script>
+
+  <!-- PARTICLES.JS CONFIG -->
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 60,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#FFA67D"
+        },
+        "shape": {
+          "type": "circle"
+        },
+        "opacity": {
+          "value": 0.4
+        },
+        "size": {
+          "value": 3
+        },
+        "move": {
+          "enable": true,
+          "speed": 2
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          }
+        },
+        "modes": {
+          "repulse": {
+            "distance": 100
+          },
+          "push": {
+            "particles_nb": 4
+          }
+        }
+      },
+      "retina_detect": true
+    });
+
+    // Validación del formulario (Bootstrap)
+    (function () {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.prototype.slice.call(forms).forEach((form) => {
+        form.addEventListener(
+          'submit',
+          (event) => {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          },
+          false
+        );
+      });
+    })();
+
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("preloader");
+      loader.style.opacity = "0";
+      setTimeout(() => loader.style.display = "none", 500);
+    });
+  </script>
+</body>
+</html>
