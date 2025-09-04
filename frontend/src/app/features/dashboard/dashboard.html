@@ -37,7 +37,7 @@
               <button [routerLink]="'/buscar-producto'">Buscar</button>
             </div>
             <div class="derecha">
-              <input type="button" value="Añadir Producto" disabled>
+              <button [routerLink]="'/formulario-producto'">Añadir Producto</button>
             </div>
           </div>
         </div>
@@ -70,10 +70,10 @@
                 </td>
                 <td>{{ prod.ubicacion }}</td>
                 <td class="acciones">
-                  <button class="btn btn-sm btn-outline-primary editar" title="Editar" disabled>Editar
+                  <button class="btn btn-sm btn-outline-primary editar" title="Editar">Editar
                     <i class="bi bi-pencil"></i>
                   </button>
-                  <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar" disabled> Eliminar
+                  <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar"> Eliminar
                     <i class="bi bi-trash"></i>
                   </button>
                 </td>
