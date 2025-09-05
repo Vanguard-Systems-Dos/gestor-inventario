@@ -110,8 +110,4 @@ export class Home {
     setInterval(() => this.next(), 5000);
   }
 
-
-
 }
-
-//NgbModule

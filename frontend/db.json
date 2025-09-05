@@ -1,0 +1,228 @@
+{
+  "productos": [
+    {
+      "id": "1b37",
+      "nombre": "tambor",
+      "codigo_producto": 1111,
+      "marca": "cormega",
+      "modelo": "alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "7840",
+      "nombre": "Pinza",
+      "codigo_producto": 1111111,
+      "marca": "forze",
+      "modelo": "liviano",
+      "unidad_medida": "Piezas",
+      "descripcion": "pinza de fuerza",
+      "estado": "activo",
+      "stock_actual": 50000
+    }
+  ],
+  "unidades_de_medicas": [
+    {
+      "codigo": "UN",
+      "nombre": "Unidad"
+    },
+    {
+      "codigo": "CA",
+      "nombre": "Caja"
+    },
+    {
+      "codigo": "PA",
+      "nombre": "Paquete"
+    },
+    {
+      "codigo": "BOL",
+      "nombre": "Bolsa"
+    },
+    {
+      "codigo": "BOT",
+      "nombre": "Botella"
+    },
+    {
+      "codigo": "LAT",
+      "nombre": "Lata"
+    },
+    {
+      "codigo": "ROL",
+      "nombre": "Rollo"
+    },
+    {
+      "codigo": "M",
+      "nombre": "Metro"
+    },
+    {
+      "codigo": "CM",
+      "nombre": "Centímetro"
+    },
+    {
+      "codigo": "MM",
+      "nombre": "Milímetro"
+    },
+    {
+      "codigo": "KG",
+      "nombre": "Kilogramo"
+    },
+    {
+      "codigo": "G",
+      "nombre": "Gramo"
+    },
+    {
+      "codigo": "L",
+      "nombre": "Litro"
+    },
+    {
+      "codigo": "ML",
+      "nombre": "Mililitro"
+    },
+    {
+      "codigo": "M2",
+      "nombre": "Metro cuadrado"
+    },
+    {
+      "codigo": "M3",
+      "nombre": "Metro cúbico"
+    },
+    {
+      "codigo": "PZ",
+      "nombre": "Piezas"
+    },
+    {
+      "codigo": "JGO",
+      "nombre": "Juego"
+    },
+    {
+      "codigo": "TAR",
+      "nombre": "Tarro"
+    },
+    {
+      "codigo": "SOB",
+      "nombre": "Sobre"
+    },
+    {
+      "codigo": "FRAS",
+      "nombre": "Frasco"
+    },
+    {
+      "codigo": "BID",
+      "nombre": "Bidón"
+    },
+    {
+      "codigo": "TUB",
+      "nombre": "Tubo"
+    },
+    {
+      "codigo": "PQT",
+      "nombre": "Paquete chico"
+    },
+    {
+      "codigo": "TARJ",
+      "nombre": "Tarjeta"
+    },
+    {
+      "codigo": "BUL",
+      "nombre": "Bulk / a granel"
+    },
+    {
+      "codigo": "ROLLO",
+      "nombre": "Rollo grande"
+    },
+    {
+      "codigo": "JARR",
+      "nombre": "Jarra"
+    },
+    {
+      "codigo": "BLQ",
+      "nombre": "Bloque"
+    },
+    {
+      "codigo": "CJA",
+      "nombre": "Caja grande"
+    },
+    {
+      "codigo": "SACO",
+      "nombre": "Saco"
+    },
+    {
+      "codigo": "LATGR",
+      "nombre": "Lata grande"
+    },
+    {
+      "codigo": "TUBO",
+      "nombre": "Tubo plástico"
+    },
+    {
+      "codigo": "FRASC",
+      "nombre": "Frasco chico"
+    },
+    {
+      "codigo": "BOTGR",
+      "nombre": "Botella grande"
+    },
+    {
+      "codigo": "PAQGR",
+      "nombre": "Paquete grande"
+    },
+    {
+      "codigo": "CAPS",
+      "nombre": "Cápsulas"
+    },
+    {
+      "codigo": "TABL",
+      "nombre": "Tabla"
+    },
+    {
+      "codigo": "PLCA",
+      "nombre": "Placa"
+    },
+    {
+      "codigo": "ROLPE",
+      "nombre": "Rollo de papel"
+    },
+    {
+      "codigo": "SOBGR",
+      "nombre": "Sobre grande"
+    },
+    {
+      "codigo": "BARR",
+      "nombre": "Barra"
+    },
+    {
+      "codigo": "FRGR",
+      "nombre": "Frasco grande"
+    },
+    {
+      "codigo": "TAP",
+      "nombre": "Tapón"
+    },
+    {
+      "codigo": "DISP",
+      "nombre": "Dispensador"
+    },
+    {
+      "codigo": "TUBGR",
+      "nombre": "Tubo grande"
+    },
+    {
+      "codigo": "BIDGR",
+      "nombre": "Bidón grande"
+    },
+    {
+      "codigo": "BULGR",
+      "nombre": "Bulk grande"
+    },
+    {
+      "codigo": "ROLCH",
+      "nombre": "Rollo chico"
+    },
+    {
+      "codigo": "PAQCH",
+      "nombre": "Paquete chico"
+    }
+  ]
+}

@@ -7,6 +7,8 @@ import { FormularioDeRegistro } from './features/formulario-de-registro/formular
 import { RegistrarProductosComponent } from './features/dashboard/registrar-producto/registrar-producto';
 import { BuscarProductoComponent } from './features/dashboard/buscar-producto/buscar-producto';
 import { RegistrarSalidaComponent } from './features/dashboard/registrar-salida/registrar-salida';
+import { FormularioProducto } from './features/dashboard/formulario-producto/formulario-producto';
+
 
 export const routes: Routes = [
     { path: '', component: Home, pathMatch: 'full' },
@@ -17,5 +19,6 @@ export const routes: Routes = [
     { path: 'registrar-producto', component: RegistrarProductosComponent },
     { path: 'buscar-producto', component: BuscarProductoComponent },
     { path: 'registrar-salida', component: RegistrarSalidaComponent },
+    { path: 'formulario-producto', component: FormularioProducto },
     { path: '**', redirectTo: '' }
 ];
