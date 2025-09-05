@@ -1,8 +1,8 @@
 <main>
     <section>
         <div class="container-fluid mt-4">
-            <h2 class="mb-4">Formulario de Producto</h2>
-            <form (ngSubmit)="altaProducto(producto)" #formProducto="ngForm">
+            <h2 class="text-center mb-4">Formulario de Producto</h2>
+            <form class="formularioPro" (ngSubmit)="altaProducto(producto)" #formProducto="ngForm">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre:</label>
                     <input type="text" [(ngModel)]="producto.nombre" class="form-control" id="nombre" name="nombre">
@@ -24,9 +24,11 @@
                     <label for="unidad_medida" class="form-label">Unidad de Medida:</label>
                     <select id="unidad_medida" name="unidad_medida" class="form-select"
                         [(ngModel)]="producto.unidad_medida">
-                        <option *ngFor="let unidad of unidadesMedida" [value]="unidad.codigo">
-                            {{ unidad.nombre }}
+                        @for (unidad of unidadesMedidas$ | async; track unidad.codigo) {
+                        <option>
+                            {{unidad.nombre}}
                         </option>
+                        }
                     </select>
                 </div>
                 <div class="mb-3">
@@ -46,8 +48,11 @@
                         <option value="inactivo">Inactivo</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Guardar</button>
-                <button type="button" class="btn btn-danger">Cancelar</button>
+                <div class="d-flex w-100 gap-2">
+                    <button type="submit" class="btn-dashboard">Guardar</button>
+                    <button type="button" (click)="cancelarFormulario()" class="btn-dashboard">Cancelar</button>
+                    <button [routerLink]="'/dashboard'" type="button" class="btn-dashboard ms-auto">Salir</button>
+                </div>
             </form>
         </div>
     </section>

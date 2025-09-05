@@ -1,114 +1,26 @@
 {
   "productos": [
     {
-      "id": "dc22",
-      "nombre": "turca",
-      "codigo_producto": 1111111,
-      "marca": "prueba",
-      "modelo": "",
-      "unidad_medida": "10 kilos",
-      "descripcion": "sssss",
-      "estado": "activo",
-      "stock_actual": 0
-    },
-    {
-      "id": "c41e",
-      "nombre": "turca",
-      "codigo_producto": 1111111,
-      "marca": "prueba",
-      "modelo": "",
-      "unidad_medida": "10 kilos",
-      "descripcion": "sssss",
-      "estado": "activo",
-      "stock_actual": 0
-    },
-    {
-      "id": "9ec8",
-      "nombre": "turca",
-      "codigo_producto": 1111111,
-      "marca": "prueba",
-      "modelo": "",
-      "unidad_medida": "10 kilos",
-      "descripcion": "sssss",
-      "estado": "activo",
-      "stock_actual": 0
-    },
-    {
-      "id": "7aa1",
-      "nombre": "turca",
-      "codigo_producto": 1111111,
-      "marca": "prueba",
-      "modelo": "",
-      "unidad_medida": "10 kilos",
-      "descripcion": "sssss",
-      "estado": "activo",
-      "stock_actual": 0
-    },
-    {
-      "id": "62e8",
-      "nombre": "turca",
-      "codigo_producto": 1111111,
-      "marca": "prueba",
-      "modelo": "",
-      "unidad_medida": "10 kilos",
-      "descripcion": "sssss",
-      "estado": "activo",
-      "stock_actual": 0
-    },
-    {
-      "id": "e2f0",
-      "nombre": "turca",
-      "codigo_producto": 1111111,
-      "marca": "prueba",
-      "modelo": "",
-      "unidad_medida": "10 kilos",
-      "descripcion": "sssss",
-      "estado": "activo",
-      "stock_actual": 0
-    },
-    {
-      "id": "d2e9",
-      "nombre": "turca",
-      "codigo_producto": 1111111,
-      "marca": "prueba",
-      "modelo": "",
-      "unidad_medida": "10 kilos",
-      "descripcion": "sssss",
-      "estado": "activo",
-      "stock_actual": 0
-    },
-    {
-      "id": "8146",
-      "nombre": "turca",
-      "codigo_producto": 1111111,
-      "marca": "prueba",
-      "modelo": "",
-      "unidad_medida": "10 kilos",
-      "descripcion": "sssss",
-      "estado": "activo",
-      "stock_actual": 0
-    },
-    {
-      "id": "c637",
-      "nombre": "prueba",
+      "id": "1b37",
+      "nombre": "tambor",
       "codigo_producto": 1111,
-      "marca": "simulacion",
-      "modelo": "",
-      "unidad_medida": "20 kilos",
-      "descripcion": "hola prueba",
+      "marca": "cormega",
+      "modelo": "alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "tambor de residuos",
       "estado": "activo",
-      "stock_actual": 0
+      "stock_actual": 100
     },
     {
-      "id": "5191",
-      "nombre": "prueba",
-      "codigo_producto": 1111,
-      "marca": "simulacion",
-      "modelo": "",
-      "unidad_medida": "20 kilos",
-      "descripcion": "hola prueba",
+      "id": "7840",
+      "nombre": "Pinza",
+      "codigo_producto": 1111111,
+      "marca": "forze",
+      "modelo": "liviano",
+      "unidad_medida": "Piezas",
+      "descripcion": "pinza de fuerza",
       "estado": "activo",
-      "stock_actual": 0
+      "stock_actual": 50000
     }
   ],
   "unidades_de_medicas": [
