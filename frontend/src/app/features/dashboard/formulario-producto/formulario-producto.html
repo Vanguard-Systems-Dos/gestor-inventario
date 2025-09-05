@@ -1,32 +1,47 @@
 <main>
     <section>
         <div class="container-fluid mt-4">
-            <h2 class="mb-4">Formulario de Registros</h2>
-            <form action="">
+            <h2 class="mb-4">Formulario de Producto</h2>
+            <form (ngSubmit)="altaProducto(producto)" #formProducto="ngForm">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre">
+                    <input type="text" [(ngModel)]="producto.nombre" class="form-control" id="nombre" name="nombre">
                 </div>
                 <div class="mb-3">
                     <label for="codigo_producto" class="form-label">Código Producto:</label>
-                    <input type="number" class="form-control" id="codigo_producto" name="codigo_producto">
+                    <input type="number" [(ngModel)]="producto.codigo_producto" class="form-control"
+                        id="codigo_producto" name="codigo_producto">
                 </div>
                 <div class="mb-3">
                     <label for="marca" class="form-label">Marca:</label>
-                    <input type="text" class="form-control" id="marca" name="marca">
+                    <input type="text" [(ngModel)]="producto.marca" class="form-control" id="marca" name="marca">
+                </div>
+                <div class="mb-3">
+                    <label for="modelo" class="form-label">Modelo:</label>
+                    <input type="text" [(ngModel)]="producto.modelo" class="form-control" id="modelo" name="modelo">
                 </div>
                 <div class="mb-3">
                     <label for="unidad_medida" class="form-label">Unidad de Medida:</label>
-                    <input type="text" class="form-control" id="unidad_medida" name="unidad_medida">
+                    <select id="unidad_medida" name="unidad_medida" class="form-select"
+                        [(ngModel)]="producto.unidad_medida">
+                        <option *ngFor="let unidad of unidadesMedida" [value]="unidad.codigo">
+                            {{ unidad.nombre }}
+                        </option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="stock_actual" class="form-label">Cantidad:</label>
+                    <input type="number" [(ngModel)]="producto.stock_actual" class="form-control" id="stock_actual"
+                        name="stock_actual">
                 </div>
                 <div class="mb-3">
                     <label for="descripcion" class="form-label">Descripción:</label>
-                    <textarea name="descripcion" id="descripcion" class="form-control" rows="6"></textarea>
-                    
+                    <textarea name="descripcion" [(ngModel)]="producto.descripcion" id="descripcion"
+                        class="form-control" rows="6"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="estado" class="form-label">Estado:</label>
-                    <select name="estado" id="estado" class="form-select">
+                    <select name="estado" id="estado" class="form-select" [(ngModel)]="producto.estado">
                         <option value="activo">Activo</option>
                         <option value="inactivo">Inactivo</option>
                     </select>

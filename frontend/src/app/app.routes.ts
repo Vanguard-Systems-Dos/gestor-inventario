@@ -9,6 +9,7 @@ import { BuscarProductoComponent } from './features/dashboard/buscar-producto/bu
 import { RegistrarSalidaComponent } from './features/dashboard/registrar-salida/registrar-salida';
 import { FormularioProducto } from './features/dashboard/formulario-producto/formulario-producto';
 
+
 export const routes: Routes = [
     { path: '', component: Home, pathMatch: 'full' },
     { path: 'login', component: Login },
