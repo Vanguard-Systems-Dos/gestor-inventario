@@ -21,208 +21,335 @@
       "descripcion": "pinza de fuerza",
       "estado": "activo",
       "stock_actual": 50000
+    },
+    {
+      "id": "125f",
+      "nombre": "Prueba Nicolas",
+      "codigo_producto": 1234,
+      "marca": "nada",
+      "modelo": "3",
+      "unidad_medida": "Tarro",
+      "descripcion": "Prueba de formulario de producto",
+      "estado": "activo",
+      "stock_actual": 10
+    },
+    {
+      "id": "0862",
+      "nombre": "ProductoPrueba",
+      "codigo_producto": 1e+21,
+      "marca": "5555555555555",
+      "modelo": "prueba",
+      "unidad_medida": "",
+      "descripcion": "ssss",
+      "estado": "activo",
+      "stock_actual": 1
+    },
+    {
+      "id": "923e",
+      "nombre": "ss",
+      "codigo_producto": 22,
+      "marca": "222",
+      "modelo": "22",
+      "unidad_medida": "Juego",
+      "descripcion": "222",
+      "estado": "activo",
+      "stock_actual": 22
+    },
+    {
+      "id": "ba95",
+      "nombre": "ss",
+      "codigo_producto": 11111111111,
+      "marca": "11",
+      "modelo": "11",
+      "unidad_medida": "Juego",
+      "descripcion": "1",
+      "estado": "activo",
+      "stock_actual": 1
+    },
+    {
+      "id": "65db",
+      "nombre": "aa",
+      "codigo_producto": "",
+      "marca": "aa",
+      "modelo": "",
+      "unidad_medida": "",
+      "descripcion": "aa",
+      "estado": "activo",
+      "stock_actual": 0
+    },
+    {
+      "id": "0224",
+      "nombre": "Susana",
+      "codigo_producto": "",
+      "marca": "",
+      "modelo": "s",
+      "unidad_medida": "",
+      "descripcion": "",
+      "estado": "activo",
+      "stock_actual": 0
+    },
+    {
+      "id": "a2c3",
+      "nombre": "sss",
+      "codigo_producto": "",
+      "marca": "sss",
+      "modelo": "",
+      "unidad_medida": "",
+      "descripcion": "ss",
+      "estado": "activo",
+      "stock_actual": 0
     }
   ],
   "unidades_de_medicas": [
     {
       "codigo": "UN",
-      "nombre": "Unidad"
+      "nombre": "Unidad",
+      "id": "5667"
     },
     {
       "codigo": "CA",
-      "nombre": "Caja"
+      "nombre": "Caja",
+      "id": "bce1"
     },
     {
       "codigo": "PA",
-      "nombre": "Paquete"
+      "nombre": "Paquete",
+      "id": "d532"
     },
     {
       "codigo": "BOL",
-      "nombre": "Bolsa"
+      "nombre": "Bolsa",
+      "id": "7223"
     },
     {
       "codigo": "BOT",
-      "nombre": "Botella"
+      "nombre": "Botella",
+      "id": "ec48"
     },
     {
       "codigo": "LAT",
-      "nombre": "Lata"
+      "nombre": "Lata",
+      "id": "0624"
     },
     {
       "codigo": "ROL",
-      "nombre": "Rollo"
+      "nombre": "Rollo",
+      "id": "c797"
     },
     {
       "codigo": "M",
-      "nombre": "Metro"
+      "nombre": "Metro",
+      "id": "2adc"
     },
     {
       "codigo": "CM",
-      "nombre": "Centímetro"
+      "nombre": "Centímetro",
+      "id": "75dc"
     },
     {
       "codigo": "MM",
-      "nombre": "Milímetro"
+      "nombre": "Milímetro",
+      "id": "da41"
     },
     {
       "codigo": "KG",
-      "nombre": "Kilogramo"
+      "nombre": "Kilogramo",
+      "id": "41d8"
     },
     {
       "codigo": "G",
-      "nombre": "Gramo"
+      "nombre": "Gramo",
+      "id": "4c7e"
     },
     {
       "codigo": "L",
-      "nombre": "Litro"
+      "nombre": "Litro",
+      "id": "e1f7"
     },
     {
       "codigo": "ML",
-      "nombre": "Mililitro"
+      "nombre": "Mililitro",
+      "id": "777a"
     },
     {
       "codigo": "M2",
-      "nombre": "Metro cuadrado"
+      "nombre": "Metro cuadrado",
+      "id": "db6f"
     },
     {
       "codigo": "M3",
-      "nombre": "Metro cúbico"
+      "nombre": "Metro cúbico",
+      "id": "aaa7"
     },
     {
       "codigo": "PZ",
-      "nombre": "Piezas"
+      "nombre": "Piezas",
+      "id": "8c68"
     },
     {
       "codigo": "JGO",
-      "nombre": "Juego"
+      "nombre": "Juego",
+      "id": "513c"
     },
     {
       "codigo": "TAR",
-      "nombre": "Tarro"
+      "nombre": "Tarro",
+      "id": "af8c"
     },
     {
       "codigo": "SOB",
-      "nombre": "Sobre"
+      "nombre": "Sobre",
+      "id": "bd29"
     },
     {
       "codigo": "FRAS",
-      "nombre": "Frasco"
+      "nombre": "Frasco",
+      "id": "dbc6"
     },
     {
       "codigo": "BID",
-      "nombre": "Bidón"
+      "nombre": "Bidón",
+      "id": "cef2"
     },
     {
       "codigo": "TUB",
-      "nombre": "Tubo"
+      "nombre": "Tubo",
+      "id": "c490"
     },
     {
       "codigo": "PQT",
-      "nombre": "Paquete chico"
+      "nombre": "Paquete chico",
+      "id": "508c"
     },
     {
       "codigo": "TARJ",
-      "nombre": "Tarjeta"
+      "nombre": "Tarjeta",
+      "id": "38da"
     },
     {
       "codigo": "BUL",
-      "nombre": "Bulk / a granel"
+      "nombre": "Bulk / a granel",
+      "id": "193a"
     },
     {
       "codigo": "ROLLO",
-      "nombre": "Rollo grande"
+      "nombre": "Rollo grande",
+      "id": "c5c1"
     },
     {
       "codigo": "JARR",
-      "nombre": "Jarra"
+      "nombre": "Jarra",
+      "id": "d471"
     },
     {
       "codigo": "BLQ",
-      "nombre": "Bloque"
+      "nombre": "Bloque",
+      "id": "e11a"
     },
     {
       "codigo": "CJA",
-      "nombre": "Caja grande"
+      "nombre": "Caja grande",
+      "id": "047d"
     },
     {
       "codigo": "SACO",
-      "nombre": "Saco"
+      "nombre": "Saco",
+      "id": "1f93"
     },
     {
       "codigo": "LATGR",
-      "nombre": "Lata grande"
+      "nombre": "Lata grande",
+      "id": "8677"
     },
     {
       "codigo": "TUBO",
-      "nombre": "Tubo plástico"
+      "nombre": "Tubo plástico",
+      "id": "07d9"
     },
     {
       "codigo": "FRASC",
-      "nombre": "Frasco chico"
+      "nombre": "Frasco chico",
+      "id": "52ce"
     },
     {
       "codigo": "BOTGR",
-      "nombre": "Botella grande"
+      "nombre": "Botella grande",
+      "id": "4049"
     },
     {
       "codigo": "PAQGR",
-      "nombre": "Paquete grande"
+      "nombre": "Paquete grande",
+      "id": "f09c"
     },
     {
       "codigo": "CAPS",
-      "nombre": "Cápsulas"
+      "nombre": "Cápsulas",
+      "id": "95bc"
     },
     {
       "codigo": "TABL",
-      "nombre": "Tabla"
+      "nombre": "Tabla",
+      "id": "a19f"
     },
     {
       "codigo": "PLCA",
-      "nombre": "Placa"
+      "nombre": "Placa",
+      "id": "370a"
     },
     {
       "codigo": "ROLPE",
-      "nombre": "Rollo de papel"
+      "nombre": "Rollo de papel",
+      "id": "aa3c"
     },
     {
       "codigo": "SOBGR",
-      "nombre": "Sobre grande"
+      "nombre": "Sobre grande",
+      "id": "282a"
     },
     {
       "codigo": "BARR",
-      "nombre": "Barra"
+      "nombre": "Barra",
+      "id": "2b04"
     },
     {
       "codigo": "FRGR",
-      "nombre": "Frasco grande"
+      "nombre": "Frasco grande",
+      "id": "562b"
     },
     {
       "codigo": "TAP",
-      "nombre": "Tapón"
+      "nombre": "Tapón",
+      "id": "0b5c"
     },
     {
       "codigo": "DISP",
-      "nombre": "Dispensador"
+      "nombre": "Dispensador",
+      "id": "0e5b"
     },
     {
       "codigo": "TUBGR",
-      "nombre": "Tubo grande"
+      "nombre": "Tubo grande",
+      "id": "80a6"
     },
     {
       "codigo": "BIDGR",
-      "nombre": "Bidón grande"
+      "nombre": "Bidón grande",
+      "id": "45db"
     },
     {
       "codigo": "BULGR",
-      "nombre": "Bulk grande"
+      "nombre": "Bulk grande",
+      "id": "488f"
     },
     {
       "codigo": "ROLCH",
-      "nombre": "Rollo chico"
+      "nombre": "Rollo chico",
+      "id": "8b52"
     },
     {
       "codigo": "PAQCH",
-      "nombre": "Paquete chico"
+      "nombre": "Paquete chico",
+      "id": "71f8"
     }
   ]
 }

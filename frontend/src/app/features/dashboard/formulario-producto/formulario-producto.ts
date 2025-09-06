@@ -7,6 +7,7 @@ import { UnidadMedidaService } from '../../../services/unidad-medida.service';
 import { IUnidadMedida } from '../../../models/iunidad-medida';
 import { Observable } from 'rxjs';
 import { RouterModule } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   standalone: true,
