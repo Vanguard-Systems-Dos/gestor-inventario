@@ -98,6 +98,28 @@
       "descripcion": "ss",
       "estado": "activo",
       "stock_actual": 0
+    },
+    {
+      "id": "408a",
+      "nombre": "Corpiño",
+      "codigo_producto": 2.2222222222222222e+24,
+      "marca": "prima",
+      "modelo": "dos",
+      "unidad_medida": "Piezas",
+      "descripcion": "ss",
+      "estado": "activo",
+      "stock_actual": null
+    },
+    {
+      "id": "03a2",
+      "nombre": "",
+      "codigo_producto": "",
+      "marca": "",
+      "modelo": "",
+      "unidad_medida": "",
+      "descripcion": "",
+      "estado": "activo",
+      "stock_actual": 0
     }
   ],
   "unidades_de_medicas": [
