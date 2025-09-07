@@ -82,3 +82,128 @@ body {
   margin: auto;
 }
 
+.login-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: var(--title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.login-section {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem 1.5rem;
+  background-color: var(--card-dark-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  color: var(--highlight-color);
+  animation: fadeInUp 0.6s ease-out;
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+.login-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: var(--border-radius);
+  background: var(--title-gradient);
+  z-index: -1;
+}
+
+input[formControlName] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-top: 0.3rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #bbb;
+  /* gris claro */
+  color: #333;
+  /* texto oscuro */
+  font-size: 1rem;
+}
+
+input[formControlName]::placeholder {
+  color: #666;
+}
+
+.enlace-olvidecontraseña {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #14c19c;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.enlace-olvidecontraseña:hover {
+  text-decoration: underline;
+}
+
+.enlace-registrate {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: #142ec1;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.enlace-registrate:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+label {
+  font-weight: bold;
+  color: white;
+  display: block;
+  margin-top: 1rem;
+}
+
+.button-login {
+  width: 100%;
+  padding: 0.75rem 0;
+  background-color: #7b3df2;
+  /* morado vibrante */
+  border-radius: 2rem;
+  /* bordes muy redondeados */
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  text-decoration: underline;
+  /* texto subrayado */
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.button-login:hover {
+  background-color: #5a29b8;
+  /* morado más oscuro al hover */
+}
+
+input.error {
+  border: 2px solid red;
+}
+small, span {
+  color: red;
+  font-size: 0.85rem;
+}
+
+
