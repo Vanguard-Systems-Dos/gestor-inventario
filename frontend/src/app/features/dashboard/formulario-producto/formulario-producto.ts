@@ -1,79 +1,79 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Iproducto } from '../../../models/iproducto';
 import { ProductoService } from '../../../services/producto.service';
 import { UnidadMedidaService } from '../../../services/unidad-medida.service';
 import { IUnidadMedida } from '../../../models/iunidad-medida';
 import { Observable } from 'rxjs';
 import { RouterModule } from '@angular/router';
-import { NgForm } from '@angular/forms';
 
 @Component({
   standalone: true,
   selector: 'app-formulario-producto',
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
   templateUrl: './formulario-producto.html',
   styleUrls: ['./formulario-producto.css']
 })
 export class FormularioProducto implements OnInit {
 
-  producto: Iproducto = {
-    nombre: '',
-    codigo_producto: '',
-    marca: '',
-    modelo: '',
-    unidad_medida: '',
-    descripcion: '',
-    fecha_creacion: undefined,
-    fecha_actualizacion: undefined,
-    estado: 'activo',
-    stock_actual: 0
-  }
+  productoForm!: FormGroup;
+  unidadesMedidas$!: Observable<IUnidadMedida[]>;
+  mensaje = '';
 
-  unidadesMedidas$!: Observable<IUnidadMedida[]>
-  mensaje = ''
-
-  constructor(private productoService: ProductoService,
-    private unidadMedidaService: UnidadMedidaService
+  constructor(
+    private productoService: ProductoService,
+    private unidadMedidaService: UnidadMedidaService,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit(): void {
-    this.unidadesMedidas$ = this.unidadMedidaService.obtenerUnidadesMedidas()
+    this.unidadesMedidas$ = this.unidadMedidaService.obtenerUnidadesMedidas();
+
+    this.productoForm = this.fb.group({
+      nombre: ['', [Validators.required]],
+      codigo_producto: ['', [Validators.required]],
+      marca: [''],
+      modelo: [''],
+      unidad_medida: ['', [Validators.required]],
+      descripcion: [''],
+      estado: ['activo', [Validators.required]],
+      stock_actual: [null, [Validators.required, Validators.min(1)]]
+    });
   }
 
-  altaProducto(producto: Iproducto) {
-    this.productoService.crearProductos(this.producto).subscribe({
-      next: (res => {
-        this.mensaje = 'El producto se Guardo correctamente'
-        this.producto = this.resetProducto()
-      }),
-      error: (err => {
-        console.error('Ocurrio un Error al Guardar Producto')
-        this.mensaje = 'Ocurrio un Error al Guardar Producto'
-      })
-    })
-  }
+  get nombre() { return this.productoForm.get('nombre'); }
+  get codigo_producto() { return this.productoForm.get('codigo_producto'); }
+  get unidad_medida() { return this.productoForm.get('unidad_medida') }
+  get stock_actual() { return this.productoForm.get('stock_actual') }
 
-  cancelarFormulario(){
-    this.producto = this.resetProducto()
-  }  
-
-  resetProducto(): Iproducto {
-    return {
-      nombre: '',
-      codigo_producto: '',
-      marca: '',
-      modelo: '',
-      unidad_medida: '',
-      descripcion: '',
-      fecha_creacion: undefined,
-      fecha_actualizacion: undefined,
-      estado: 'activo',
-      stock_actual: 0
+  altaProducto() {
+    if (this.productoForm.invalid) {
+      this.productoForm.markAllAsTouched();
+      return;
     }
+
+    const producto: Iproducto = this.productoForm.value;
+
+    this.productoService.crearProductos(producto).subscribe({
+      next: () => {
+        this.mensaje = 'El producto se guardó correctamente';
+        this.productoForm.reset({
+          estado: 'activo',
+          stock_actual: 0
+        });
+      },
+      error: () => {
+        console.error('Ocurrió un error al guardar el producto');
+        this.mensaje = 'Ocurrió un error al guardar el producto';
+      }
+    });
   }
 
-
-
+  cancelarFormulario() {
+    this.productoForm.reset({
+      estado: 'activo',
+      stock_actual: null
+    });
+  }
 }
