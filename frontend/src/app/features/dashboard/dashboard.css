@@ -144,10 +144,28 @@
 
 .tabla-dashboard {
   overflow-y: auto;
+  max-height: 500px;
   border: 1px solid var(--card-border);
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
 }
+
+.tabla-con-borde thead th {
+  position: sticky;
+  top: 0;
+  background-color: var(--card-bg);
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid var(--card-border);
+  border-left: 1px solid var(--card-border);
+  border-right: 1px solid var(--card-border);
+}
+
+.tabla-con-borde thead th {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
 
 table {
   border-collapse: collapse;
@@ -192,9 +210,30 @@ table {
   box-shadow: 0 2px 6px var(--card-bg);
   background-color: var(--card-bg);
   margin-bottom: 2em;
-  max-width: 1000px;
+  width: 100%;
+  max-width: none;
   margin: auto;
 }
+
+/* Centrar encabezados */
+.tabla-con-borde th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Centrar contenido de las celdas */
+.tabla-con-borde td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tabla-con-borde td button {
+  margin: 0 5px;
+  /* separa los botones */
+}
+
+
+
 
 .encabezado-dashboard {
   display: flex;
