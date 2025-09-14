@@ -142,6 +142,17 @@
       "descripcion": "Hormigonera móvil para mezclado y transporte de concreto en obra",
       "estado": "activo",
       "stock_actual": 1
+    },
+    {
+      "id": "efdb",
+      "nombre": "Prueba",
+      "codigo_producto": 121212,
+      "marca": "Premium",
+      "modelo": "momo",
+      "unidad_medida": "Unidad",
+      "descripcion": "lalalala",
+      "estado": "activo",
+      "stock_actual": 2
     }
   ],
   "unidades_de_medicas": [
