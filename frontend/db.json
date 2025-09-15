@@ -1,0 +1,410 @@
+{
+  "productos": [
+    {
+      "id": "1b37",
+      "nombre": "Tambor",
+      "codigo_producto": 1111,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "2c48",
+      "nombre": "Excavadora hidráulica",
+      "codigo_producto": 2222,
+      "marca": "Caterpillar",
+      "modelo": "320D",
+      "unidad_medida": "Unidad",
+      "descripcion": "Excavadora de orugas para movimiento de tierra",
+      "estado": "activo",
+      "stock_actual": 5
+    },
+    {
+      "id": "3d59",
+      "nombre": "Bulldozer",
+      "codigo_producto": 3333,
+      "marca": "Komatsu",
+      "modelo": "D65EX",
+      "unidad_medida": "Unidad",
+      "descripcion": "Tractor de orugas para nivelación y empuje de materiales",
+      "estado": "activo",
+      "stock_actual": 3
+    },
+    {
+      "id": "4e6a",
+      "nombre": "Grúa torre",
+      "codigo_producto": 4444,
+      "marca": "Liebherr",
+      "modelo": "550 EC-H",
+      "unidad_medida": "Unidad",
+      "descripcion": "Grúa torre para construcción de gran altura",
+      "estado": "activo",
+      "stock_actual": 2
+    },
+    {
+      "id": "5f7b",
+      "nombre": "Cargadora frontal",
+      "codigo_producto": 5555,
+      "marca": "John Deere",
+      "modelo": "744K",
+      "unidad_medida": "Unidad",
+      "descripcion": "Cargadora para movimiento de materiales en canteras y construcción",
+      "estado": "activo",
+      "stock_actual": 4
+    },
+    {
+      "id": "6g8c",
+      "nombre": "Camión volquete",
+      "codigo_producto": 6666,
+      "marca": "Volvo",
+      "modelo": "A40G",
+      "unidad_medida": "Unidad",
+      "descripcion": "Camión articulado de gran capacidad para transporte de materiales",
+      "estado": "activo",
+      "stock_actual": 7
+    },
+    {
+      "id": "7h9d",
+      "nombre": "Retroexcavadora",
+      "codigo_producto": 7777,
+      "marca": "CASE",
+      "modelo": "580N",
+      "unidad_medida": "Unidad",
+      "descripcion": "Retroexcavadora multipropósito para construcción",
+      "estado": "activo",
+      "stock_actual": 6
+    },
+    {
+      "id": "8i0e",
+      "nombre": "Compactador de rodillo",
+      "codigo_producto": 8888,
+      "marca": "Dynapac",
+      "modelo": "CA2500D",
+      "unidad_medida": "Unidad",
+      "descripcion": "Compactador de suelo para obras viales",
+      "estado": "activo",
+      "stock_actual": 3
+    },
+    {
+      "id": "9j1f",
+      "nombre": "Orugas para excavadora",
+      "codigo_producto": 9999,
+      "marca": "Caterpillar",
+      "modelo": "320D",
+      "unidad_medida": "Unidad",
+      "descripcion": "Juego de orugas reforzadas para excavadora hidráulica",
+      "estado": "activo",
+      "stock_actual": 15
+    },
+    {
+      "id": "10k2g",
+      "nombre": "Motor diesel",
+      "codigo_producto": 1010,
+      "marca": "Cummins",
+      "modelo": "QSK19",
+      "unidad_medida": "Unidad",
+      "descripcion": "Motor diesel de repuesto para maquinaria pesada",
+      "estado": "activo",
+      "stock_actual": 8
+    },
+    {
+      "id": "11l3h",
+      "nombre": "Cuchilla de bulldozer",
+      "codigo_producto": 1112,
+      "marca": "Komatsu",
+      "modelo": "D65EX",
+      "unidad_medida": "Unidad",
+      "descripcion": "Cuchilla frontal de repuesto para bulldozer",
+      "estado": "activo",
+      "stock_actual": 12
+    },
+    {
+      "id": "12m4i",
+      "nombre": "Brazo de retroexcavadora",
+      "codigo_producto": 1212,
+      "marca": "CASE",
+      "modelo": "580N",
+      "unidad_medida": "Unidad",
+      "descripcion": "Brazo articulado de repuesto para retroexcavadora",
+      "estado": "activo",
+      "stock_actual": 9
+    },
+    {
+      "id": "5952",
+      "nombre": "Hormigonera autopropulsada",
+      "codigo_producto": 1313,
+      "marca": "Mecalac",
+      "modelo": "9MDX",
+      "unidad_medida": "Unidad",
+      "descripcion": "Hormigonera móvil para mezclado y transporte de concreto en obra",
+      "estado": "activo",
+      "stock_actual": 1
+    },
+    {
+      "id": "efdb",
+      "nombre": "Prueba",
+      "codigo_producto": 121212,
+      "marca": "Premium",
+      "modelo": "momo",
+      "unidad_medida": "Unidad",
+      "descripcion": "lalalala",
+      "estado": "activo",
+      "stock_actual": 2
+    }
+  ],
+  "unidades_de_medicas": [
+    {
+      "codigo": "UN",
+      "nombre": "Unidad",
+      "id": "5667"
+    },
+    {
+      "codigo": "CA",
+      "nombre": "Caja",
+      "id": "bce1"
+    },
+    {
+      "codigo": "PA",
+      "nombre": "Paquete",
+      "id": "d532"
+    },
+    {
+      "codigo": "BOL",
+      "nombre": "Bolsa",
+      "id": "7223"
+    },
+    {
+      "codigo": "BOT",
+      "nombre": "Botella",
+      "id": "ec48"
+    },
+    {
+      "codigo": "LAT",
+      "nombre": "Lata",
+      "id": "0624"
+    },
+    {
+      "codigo": "ROL",
+      "nombre": "Rollo",
+      "id": "c797"
+    },
+    {
+      "codigo": "M",
+      "nombre": "Metro",
+      "id": "2adc"
+    },
+    {
+      "codigo": "CM",
+      "nombre": "Centímetro",
+      "id": "75dc"
+    },
+    {
+      "codigo": "MM",
+      "nombre": "Milímetro",
+      "id": "da41"
+    },
+    {
+      "codigo": "KG",
+      "nombre": "Kilogramo",
+      "id": "41d8"
+    },
+    {
+      "codigo": "G",
+      "nombre": "Gramo",
+      "id": "4c7e"
+    },
+    {
+      "codigo": "L",
+      "nombre": "Litro",
+      "id": "e1f7"
+    },
+    {
+      "codigo": "ML",
+      "nombre": "Mililitro",
+      "id": "777a"
+    },
+    {
+      "codigo": "M2",
+      "nombre": "Metro cuadrado",
+      "id": "db6f"
+    },
+    {
+      "codigo": "M3",
+      "nombre": "Metro cúbico",
+      "id": "aaa7"
+    },
+    {
+      "codigo": "PZ",
+      "nombre": "Piezas",
+      "id": "8c68"
+    },
+    {
+      "codigo": "JGO",
+      "nombre": "Juego",
+      "id": "513c"
+    },
+    {
+      "codigo": "TAR",
+      "nombre": "Tarro",
+      "id": "af8c"
+    },
+    {
+      "codigo": "SOB",
+      "nombre": "Sobre",
+      "id": "bd29"
+    },
+    {
+      "codigo": "FRAS",
+      "nombre": "Frasco",
+      "id": "dbc6"
+    },
+    {
+      "codigo": "BID",
+      "nombre": "Bidón",
+      "id": "cef2"
+    },
+    {
+      "codigo": "TUB",
+      "nombre": "Tubo",
+      "id": "c490"
+    },
+    {
+      "codigo": "PQT",
+      "nombre": "Paquete chico",
+      "id": "508c"
+    },
+    {
+      "codigo": "TARJ",
+      "nombre": "Tarjeta",
+      "id": "38da"
+    },
+    {
+      "codigo": "BUL",
+      "nombre": "Bulk / a granel",
+      "id": "193a"
+    },
+    {
+      "codigo": "ROLLO",
+      "nombre": "Rollo grande",
+      "id": "c5c1"
+    },
+    {
+      "codigo": "JARR",
+      "nombre": "Jarra",
+      "id": "d471"
+    },
+    {
+      "codigo": "BLQ",
+      "nombre": "Bloque",
+      "id": "e11a"
+    },
+    {
+      "codigo": "CJA",
+      "nombre": "Caja grande",
+      "id": "047d"
+    },
+    {
+      "codigo": "SACO",
+      "nombre": "Saco",
+      "id": "1f93"
+    },
+    {
+      "codigo": "LATGR",
+      "nombre": "Lata grande",
+      "id": "8677"
+    },
+    {
+      "codigo": "TUBO",
+      "nombre": "Tubo plástico",
+      "id": "07d9"
+    },
+    {
+      "codigo": "FRASC",
+      "nombre": "Frasco chico",
+      "id": "52ce"
+    },
+    {
+      "codigo": "BOTGR",
+      "nombre": "Botella grande",
+      "id": "4049"
+    },
+    {
+      "codigo": "PAQGR",
+      "nombre": "Paquete grande",
+      "id": "f09c"
+    },
+    {
+      "codigo": "CAPS",
+      "nombre": "Cápsulas",
+      "id": "95bc"
+    },
+    {
+      "codigo": "TABL",
+      "nombre": "Tabla",
+      "id": "a19f"
+    },
+    {
+      "codigo": "PLCA",
+      "nombre": "Placa",
+      "id": "370a"
+    },
+    {
+      "codigo": "ROLPE",
+      "nombre": "Rollo de papel",
+      "id": "aa3c"
+    },
+    {
+      "codigo": "SOBGR",
+      "nombre": "Sobre grande",
+      "id": "282a"
+    },
+    {
+      "codigo": "BARR",
+      "nombre": "Barra",
+      "id": "2b04"
+    },
+    {
+      "codigo": "FRGR",
+      "nombre": "Frasco grande",
+      "id": "562b"
+    },
+    {
+      "codigo": "TAP",
+      "nombre": "Tapón",
+      "id": "0b5c"
+    },
+    {
+      "codigo": "DISP",
+      "nombre": "Dispensador",
+      "id": "0e5b"
+    },
+    {
+      "codigo": "TUBGR",
+      "nombre": "Tubo grande",
+      "id": "80a6"
+    },
+    {
+      "codigo": "BIDGR",
+      "nombre": "Bidón grande",
+      "id": "45db"
+    },
+    {
+      "codigo": "BULGR",
+      "nombre": "Bulk grande",
+      "id": "488f"
+    },
+    {
+      "codigo": "ROLCH",
+      "nombre": "Rollo chico",
+      "id": "8b52"
+    },
+    {
+      "codigo": "PAQCH",
+      "nombre": "Paquete chico",
+      "id": "71f8"
+    }
+  ]
+}
