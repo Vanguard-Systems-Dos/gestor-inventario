@@ -1,87 +1,79 @@
 /* Styles for the form container */
 .cuadro-tabla-dashboard {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 40px auto;
-    border: 1px solid #e0e0e0;
+  background-color: var(--card-bg, #ffffff);
+  padding: 1.5em 30px;
+  border-radius: 0.75em;
+  box-shadow: 0 2px 6px var(--card-bg, rgba(0,0,0,0.1));
+  max-width: 1000px;
+  margin: 40px auto 2em;
+  border: 1px solid var(--card-border, #e0e0e0);
 }
 
 /* Styles for the form header */
 .encabezado-dashboard {
-    text-align: center;
-    margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 .encabezado-dashboard h2 {
-    font-size: 2rem;
-    color: #333;
-    margin: 0;
-    font-weight: 500;
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
 }
 
 /* Form group and labels */
 .form-group {
-    margin-bottom: 20px;
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #555;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
 }
 
 /* Input styles */
-.form-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #444;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+.form-group input,
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 0.75rem 12px;
+  font-size: 1rem;
+  border: 1px solid var(--card-border, #ccc);
+  border-radius: var(--border-radius, 8px);
+  background-color: white;
+  color: var(--text-color, #444);
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  color: #000;
 }
 
 .form-group input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
-}
-
-/* Button styles */
-.btn-login {
-    width: 100%;
-    padding: 15px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn-login:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.btn-login:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-    transform: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
 }
 
 /* General layout */
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .tabla-dashboard {
@@ -95,7 +87,6 @@ table {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid var(--card-border);
-  /* Borde uniforme ya no muestra la L invertida*/
 }
 
 .tabla-con-borde {
@@ -127,25 +118,75 @@ table {
   margin: 2px;
 }
 
-.cuadro-tabla-dashboard {
-  border: 1px solid var(--card-border);
-  border-radius: 0.75em;
-  padding: 1.5em;
-  box-shadow: 0 2px 6px var(--card-bg);
-  background-color: var(--card-bg);
-  margin-bottom: 2em;
-  max-width: 1000px;
-  margin: auto;
+/* Botones de acción */
+.btn-accion {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.encabezado-dashboard {
-  display: flex;
-  flex-direction: column;
-  /*los pone en vertical*/
-  gap: 0.5em;
-  /*espacio uniforme entre elementos*/
-  margin-bottom: 1em;
+.btn-accion img {
+  width: 24px;
+  height: 24px;
 }
+
+.btn-accion:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(100%) brightness(80%);
+}
+
+/* Botón login */
+.btn-login {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--primary-color-1, #007bff), var(--primary-color-2, #0056b3));
+  color: var(--bg-color, #fff);
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 10px 20px var(--primary-color-1, rgba(0,0,0,0.2));
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px var(--primary-color-2);
+}
+
+.btn-login:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Botón alternativo */
+.button-login {
+  background-color: var(--primary-color-1);
+  color: var(--highlight-color);
+  padding: 0.9rem 2.2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.button-login:hover {
+  transform: translateY(-2px);
+  background-color: var(--primary-color-2);
+  box-shadow: var(--button-shadow-hover);
+}
+
+/* Botones izquierda/derecha */
 .izquierda input[type="button"],
 .derecha input[type="button"] {
   padding: 0.6em 1.5em;
@@ -167,11 +208,11 @@ table {
 .derecha input[type="button"]:disabled {
   background-color: #cbd5e1;
   color: #6b7280;
-  /* gris texto */
   cursor: not-allowed;
   opacity: 0.7;
 }
 
+/* Formulario login */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -221,12 +262,21 @@ table {
   color: var(--placeholder-color);
 }
 
-.form-container form {
+/* Contenedor de formularios */
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  min-height: 100vh;
+  padding: 1rem;
+}
 
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
   background-color: var(--card-bg);
   padding: 2rem;
   border-radius: var(--border-radius);
@@ -235,23 +285,13 @@ table {
   width: 100%;
   max-width: 500px;
   color: var(--text-color);
-  flex-direction: column;
 }
 
 .form-container form h2 {
-  margin-top: 0%;
   text-align: center;
   color: var(--primary-color-2);
   font-size: 1.5rem;
   margin-top: 1.5rem;
-}
-
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
 }
 
 .form-container form button[type="submit"] {
@@ -293,88 +333,4 @@ table {
 .form-container form label.checkbox-container a {
   color: var(--primary-color-2);
   text-decoration: none;
-}
-
-.form-group {
-  width: 100%;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="number"],
-.form-group input[type="password"] {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid var(--card-border, #ccc);
-  border-radius: var(--border-radius, 6px);
-  box-sizing: border-box;
-  background-color: white;
-  color: var(--text-color, #333);
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="password"] {
-  color: #000;
-}
-
-.btn-accion {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/*tamaño de icones columna acciones para que sean visibles*/
-.btn-accion img {
-  width: 24px;
-  height: 24px;
-}
-
-.btn-accion:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  filter: grayscale(100%) brightness(80%);
-}
-
-.btn-login {
-  display: inline-block;
-  padding: 0.9rem 2.2rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  background: linear-gradient(90deg, var(--primary-color-1), var(--primary-color-2));
-  color: var(--bg-color);
-  box-shadow: 0 10px 20px var(--primary-color-1);
-  border: none;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-login:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 30px var(--primary-color-2);
-}
-
-.button-login {
-  background-color: var(--primary-color-1);
-  color: var(--highlight-color);
-  padding: 0.9rem 2.2rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  margin-top: 2rem;
-}
-
-.button-login:hover {
-  transform: translateY(-2px);
-  background-color: var(--primary-color-2);
-  box-shadow: var(--button-shadow-hover);
 }
