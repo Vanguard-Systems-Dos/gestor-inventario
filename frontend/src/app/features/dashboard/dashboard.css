@@ -646,3 +646,10 @@ table {
 .form-group input[type="password"] {
   color: #000;
 }
+
+.derecha {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: flex-end; /* esto mueve todo a la derecha */
+}

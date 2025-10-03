@@ -34,9 +34,10 @@
             <div class="izquierda d-flex flex-wrap gap-2">
               <button [routerLink]="'/registrar-producto'">Registrar Entradas</button>
               <button [routerLink]="'/registrar-salida'">Registrar Salidas</button>
-              <button [routerLink]="'/buscar-producto'">Buscar</button>
             </div>
-            <div class="derecha">
+            <div class="derecha d-flex align-items-center gap-2">
+              <input type="text" class="form-control input-busqueda-producto" placeholder="Buscar producto..." [(ngModel)]="filtro"
+                (input)="filtrarProductos()" style="max-width: 200px;" />
               <button [routerLink]="'/formulario-producto'">Añadir Producto</button>
             </div>
           </div>
@@ -61,7 +62,7 @@
               </tr>
             </thead>
             <tbody>
-              @for (prod of listarProductos; track prod) {
+              @for (prod of productosFiltrados; track prod) {
               <tr>
                 <td>{{ prod.nombre }}</td>
                 <td>{{ prod.codigo_producto }}</td>
@@ -75,7 +76,7 @@
                 <td>{{ prod.stock_actual}}</td>
                 <td class="acciones">
                   <button class="btn btn-sm btn-outline-primary editar" title="Editar"
-                  [routerLink]="['/formulario-producto', prod.id]">Editar
+                    [routerLink]="['/formulario-producto', prod.id]">Editar
                     <i class="bi bi-pencil"></i>
                   </button>
                   <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar"> Eliminar
