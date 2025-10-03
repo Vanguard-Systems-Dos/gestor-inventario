@@ -90,7 +90,7 @@
                     <button type="submit" class="btn-dashboard">
                         {{esEdicion ? 'Actualizar' : 'Nuevo'}}
                     </button>
-                    <button type="button" (click)="cancelarFormulario()" class="btn-dashboard">
+                    <button type="button" (click)="cancelarFormulario()" class="btn-dashboard" [disabled]="esEdicion">
                         Cancelar
                     </button>
                     <button [routerLink]="'/dashboard'" type="button" class="btn-dashboard salir-btn ms-auto">

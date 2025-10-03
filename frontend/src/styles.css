@@ -497,3 +497,27 @@ input:hover {
   font-size: 0.9rem;
   margin-top: 4px;
 }
+
+
+.input-busqueda-producto {
+  width: 100%;
+  max-width: 1000px;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color-2);
+  border-radius: 0.5em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--input-bg-color, #fff);
+  color: var(--text-color, #333);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.input-busqueda-producto::placeholder {
+  color: #999;
+}
+
+.input-busqueda-producto:focus {
+  outline: none;
+  border-color: var(--primary-color-1);
+  box-shadow: 0 0 8px var(--primary-color-1);
+}

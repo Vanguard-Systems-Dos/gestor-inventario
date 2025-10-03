@@ -384,28 +384,6 @@
       "descripcion": "Retroexcavadora multipropósito para construcción",
       "estado": "activo",
       "stock_actual": 6
-    },
-    {
-      "nombre": "PruebaGuradar",
-      "codigo_producto": 11,
-      "marca": "Cormega",
-      "modelo": "Alto",
-      "unidad_medida": "Tarro",
-      "descripcion": "dddd x prueba",
-      "estado": "activo",
-      "stock_actual": 1,
-      "id": "cffc"
-    },
-    {
-      "nombre": "Tambor",
-      "codigo_producto": 444444444444,
-      "marca": "Cormega",
-      "modelo": "Alto",
-      "unidad_medida": "Caja",
-      "descripcion": "preuba",
-      "estado": "inactivo",
-      "stock_actual": 1,
-      "id": "a1f3"
     }
   ],
   "unidades_de_medicas": [
