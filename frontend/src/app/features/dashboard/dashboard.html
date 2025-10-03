@@ -74,7 +74,8 @@
                 <td>{{ prod.estado}}</td>
                 <td>{{ prod.stock_actual}}</td>
                 <td class="acciones">
-                  <button class="btn btn-sm btn-outline-primary editar" title="Editar">Editar
+                  <button class="btn btn-sm btn-outline-primary editar" title="Editar"
+                  [routerLink]="['/formulario-producto', prod.id]">Editar
                     <i class="bi bi-pencil"></i>
                   </button>
                   <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar"> Eliminar

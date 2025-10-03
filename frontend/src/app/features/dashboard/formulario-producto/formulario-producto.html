@@ -2,7 +2,7 @@
     <section>
         <div class="container-fluid mt-4">
             <h2 class="text-center mb-4">Formulario de Producto</h2>
-            <form [formGroup]="productoForm" class="formularioPro" (ngSubmit)="altaProducto()">
+            <form [formGroup]="productoForm" class="formularioPro" (ngSubmit)="guardarProducto()">
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre:</label>
                     <input formControlName="nombre" type="text" class="form-control" id="nombre"
@@ -86,12 +86,26 @@
                         <option value="inactivo">Inactivo</option>
                     </select>
                 </div>
-                <div class="d-flex w-100 gap-2">
-                    <button type="submit" class="btn-dashboard">Guardar</button>
-                    <button type="button" (click)="cancelarFormulario()" class="btn-dashboard">Cancelar</button>
-                    <button [routerLink]="'/dashboard'" type="button" class="btn-dashboard ms-auto">Salir</button>
+                <div class="d-flex flex-wrap w-100 gap-2">
+                    <button type="submit" class="btn-dashboard">
+                        {{esEdicion ? 'Actualizar' : 'Nuevo'}}
+                    </button>
+                    <button type="button" (click)="cancelarFormulario()" class="btn-dashboard">
+                        Cancelar
+                    </button>
+                    <button [routerLink]="'/dashboard'" type="button" class="btn-dashboard salir-btn ms-auto">
+                        Salir
+                    </button>
                 </div>
             </form>
+
+
+            @if (mensaje) {
+            <div class="mensaje">
+                <p>{{mensaje}}</p>
+            </div>
+            }
+
         </div>
     </section>
 </main>

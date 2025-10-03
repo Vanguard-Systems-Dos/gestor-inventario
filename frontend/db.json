@@ -45,7 +45,6 @@
       "stock_actual": 2
     },
     {
-      "id": "5f7b",
       "nombre": "Cargadora frontal",
       "codigo_producto": 5555,
       "marca": "John Deere",
@@ -53,7 +52,8 @@
       "unidad_medida": "Unidad",
       "descripcion": "Cargadora para movimiento de materiales en canteras y construcción",
       "estado": "activo",
-      "stock_actual": 4
+      "stock_actual": 4,
+      "id": "5f7b"
     },
     {
       "id": "6g8c",
@@ -89,7 +89,6 @@
       "stock_actual": 3
     },
     {
-      "id": "9j1f",
       "nombre": "Orugas para excavadora",
       "codigo_producto": 9999,
       "marca": "Caterpillar",
@@ -97,10 +96,10 @@
       "unidad_medida": "Unidad",
       "descripcion": "Juego de orugas reforzadas para excavadora hidráulica",
       "estado": "activo",
-      "stock_actual": 15
+      "stock_actual": 15,
+      "id": "9j1f"
     },
     {
-      "id": "10k2g",
       "nombre": "Motor diesel",
       "codigo_producto": 1010,
       "marca": "Cummins",
@@ -108,7 +107,8 @@
       "unidad_medida": "Unidad",
       "descripcion": "Motor diesel de repuesto para maquinaria pesada",
       "estado": "activo",
-      "stock_actual": 8
+      "stock_actual": 8,
+      "id": "10k2g"
     },
     {
       "id": "11l3h",
@@ -153,6 +153,292 @@
       "descripcion": "lalalala",
       "estado": "activo",
       "stock_actual": 2
+    },
+    {
+      "id": "44ed",
+      "nombre": "Tambor",
+      "codigo_producto": 1112,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "5beb",
+      "nombre": "Prueba",
+      "codigo_producto": 5555,
+      "marca": "Premium",
+      "modelo": "momo",
+      "unidad_medida": "Unidad",
+      "descripcion": "lalalala",
+      "estado": "activo",
+      "stock_actual": 2
+    },
+    {
+      "id": "ba50",
+      "nombre": "Excavadora hidráulica",
+      "codigo_producto": 99999,
+      "marca": "Caterpillar",
+      "modelo": "320D",
+      "unidad_medida": "Unidad",
+      "descripcion": "Excavadora de orugas para movimiento de tierra",
+      "estado": "activo",
+      "stock_actual": 5
+    },
+    {
+      "id": "62bf",
+      "nombre": "Tambor",
+      "codigo_producto": 999995,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "d729",
+      "nombre": "TamborPrueba",
+      "codigo_producto": 99999,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "79dc",
+      "nombre": "TamborPrueba",
+      "codigo_producto": 1199999,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "bb1d",
+      "nombre": "Compactador de rodillo",
+      "codigo_producto": 8888,
+      "marca": "Dynapac",
+      "modelo": "CA2500D",
+      "unidad_medida": "Unidad",
+      "descripcion": "Compactador de suelo para obras viales",
+      "estado": "activo",
+      "stock_actual": 3
+    },
+    {
+      "id": "0f17",
+      "nombre": "Prueba",
+      "codigo_producto": 121212,
+      "marca": "Premium",
+      "modelo": "momo",
+      "unidad_medida": "Unidad",
+      "descripcion": "pruebaprueba",
+      "estado": "inactivo",
+      "stock_actual": 2
+    },
+    {
+      "id": "e596",
+      "nombre": "prueba",
+      "codigo_producto": 666666666666666600,
+      "marca": "prueba",
+      "modelo": "preuba",
+      "unidad_medida": "Caja",
+      "descripcion": "prueba",
+      "estado": "activo",
+      "stock_actual": 2
+    },
+    {
+      "id": "4bcb",
+      "nombre": "prueba",
+      "codigo_producto": 77777,
+      "marca": "prueba",
+      "modelo": "preuba",
+      "unidad_medida": "Caja",
+      "descripcion": "prueba22",
+      "estado": "activo",
+      "stock_actual": 2
+    },
+    {
+      "id": "abbd",
+      "nombre": "Prueba",
+      "codigo_producto": 99999999999996670,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Tarro",
+      "descripcion": "dddd",
+      "estado": "activo",
+      "stock_actual": 2
+    },
+    {
+      "id": "bfdb",
+      "nombre": "Tambor55",
+      "codigo_producto": 1111,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "05f5",
+      "nombre": "Tambor",
+      "codigo_producto": 1111,
+      "marca": "Cormega",
+      "modelo": "Bajo",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "b4a3",
+      "nombre": "Tambor",
+      "codigo_producto": 1111,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "b03a",
+      "nombre": "Tambor",
+      "codigo_producto": 1111,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "03b4",
+      "nombre": "Tambor",
+      "codigo_producto": 1111,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "31d3",
+      "nombre": "Tambor",
+      "codigo_producto": 1111,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "cd60",
+      "nombre": "Orugas para excavadora",
+      "codigo_producto": 99995,
+      "marca": "Caterpillar",
+      "modelo": "320D",
+      "unidad_medida": "Unidad",
+      "descripcion": "Juego de orugas reforzadas para excavadora hidráulica",
+      "estado": "activo",
+      "stock_actual": 15
+    },
+    {
+      "id": "b99e",
+      "nombre": "Orugas para excavadora",
+      "codigo_producto": 9999,
+      "marca": "Caterpillar",
+      "modelo": "320D",
+      "unidad_medida": "Unidad",
+      "descripcion": "Juego de orugas reforzadas para excavadora hidráulica",
+      "estado": "activo",
+      "stock_actual": 15
+    },
+    {
+      "id": "3e30",
+      "nombre": "Tambor",
+      "codigo_producto": 1111,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Kilogramo",
+      "descripcion": "Tambor de residuos",
+      "estado": "activo",
+      "stock_actual": 100
+    },
+    {
+      "id": "c780",
+      "nombre": "Retroexcavadora",
+      "codigo_producto": 7777,
+      "marca": "CASE",
+      "modelo": "580N",
+      "unidad_medida": "Unidad",
+      "descripcion": "Retroexcavadora multipropósito para construcción",
+      "estado": "activo",
+      "stock_actual": 6
+    },
+    {
+      "id": "811a",
+      "nombre": "Retroexcavadora",
+      "codigo_producto": 77776,
+      "marca": "CASE",
+      "modelo": "580N",
+      "unidad_medida": "Unidad",
+      "descripcion": "Retroexcavadora multipropósito para construcción",
+      "estado": "activo",
+      "stock_actual": 6
+    },
+    {
+      "nombre": "PruebaGuradar",
+      "codigo_producto": 11,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Tarro",
+      "descripcion": "dddd x prueba",
+      "estado": "activo",
+      "stock_actual": 1,
+      "id": "cffc"
+    },
+    {
+      "nombre": "Prueba 2",
+      "codigo_producto": 77777777777777,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Caja",
+      "descripcion": "prueba",
+      "estado": "inactivo",
+      "stock_actual": 1,
+      "id": "a119"
+    },
+    {
+      "nombre": "Tambor",
+      "codigo_producto": 444444444444,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Caja",
+      "descripcion": "preuba",
+      "estado": "inactivo",
+      "stock_actual": 1,
+      "id": "a1f3"
+    },
+    {
+      "id": "1e85",
+      "nombre": "Prueba55",
+      "codigo_producto": 11111111111111110000,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Caja",
+      "descripcion": "dddddddddddddddddd",
+      "estado": "activo",
+      "stock_actual": 1
     }
   ],
   "unidades_de_medicas": [

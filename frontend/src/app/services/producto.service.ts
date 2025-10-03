@@ -30,4 +30,22 @@ export class ProductoService {
     )
   }
 
+  obtenerProductoPorId(id: string): Observable<Iproducto> {
+    return this.http.get<Iproducto>(`${this.apiUrl}/${id}`).pipe(
+      catchError(err => {
+        console.error(`No se pudo obtener el producto con id ${id}`, err);
+        return throwError(() => new Error('Error al obtener el producto por ID'));
+      })
+    );
+  }
+
+  actualizarProducto(id: string, producto: Iproducto): Observable<Iproducto> {
+    return this.http.put<Iproducto>(`${this.apiUrl}/${id}`, producto).pipe(
+      catchError(err => {
+        console.error('Error al actualizar el producto', err);
+        return throwError(() => new Error('No se pudo actualizar el producto'));
+      })
+    );
+  }
+
 }
