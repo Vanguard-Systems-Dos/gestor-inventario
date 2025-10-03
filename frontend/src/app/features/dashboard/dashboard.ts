@@ -25,27 +25,43 @@ export class Dashboard implements OnInit {
 
   cargaTablaDashboard() {
     this.productoServicio.obtenerProductos().subscribe({
-      next: (data =>{
+      next: (data => {
         this.listarProductos = data
       }),
-      error: (err =>{
-        console.error('Error al listar los productos',err)
+      error: (err => {
+        console.error('Error al listar los productos', err)
       })
     })
   }
 
 
-  // Datos simulados
-tarjetasInfo = [
-  { titulo: 'Total de Productos', valor: 150 },
-  { titulo: 'Bajo Stock', valor: 5 },
-  { titulo: 'Entradas Recientes', valor: 10 },
-  { titulo: 'Frecuencia de Reposicion', valor: 8 }
-];
+eliminarProducto(prod: Iproducto) {
+  const mensaje = `¿Desea eliminar "${prod.nombre}" con ID ${prod.id}?`;
+  if (confirm(mensaje)) {
+    this.productoServicio.eliminarProducto(prod.id!.toString()).subscribe({
+      next: () => {
+        this.listarProductos = this.listarProductos.filter(p => p.id !== prod.id);
+        console.log('Producto eliminado correctamente');
+      },
+      error: (err) => {
+        console.error('Error al eliminar el producto', err);
+      }
+    });
+  }
+}
 
-graficos = [
-  { titulo: 'Productos Más Utilizados', img: 'img/graph.svg' },
-  { titulo: 'Frecuencia de Pedidos', img: 'img/stock_box.svg' }
-];
+
+  // Datos simulados
+  tarjetasInfo = [
+    { titulo: 'Total de Productos', valor: 150 },
+    { titulo: 'Bajo Stock', valor: 5 },
+    { titulo: 'Entradas Recientes', valor: 10 },
+    { titulo: 'Frecuencia de Reposicion', valor: 8 }
+  ];
+
+  graficos = [
+    { titulo: 'Productos Más Utilizados', img: 'img/graph.svg' },
+    { titulo: 'Frecuencia de Pedidos', img: 'img/stock_box.svg' }
+  ];
 }
 

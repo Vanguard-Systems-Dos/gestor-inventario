@@ -1,17 +1,6 @@
 {
   "productos": [
     {
-      "id": "1b37",
-      "nombre": "Tambor",
-      "codigo_producto": 1111,
-      "marca": "Cormega",
-      "modelo": "Alto",
-      "unidad_medida": "Kilogramo",
-      "descripcion": "Tambor de residuos",
-      "estado": "activo",
-      "stock_actual": 100
-    },
-    {
       "id": "2c48",
       "nombre": "Excavadora hidráulica",
       "codigo_producto": 2222,
@@ -406,17 +395,6 @@
       "estado": "activo",
       "stock_actual": 1,
       "id": "cffc"
-    },
-    {
-      "nombre": "Prueba 2",
-      "codigo_producto": 77777777777777,
-      "marca": "Cormega",
-      "modelo": "Alto",
-      "unidad_medida": "Caja",
-      "descripcion": "prueba",
-      "estado": "inactivo",
-      "stock_actual": 1,
-      "id": "a119"
     },
     {
       "nombre": "Tambor",

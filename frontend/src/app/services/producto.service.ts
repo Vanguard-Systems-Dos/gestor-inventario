@@ -48,4 +48,13 @@ export class ProductoService {
     );
   }
 
+eliminarProducto(id: string): Observable<void> {
+  return this.http.delete<void>(`${this.apiUrl}/${id}`).pipe(
+    catchError(err => {
+      console.error(`Error al eliminar el producto con id ${id}`, err);
+      return throwError(() => new Error('No se pudo eliminar el producto'));
+    })
+  );
+}
+
 }
