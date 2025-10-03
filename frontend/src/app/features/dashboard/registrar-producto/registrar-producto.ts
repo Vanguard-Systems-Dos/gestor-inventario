@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms'; // 👈 Import ReactiveFormsModule here
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-registrar-producto',
   templateUrl: './registrar-producto.html',

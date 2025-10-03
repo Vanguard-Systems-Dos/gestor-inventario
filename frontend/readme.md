@@ -8,3 +8,8 @@ npx ng serve --open
 
 
 nota: npm install = Instalar las dependencias del frontend (sólo la primera vez o cuando haya cambios en package.json)
+
+
+
+Este comando ejecuta el server json:
+npm run start:api

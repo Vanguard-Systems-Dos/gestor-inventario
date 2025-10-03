@@ -27,7 +27,9 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 - ✅ Sprint 1: documentación y diseño general del sistema  
 - 🛠️ Sprint 2 (en curso): maquetado con HTML5, CSS y Bootstrap  
 - 🔜 Sprint 3: SPA estática en Angular (landing, registro/login, dashboard, CRUD y "quiénes somos") con routing y formularios reactivos  
-- 🔜 Sprint 4: SPA fullstack con Angular + API REST en Django (login/registro con lógica de negocio y CRUD conectado al backend)  
+- 🔜 Sprint 4: SPA fullstack con Angular. Implementación de Servicios que consumen APIs de prueba para los Get. No se aceptan datos en duro o hardcodeados.   
+ Diseño de Base de Datos: Diseño de base de datos: Conceptual (DER), Lógico (Modelo Relacional) y Físico. Entregar además el script de la base de datos.
+
 
 ---
 
@@ -39,13 +41,20 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 
 ---
 
-## 📁 Estructura del proyecto
+# 📂 Estructura del proyecto
 
 ```bash
 gestor-inventario/
 ├── backend/
+│
 ├── frontend/
 │   ├── node_modules/
+│   │
+│   ├── public/
+│   │   ├── img/
+│   │   ├── portfolio/
+│   │   └── favicon.ico
+│   │
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── features/
@@ -54,49 +63,69 @@ gestor-inventario/
 │   │   │   │   │   ├── dashboard.html
 │   │   │   │   │   ├── dashboard.spec.ts
 │   │   │   │   │   └── dashboard.ts
+│   │   │   │   │
 │   │   │   │   ├── formulario-de-registro/
 │   │   │   │   │   ├── formulario-de-registro.css
 │   │   │   │   │   ├── formulario-de-registro.html
 │   │   │   │   │   ├── formulario-de-registro.spec.ts
 │   │   │   │   │   └── formulario-de-registro.ts
+│   │   │   │   │
 │   │   │   │   ├── home/
 │   │   │   │   │   ├── home.css
 │   │   │   │   │   ├── home.html
 │   │   │   │   │   ├── home.spec.ts
 │   │   │   │   │   └── home.ts
+│   │   │   │   │
 │   │   │   │   ├── login/
 │   │   │   │   │   ├── login.css
 │   │   │   │   │   ├── login.html
 │   │   │   │   │   ├── login.spec.ts
 │   │   │   │   │   └── login.ts
-│   │   │   │   ├── quienes-somos/
-│   │   │   │   │   ├── quienes-somos.css
-│   │   │   │   │   ├── quienes-somos.html
-│   │   │   │   │   ├── quienes-somos.spec.ts
-│   │   │   │   │   └── quienes-somos.ts
+│   │   │   │   │
+│   │   │   │   └── quienes-somos/
+│   │   │   │       ├── quienes-somos.css
+│   │   │   │       ├── quienes-somos.html
+│   │   │   │       ├── quienes-somos.spec.ts
+│   │   │   │       └── quienes-somos.ts
+│   │   │   │
 │   │   │   ├── img/
 │   │   │   ├── models/
+│   │   │   │   ├── producto.ts
+│   │   │   │   ├── productos.ts
+│   │   │   │   ├── prueba.ts
+│   │   │   │   └── unidad-medida.ts
+│   │   │   │
 │   │   │   ├── services/
-│   │   │   ├── shared/
-│   │   │   └── app.config.server.ts
+│   │   │   │   ├── producto.service.ts
+│   │   │   │   ├── producto.service.spec.ts
+│   │   │   │   ├── prueba.service.ts
+│   │   │   │   ├── prueba.service.spec.ts
+│   │   │   │   ├── unidad-medida.service.ts
+│   │   │   │   └── unidad-medida.service.spec.ts
+│   │   │   │
+│   │   │   └── shared/
+│   │   │
+│   │   ├── app.config.server.ts
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│   │   ├── app.ts
+│   │   ├── app.spec.ts
+│   │   ├── index.html
+│   │   ├── main.ts
+│   │   ├── server.ts
+│   │   ├── styles.css
+│   │   └── tsconfig.app.json
+│   │
 │   ├── angular.json
 │   ├── package.json
-│   └── tsconfig.json
+│   ├── tsconfig.json
+│   ├── tsconfig.spec.json
+│   └── README.md
+│
 ├── maqueta/
-│   ├── bootstrap-5.3.6/
-│   ├── css/
-│   ├── images/
-│   ├── portfolio/
-│   ├── home.html
-│   ├── login.html
-│   ├── dashboard.html
-│   ├── buscar-producto.html
-│   ├── formulario-de-registro.html
-│   ├── quienes-somos.html
-│   ├── registrar-producto.html
-│   ├── registrar-salida.html
-│   └── readme.md
-└── README.md
+│   └── bootstrap-5.3.6/
+│
+└── db.json
 
 ```
 
@@ -111,10 +140,43 @@ gestor-inventario/
 
 ## 🚀 Próximos pasos
 
-- Completar la maquetación responsive
-- Validar las vistas con los usuarios simulados
-- Iniciar el desarrollo funcional con JavaScript
-- Implementar conexión con el backend y base de datos
+## 🚀 Próximos pasos
+
+El objetivo es evolucionar la aplicación hacia una **App SPA Fullstack** con frontend en Angular y backend en Django (arquitectura limpia).  
+
+### 🔹 Funcionalidades a implementar
+- **Mejoras en Páginas**:
+  - Home (Landing Page)
+  - Registro e Inicio de Sesión
+  - Dashboard
+  - Gestión de Contenido (CRUD de productos, categorías, proveedores)
+  - Quiénes Somos
+
+- **Backend (Django + DRF)**:
+  - Implementar API Rest siguiendo principios de **arquitectura limpia**.  
+  - Endpoints para registro, login (JWT), y manejo de sesiones.  
+  - Endpoints CRUD para productos, categorías, proveedores y movimientos de stock.  
+  - Validaciones y manejo de errores.  
+
+- **Frontend (Angular)**:
+  - Conexión a la API Rest mediante **servicios**.  
+  - Reemplazo de datos mockeados (`db.json`) por consumo de API real.  
+  - Integración de formularios con validaciones para registro, login y CRUD.  
+
+### 🔹 Infraestructura
+- Configuración de **Docker** para levantar frontend + backend + base de datos (PostgreSQL).  
+- Despliegue inicial en **Vercel (frontend)** y **Railway / Render / DockerHub (backend y DB)**.  
+
+### 🔹 QA / Testing
+- Pruebas unitarias en Angular (`.spec.ts`).  
+- Pruebas unitarias y de integración en Django (pytest / unittest).  
+- Postman Collection para probar endpoints de la API.  
+
+### 🔹 Documentación
+- Actualizar la wiki con endpoints de la API (contratos).  
+- Guía de despliegue local y en la nube.  
+- Explicación de arquitectura del backend y conexión con el frontend.  
+
 
 ¡Gracias por visitar nuestro repositorio!  
 No dudes en seguir el proyecto o contribuir con sugerencias y mejoras. 🙌

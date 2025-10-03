@@ -37,7 +37,7 @@
               <button [routerLink]="'/buscar-producto'">Buscar</button>
             </div>
             <div class="derecha">
-              <input type="button" value="Añadir Producto" disabled>
+              <button [routerLink]="'/formulario-producto'">Añadir Producto</button>
             </div>
           </div>
         </div>
@@ -47,33 +47,38 @@
           <table class="tabla-con-borde align-middle text-center">
             <thead>
               <tr>
-                <th>Producto</th>
-                <th>Categoría</th>
-                <th>Cantidad</th>
-                <th>Ubicación</th>
+                <th>Nombre</th>
+                <th>Codigo de Producto</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Unidad de Medida</th>
+                <th>Descripción</th>
+                <th>Fecha de Creación</th>
+                <th>Fecha de Actualización</th>
+                <th>Estado</th>
+                <th>Stock Actual</th>
                 <th>Acciones</th>
               </tr>
             </thead>
             <tbody>
-              @for (prod of productos; track prod) {
+              @for (prod of listarProductos; track prod) {
               <tr>
                 <td>{{ prod.nombre }}</td>
-                <td>{{ prod.categoria }}</td>
-                <td>
-                  @if (prod.cantidad > 500) {
-                  <span class="stock-alto">{{ prod.cantidad }}</span>
-                  } @else if (prod.cantidad > 100) {
-                  <span class="stock-medio">{{ prod.cantidad }}</span>
-                  } @else {
-                  <span class="stock-bajo">{{ prod.cantidad }}</span>
-                  }
-                </td>
-                <td>{{ prod.ubicacion }}</td>
+                <td>{{ prod.codigo_producto }}</td>
+                <td>{{ prod.marca}}</td>
+                <td>{{ prod.modelo}}</td>
+                <td>{{ prod.unidad_medida}}</td>
+                <td>{{ prod.descripcion}}</td>
+                <td>{{ prod.fecha_creacion}}</td>
+                <td>{{ prod.fecha_actualizacion}}</td>
+                <td>{{ prod.estado}}</td>
+                <td>{{ prod.stock_actual}}</td>
                 <td class="acciones">
-                  <button class="btn btn-sm btn-outline-primary editar" title="Editar" disabled>Editar
+                  <button class="btn btn-sm btn-outline-primary editar" title="Editar"
+                  [routerLink]="['/formulario-producto', prod.id]">Editar
                     <i class="bi bi-pencil"></i>
                   </button>
-                  <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar" disabled> Eliminar
+                  <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar"> Eliminar
                     <i class="bi bi-trash"></i>
                   </button>
                 </td>
@@ -82,7 +87,6 @@
             </tbody>
           </table>
         </div>
-
       </div>
     </div>
   </section>
