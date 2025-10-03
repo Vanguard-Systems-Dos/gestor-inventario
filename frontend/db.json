@@ -406,17 +406,6 @@
       "estado": "inactivo",
       "stock_actual": 1,
       "id": "a1f3"
-    },
-    {
-      "id": "1e85",
-      "nombre": "Prueba55",
-      "codigo_producto": 11111111111111110000,
-      "marca": "Cormega",
-      "modelo": "Alto",
-      "unidad_medida": "Caja",
-      "descripcion": "dddddddddddddddddd",
-      "estado": "activo",
-      "stock_actual": 1
     }
   ],
   "unidades_de_medicas": [
