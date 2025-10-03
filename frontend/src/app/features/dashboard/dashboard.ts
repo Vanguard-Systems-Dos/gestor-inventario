@@ -55,6 +55,7 @@ eliminarProducto(prod: Iproducto) {
     this.productoServicio.eliminarProducto(prod.id!.toString()).subscribe({
       next: () => {
         this.listarProductos = this.listarProductos.filter(p => p.id !== prod.id);
+        this.filtrarProductos()
         console.log('Producto eliminado correctamente');
       },
       error: (err) => {

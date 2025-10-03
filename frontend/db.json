@@ -1,15 +1,15 @@
 {
   "productos": [
     {
-      "id": "2c48",
       "nombre": "Excavadora hidráulica",
       "codigo_producto": 2222,
       "marca": "Caterpillar",
       "modelo": "320D",
       "unidad_medida": "Unidad",
       "descripcion": "Excavadora de orugas para movimiento de tierra",
-      "estado": "activo",
-      "stock_actual": 5
+      "estado": "inactivo",
+      "stock_actual": 5,
+      "id": "2c48"
     },
     {
       "id": "3d59",
@@ -133,17 +133,6 @@
       "stock_actual": 1
     },
     {
-      "id": "efdb",
-      "nombre": "Prueba",
-      "codigo_producto": 121212,
-      "marca": "Premium",
-      "modelo": "momo",
-      "unidad_medida": "Unidad",
-      "descripcion": "lalalala",
-      "estado": "activo",
-      "stock_actual": 2
-    },
-    {
       "id": "44ed",
       "nombre": "Tambor",
       "codigo_producto": 1112,
@@ -153,17 +142,6 @@
       "descripcion": "Tambor de residuos",
       "estado": "activo",
       "stock_actual": 100
-    },
-    {
-      "id": "5beb",
-      "nombre": "Prueba",
-      "codigo_producto": 5555,
-      "marca": "Premium",
-      "modelo": "momo",
-      "unidad_medida": "Unidad",
-      "descripcion": "lalalala",
-      "estado": "activo",
-      "stock_actual": 2
     },
     {
       "id": "ba50",
@@ -219,50 +197,6 @@
       "descripcion": "Compactador de suelo para obras viales",
       "estado": "activo",
       "stock_actual": 3
-    },
-    {
-      "id": "0f17",
-      "nombre": "Prueba",
-      "codigo_producto": 121212,
-      "marca": "Premium",
-      "modelo": "momo",
-      "unidad_medida": "Unidad",
-      "descripcion": "pruebaprueba",
-      "estado": "inactivo",
-      "stock_actual": 2
-    },
-    {
-      "id": "e596",
-      "nombre": "prueba",
-      "codigo_producto": 666666666666666600,
-      "marca": "prueba",
-      "modelo": "preuba",
-      "unidad_medida": "Caja",
-      "descripcion": "prueba",
-      "estado": "activo",
-      "stock_actual": 2
-    },
-    {
-      "id": "4bcb",
-      "nombre": "prueba",
-      "codigo_producto": 77777,
-      "marca": "prueba",
-      "modelo": "preuba",
-      "unidad_medida": "Caja",
-      "descripcion": "prueba22",
-      "estado": "activo",
-      "stock_actual": 2
-    },
-    {
-      "id": "abbd",
-      "nombre": "Prueba",
-      "codigo_producto": 99999999999996670,
-      "marca": "Cormega",
-      "modelo": "Alto",
-      "unidad_medida": "Tarro",
-      "descripcion": "dddd",
-      "estado": "activo",
-      "stock_actual": 2
     },
     {
       "id": "bfdb",
@@ -375,15 +309,15 @@
       "stock_actual": 6
     },
     {
-      "id": "811a",
       "nombre": "Retroexcavadora",
       "codigo_producto": 77776,
       "marca": "CASE",
       "modelo": "580N",
       "unidad_medida": "Unidad",
       "descripcion": "Retroexcavadora multipropósito para construcción",
-      "estado": "activo",
-      "stock_actual": 6
+      "estado": "inactivo",
+      "stock_actual": 6,
+      "id": "811a"
     }
   ],
   "unidades_de_medicas": [
