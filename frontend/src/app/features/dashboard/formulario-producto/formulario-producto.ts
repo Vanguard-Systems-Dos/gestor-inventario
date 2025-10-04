@@ -51,16 +51,16 @@ export class FormularioProducto implements OnInit {
       const id = params.get('id');
       if (id) {
         this.esEdicion = true;
-        this.productoService.obtenerProductoPorId(id).subscribe(
-          prod => {
+        this.productoService.obtenerProductoPorId(id).subscribe({
+          next: prod => {
             this.productoOriginal = prod  //guardo todo el objeto original
             // Rellenar el formulario con los datos obtenidos
             this.productoForm.patchValue(prod);
           },
-          error => {
+          error: error => {
             console.error('Error al cargar el producto para edición', error);
           }
-        );
+        });
       }
     });
   }

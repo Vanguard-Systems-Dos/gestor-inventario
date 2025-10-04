@@ -299,15 +299,16 @@
       "stock_actual": 100
     },
     {
-      "id": "c780",
       "nombre": "Retroexcavadora",
       "codigo_producto": 7777,
       "marca": "CASE",
       "modelo": "580N",
       "unidad_medida": "Unidad",
       "descripcion": "Retroexcavadora multipropósito para construcción",
-      "estado": "activo",
-      "stock_actual": 6
+      "estado": "inactivo",
+      "stock_actual": 6,
+      "fecha_actualizacion": "2025-10-04T14:30:00.210Z",
+      "id": "c780"
     },
     {
       "nombre": "Retroexcavadora",
