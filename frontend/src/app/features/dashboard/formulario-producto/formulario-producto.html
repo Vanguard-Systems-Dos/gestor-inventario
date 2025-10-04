@@ -6,7 +6,7 @@
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre:</label>
                     <input formControlName="nombre" type="text" class="form-control" id="nombre"
-                        (blur)="nombre?.markAsTouched()" [ngClass]="{'error': nombre?.touched && nombre?.invalid}">
+                        (blur)="nombre?.markAsTouched(); primeraLetraMayuscula('nombre')" [ngClass]="{'error': nombre?.touched && nombre?.invalid}">
                     @if (nombre?.touched && nombre?.invalid) {
                     <div>
                         @if (nombre?.errors?.['required']) {
@@ -31,11 +31,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="marca" class="form-label">Marca:</label>
-                    <input formControlName="marca" type="text" class="form-control" id="marca">
+                    <input formControlName="marca" type="text" class="form-control" id="marca"
+                        (blur)="primeraLetraMayuscula('marca')">
                 </div>
                 <div class="mb-3">
                     <label for="modelo" class="form-label">Modelo:</label>
-                    <input formControlName="modelo" type="text" class="form-control" id="modelo">
+                    <input formControlName="modelo" type="text" class="form-control" id="modelo"
+                        (blur)="primeraLetraMayuscula('modelo')">
                 </div>
                 <div class="mb-3">
                     <label for="unidad_medida" class="form-label">Unidad de Medida:</label>

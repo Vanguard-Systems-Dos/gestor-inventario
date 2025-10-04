@@ -332,6 +332,19 @@
       "fecha_actualizacion": "2025-10-04T13:45:09.461Z",
       "fecha_creacion": "2025-10-04T01:34:57.326Z",
       "id": "b9db"
+    },
+    {
+      "nombre": "Prueba primera letra mayuscula",
+      "codigo_producto": 999999999999999,
+      "marca": "El puente",
+      "modelo": "Hogareño",
+      "unidad_medida": "Unidad",
+      "descripcion": "ssssssssssssssssssssss",
+      "estado": "activo",
+      "stock_actual": 1,
+      "fecha_actualizacion": "2025-10-04T14:24:17.324Z",
+      "fecha_creacion": "2025-10-04T14:23:38.195Z",
+      "id": "5f6d"
     }
   ],
   "unidades_de_medicas": [

@@ -23,7 +23,7 @@ export class FormularioProducto implements OnInit {
   unidadesMedidas$!: Observable<IUnidadMedida[]>;
   mensaje = '';
   esEdicion: boolean = false;
-  productoOriginal!:Iproducto
+  productoOriginal!: Iproducto
 
   constructor(
     private productoService: ProductoService,
@@ -80,7 +80,7 @@ export class FormularioProducto implements OnInit {
 
     const producto: Iproducto = this.productoForm.value;
     const ahora = new Date().toISOString()
- // Fecha y hora actual en formato ISO
+    // Fecha y hora actual en formato ISO
     if (this.esEdicion) {
       const id = this.route.snapshot.paramMap.get('id');
       if (id) {
@@ -130,12 +130,20 @@ export class FormularioProducto implements OnInit {
     }
   }
 
-
-
   cancelarFormulario() {
     this.productoForm.reset({
       estado: 'activo',
       stock_actual: null
     });
+  }
+
+  primeraLetraMayuscula(campo: string) {
+    const control = this.productoForm.get(campo)
+    if (control) {
+      const valor = control.value
+      if (valor && typeof valor === 'string') {
+        control.setValue(valor.charAt(0).toUpperCase() + valor.slice(1), { emitEvent: false })
+      }
+    }
   }
 }
