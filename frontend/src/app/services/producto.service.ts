@@ -40,6 +40,9 @@ export class ProductoService {
   }
 
   actualizarProducto(id: string, producto: Iproducto): Observable<Iproducto> {
+    //clonar el producto y eliminar fecha_creacion, f creacion no se modifica
+    const productoActualizado = {...producto}
+    delete productoActualizado.fecha_creacion
     return this.http.put<Iproducto>(`${this.apiUrl}/${id}`, producto).pipe(
       catchError(err => {
         console.error('Error al actualizar el producto', err);

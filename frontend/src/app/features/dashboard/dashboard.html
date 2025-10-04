@@ -70,8 +70,8 @@
                 <td>{{ prod.modelo}}</td>
                 <td>{{ prod.unidad_medida}}</td>
                 <td>{{ prod.descripcion}}</td>
-                <td>{{ prod.fecha_creacion}}</td>
-                <td>{{ prod.fecha_actualizacion}}</td>
+                <td>{{ prod.fecha_creacion | date:'short'}}</td>
+                <td>{{ prod.fecha_actualizacion | date: 'short'}}</td>
                 <td>{{ prod.estado}}</td>
                 <td>{{ prod.stock_actual}}</td>
                 <td class="acciones">

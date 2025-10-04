@@ -6,8 +6,8 @@ export interface Iproducto {
     modelo: string
     unidad_medida: string
     descripcion: string
-    fecha_creacion?: Date
-    fecha_actualizacion?: Date
+    fecha_creacion?: string
+    fecha_actualizacion?: string
     estado: string
     stock_actual?: number
 }

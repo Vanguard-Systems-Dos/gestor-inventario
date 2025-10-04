@@ -23,6 +23,7 @@ export class FormularioProducto implements OnInit {
   unidadesMedidas$!: Observable<IUnidadMedida[]>;
   mensaje = '';
   esEdicion: boolean = false;
+  productoOriginal!:Iproducto
 
   constructor(
     private productoService: ProductoService,
@@ -52,6 +53,7 @@ export class FormularioProducto implements OnInit {
         this.esEdicion = true;
         this.productoService.obtenerProductoPorId(id).subscribe(
           prod => {
+            this.productoOriginal = prod  //guardo todo el objeto original
             // Rellenar el formulario con los datos obtenidos
             this.productoForm.patchValue(prod);
           },
@@ -77,10 +79,13 @@ export class FormularioProducto implements OnInit {
     }
 
     const producto: Iproducto = this.productoForm.value;
-
+    const ahora = new Date().toISOString()
+ // Fecha y hora actual en formato ISO
     if (this.esEdicion) {
       const id = this.route.snapshot.paramMap.get('id');
       if (id) {
+        producto.fecha_actualizacion = ahora;
+        producto.fecha_creacion = this.productoOriginal.fecha_creacion
         this.productoService.actualizarProducto(id, producto).subscribe({
           next: () => {
             this.mensaje = 'El producto se actualizó correctamente';
@@ -100,6 +105,7 @@ export class FormularioProducto implements OnInit {
         });
       }
     } else {
+      producto.fecha_creacion = ahora
       this.productoService.crearProductos(producto).subscribe({
         next: () => {
           this.mensaje = 'El producto se guardó correctamente';

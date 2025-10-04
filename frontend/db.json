@@ -243,15 +243,16 @@
       "stock_actual": 100
     },
     {
-      "id": "03b4",
       "nombre": "Tambor",
       "codigo_producto": 1111,
       "marca": "Cormega",
       "modelo": "Alto",
       "unidad_medida": "Kilogramo",
       "descripcion": "Tambor de residuos",
-      "estado": "activo",
-      "stock_actual": 100
+      "estado": "inactivo",
+      "stock_actual": 100,
+      "fecha_actualizacion": "2025-10-04T02:32:39.996Z",
+      "id": "03b4"
     },
     {
       "id": "31d3",
@@ -318,6 +319,19 @@
       "estado": "inactivo",
       "stock_actual": 6,
       "id": "811a"
+    },
+    {
+      "nombre": "prueba",
+      "codigo_producto": 10000000000000000000,
+      "marca": "Cormega",
+      "modelo": "Alto",
+      "unidad_medida": "Tarro",
+      "descripcion": "ssssssssssssssssssssa",
+      "estado": "inactivo",
+      "stock_actual": 1,
+      "fecha_actualizacion": "2025-10-04T13:45:09.461Z",
+      "fecha_creacion": "2025-10-04T01:34:57.326Z",
+      "id": "b9db"
     }
   ],
   "unidades_de_medicas": [
