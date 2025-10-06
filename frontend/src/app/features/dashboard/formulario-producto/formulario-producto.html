@@ -6,7 +6,8 @@
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre:</label>
                     <input formControlName="nombre" type="text" class="form-control" id="nombre"
-                        (blur)="nombre?.markAsTouched(); primeraLetraMayuscula('nombre')" [ngClass]="{'error': nombre?.touched && nombre?.invalid}">
+                        (blur)="nombre?.markAsTouched(); primeraLetraMayuscula('nombre')"
+                        [ngClass]="{'error': nombre?.touched && nombre?.invalid}">
                     @if (nombre?.touched && nombre?.invalid) {
                     <div>
                         @if (nombre?.errors?.['required']) {
@@ -39,44 +40,45 @@
                     <input formControlName="modelo" type="text" class="form-control" id="modelo"
                         (blur)="primeraLetraMayuscula('modelo')">
                 </div>
-                <div class="mb-3">
-                    <label for="unidad_medida" class="form-label">Unidad de Medida:</label>
-                    <select formControlName="unidad_medida" id="unidad_medida" class="form-select"
-                        (blur)="unidad_medida?.markAsTouched()" [ngClass]="{'is-invalid': unidad_medida?.touched &&
-                         unidad_medida?.invalid
-                     }">
-                        <option value="" disabled selected>-- Seleccione unidad --</option>
-                        @for (unidad of unidadesMedidas$ | async; track unidad.codigo) {
-                        <option>
-                            {{unidad.nombre}}
-                        </option>
-                        }
-                    </select>
-                    @if (unidad_medida?.touched && unidad_medida?.invalid) {
-                    <div>
-                        @if (unidad_medida?.errors?.['required']) {
-                        <small>Campo Requerido</small>
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="unidad_medida" class="form-label">Unidad de Medida:</label>
+                        <select formControlName="unidad_medida" id="unidad_medida" class="form-select"
+                            (blur)="unidad_medida?.markAsTouched()"
+                            [ngClass]="{'is-invalid': unidad_medida?.touched && unidad_medida?.invalid}">
+                            <option value="" disabled selected>-- Seleccione unidad --</option>
+                            @for (unidad of unidadesMedidas$ | async; track unidad.codigo) {
+                            <option>
+                                {{unidad.nombre}}
+                            </option>
+                            }
+                        </select>
+                        @if (unidad_medida?.touched && unidad_medida?.invalid) {
+                        <div>
+                            @if (unidad_medida?.errors?.['required']) {
+                            <small>Campo Requerido</small>
+                            }
+                        </div>
                         }
                     </div>
-                    }
+                    <div class="mb-3 col-md-6">
+                        <label for="stock_actual" class="form-label">Cantidad:</label>
+                        <input formControlName="stock_actual" type="number" class="form-control" id="stock_actual"
+                            (blur)="stock_actual?.markAsTouched()"
+                            [ngClass]="{'is-invalid': stock_actual?.touched && stock_actual?.invalid}">
+                        @if (stock_actual?.touched && stock_actual?.invalid) {
+                        <div>
+                            @if (stock_actual?.errors?.['required']) {
+                            <small>Campo Requerido</small>
+                            }
+                            @if (stock_actual?.errors?.['min']) {
+                            <small>La cantidad debe ser 1 o mayor</small>
+                            }
+                        </div>
+                        }
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="stock_actual" class="form-label">Cantidad:</label>
-                    <input formControlName="stock_actual" type="number" class="form-control" id="stock_actual"
-                        (blur)="stock_actual?.markAsTouched()"
-                        [ngClass]="{'is-invalid': stock_actual?.touched && stock_actual?.invalid}">
 
-                    @if (stock_actual?.touched && stock_actual?.invalid) {
-                    <div>
-                        @if (stock_actual?.errors?.['required']) {
-                        <small>Campo Requerido</small>
-                        }
-                        @if (stock_actual?.errors?.['min']) {
-                        <small>La cantidad debe ser 1 o mayor</small>
-                        }
-                    </div>
-                    }
-                </div>
                 <div class="mb-3">
                     <label for="descripcion" class="form-label">Descripción:</label>
                     <textarea formControlName="descripcion" id="descripcion" class="form-control" rows="6"></textarea>

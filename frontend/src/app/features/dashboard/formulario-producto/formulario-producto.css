@@ -47,4 +47,10 @@
 }
 
 
+select.form-control,
+input.form-control {
+    height: calc(2.375rem + 2px); /* iguala altura entre input y select */
+}
+
+
 
