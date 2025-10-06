@@ -166,7 +166,6 @@
       "stock_actual": 100
     },
     {
-      "id": "d729",
       "nombre": "TamborPrueba",
       "codigo_producto": 99999,
       "marca": "Cormega",
@@ -174,18 +173,9 @@
       "unidad_medida": "Kilogramo",
       "descripcion": "Tambor de residuos",
       "estado": "activo",
-      "stock_actual": 100
-    },
-    {
-      "id": "79dc",
-      "nombre": "TamborPrueba",
-      "codigo_producto": 1199999,
-      "marca": "Cormega",
-      "modelo": "Alto",
-      "unidad_medida": "Kilogramo",
-      "descripcion": "Tambor de residuos",
-      "estado": "activo",
-      "stock_actual": 100
+      "stock_actual": 50,
+      "fecha_actualizacion": "2025-10-06T14:45:39.627Z",
+      "id": "d729"
     },
     {
       "id": "bb1d",
