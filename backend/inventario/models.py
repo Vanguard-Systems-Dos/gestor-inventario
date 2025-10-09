@@ -1,5 +1,5 @@
 from django.db import models
-from backend.proveedores.models import Proveedor
+from proveedores.models import Proveedor
 
 # Create your models here.
 class Categoria(models.Model):
