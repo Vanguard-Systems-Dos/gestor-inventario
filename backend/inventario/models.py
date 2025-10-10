@@ -32,7 +32,7 @@ class Producto(models.Model):
     stock_actual = models.IntegerField(default=0)
     
     #foraneas =>no usar el id_producto para no confundir a django
-    producto = models.ForeignKey(Proveedor, on_delete=models.CASCADE)
+    proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     
     class Meta: 
