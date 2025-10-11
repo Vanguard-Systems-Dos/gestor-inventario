@@ -1,39 +1,81 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms'; // 👈 Import ReactiveFormsModule here
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, ActivatedRoute } from '@angular/router';
+import { Observable, of } from 'rxjs';
 
 @Component({
-  selector: 'app-registrar-producto',
-  templateUrl: './registrar-producto.html',
-  styleUrls: ['./registrar-producto.css'],
   standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule // 👈 Add it to the imports array
-  ]
+  selector: 'app-registrar-productos',
+  imports: [CommonModule, RouterModule, ReactiveFormsModule],
+  templateUrl: './registrar-producto.html',
+  styleUrls: ['./registrar-producto.css']
 })
 export class RegistrarProductosComponent implements OnInit {
-  productForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) { }
+  entradaForm!: FormGroup;
+  categorias$!: Observable<{ id: number, nombre: string }[]>;
+  mensaje = '';
+  esEdicion: boolean = false;
+
+  constructor(
+    private route: ActivatedRoute,
+    private fb: FormBuilder,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
-    this.productForm = this.fb.group({
-      nombre: ['', Validators.required],
-      categoria: ['', Validators.required],
-      cantidad: [0, [Validators.required, Validators.min(0)]],
-      ubicacion: ['', Validators.required]
+    // Simulación de categorías locales (sin servicio externo)
+    this.categorias$ = of([
+      { id: 1, nombre: 'Insumos' },
+      { id: 2, nombre: 'Herramientas' },
+      { id: 3, nombre: 'Equipos' }
+    ]);
+
+    // Definir el formulario reactivo
+    this.entradaForm = this.fb.group({
+      codigo_producto: ['', [Validators.required]],
+      categoria: ['', [Validators.required]],
+      cantidad: [null, [Validators.required, Validators.min(1)]],
+      ubicacion: [''],
+      observaciones: ['']
     });
   }
 
-  onSubmit(): void {
-    if (this.productForm.valid) {
-      console.log('Producto registrado:', this.productForm.value);
-      alert('Producto registrado con éxito!');
-      this.productForm.reset();
-    } else {
-      alert('Por favor, completa todos los campos requeridos.');
+  // Getters para el template
+  get codigo_producto() { return this.entradaForm.get('codigo_producto'); }
+  get categoria() { return this.entradaForm.get('categoria'); }
+  get cantidad() { return this.entradaForm.get('cantidad'); }
+
+  guardarEntrada() {
+    if (this.entradaForm.invalid) {
+      this.entradaForm.markAllAsTouched();
+      return;
+    }
+
+    const entrada = this.entradaForm.value;
+    console.log('Entrada registrada:', entrada);
+
+    this.mensaje = 'Entrada registrada correctamente';
+    setTimeout(() => {
+      this.mensaje = '';
+      this.cdr.detectChanges();
+    }, 3000);
+
+    this.entradaForm.reset();
+  }
+
+  cancelarFormulario() {
+    this.entradaForm.reset();
+  }
+
+  primeraLetraMayuscula(campo: string) {
+    const control = this.entradaForm.get(campo);
+    if (control) {
+      const valor = control.value;
+      if (valor && typeof valor === 'string') {
+        control.setValue(valor.charAt(0).toUpperCase() + valor.slice(1), { emitEvent: false });
+      }
     }
   }
 }
