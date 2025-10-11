@@ -8,7 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductoService {
 
-  private apiUrl = 'https://backend-inventario.onrender.com/inventario/productos'
+  // private apiUrl = 'https://backend-inventario.onrender.com/inventario/productos'
+
+  private apiUrl = 'http://localhost:8000/inventario/productos'
+
 
   constructor(private http: HttpClient) { }
 
