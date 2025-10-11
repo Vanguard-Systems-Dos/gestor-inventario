@@ -21,7 +21,11 @@ class Producto(models.Model):
     codigo_producto = models.CharField(max_length=50, unique=True)
     marca = models.CharField(max_length=50)
     modelo = models.CharField(max_length=50, blank=True, null=True)
-    unidad_medida = models.CharField(max_length=20)
+    unidad_medida = models.ForeignKey(
+        'movimientos.UnidadMedida',
+        on_delete=models.PROTECT,
+        related_name='productos'
+    )
     descripcion = models.CharField(max_length=200, blank=True, null=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_actualizacion = models.DateTimeField(auto_now=True)
