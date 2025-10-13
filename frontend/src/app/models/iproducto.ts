@@ -8,6 +8,6 @@ export interface Iproducto {
     descripcion: string
     fecha_creacion?: string
     fecha_actualizacion?: string
-    estado: string
-    stock_actual?: number
+    estado: 'activo' | 'inactivo'
+    stock_actual: number
 }
