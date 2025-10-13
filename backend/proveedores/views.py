@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework.views import APIView as ApiView
 from inventario.models import Proveedor
-from proveedores.serializers import ProveedorSerializers, Proveedor
+from proveedores.serializers import ProveedorSerializers
 from rest_framework.response import Response
 
 

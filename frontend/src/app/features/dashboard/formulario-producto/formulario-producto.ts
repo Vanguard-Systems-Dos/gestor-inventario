@@ -8,6 +8,10 @@ import { IUnidadMedida } from '../../../models/iunidad-medida';
 import { Observable } from 'rxjs';
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { ProveedorService } from '../../../services/proveedor.service';
+import { IProveedor } from '../../../models/iproveedor';
+import { CategoriaService } from '../../../services/categoria.service';
+import { ICategoria } from '../../../models/icategoria';
 
 
 @Component({
@@ -24,17 +28,31 @@ export class FormularioProducto implements OnInit {
   mensaje = '';
   esEdicion: boolean = false;
   productoOriginal!: Iproducto
+  proveedores: IProveedor[] = []
+  categorias: ICategoria[] = []
 
   constructor(
     private productoService: ProductoService,
     private unidadMedidaService: UnidadMedidaService,
     private route: ActivatedRoute,
     private fb: FormBuilder,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private proveedorService: ProveedorService,
+    private categoriaService: CategoriaService
   ) { }
 
   ngOnInit(): void {
     this.unidadesMedidas$ = this.unidadMedidaService.obtenerUnidadesMedidas();
+
+    this.proveedorService.obtenerProveedores().subscribe({
+      next: (data) => this.proveedores = data,
+      error: (err) => console.error('Error al cargar proveedores', err)
+    });
+
+    this.categoriaService.obtenerCategorias().subscribe({
+      next: (data) => this.categorias = data,
+      error: (err) => console.error('Error al cargar categorías', err)
+    });
 
     this.productoForm = this.fb.group({
       nombre: ['', [Validators.required]],
@@ -44,7 +62,9 @@ export class FormularioProducto implements OnInit {
       unidad_medida: ['', [Validators.required]],
       descripcion: [''],
       estado: ['activo', [Validators.required]],
-      stock_actual: [null, [Validators.required, Validators.min(1)]]
+      stock_actual: [null, [Validators.required, Validators.min(1)]],
+      proveedor: ['', Validators.required],
+      categoria: ['', Validators.required]
     });
 
     this.route.paramMap.subscribe(params => {
@@ -115,7 +135,7 @@ export class FormularioProducto implements OnInit {
           }, 3000);
           this.productoForm.reset({
             estado: 'activo',
-            stock_actual: 0
+            stock_actual: 1
           });
         },
         error: () => {
