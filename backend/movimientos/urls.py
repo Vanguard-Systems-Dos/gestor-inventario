@@ -1,8 +1,8 @@
-from rest_framework.routers import DefaultRouter
+from django.urls import path
 from .views import UnidadMedidaViewSet, MovimientoStockViewSet
 
-router = DefaultRouter()
-router.register(r'unidades-medida', UnidadMedidaViewSet)
-router.register(r'movimientos-stock', MovimientoStockViewSet)
+urlpatterns = [
+    path('unidadmedida/', UnidadMedidaViewSet.as_view(), name='unidad-medidas'),
+    path('/movimientos/', MovimientoStockViewSet.as_view(), name='movimientos'),
+]
 
-urlpatterns = router.urls

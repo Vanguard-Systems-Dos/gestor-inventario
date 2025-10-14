@@ -22,7 +22,7 @@ class MovimientoStock(models.Model):
     observaciones = models.TextField(blank=True, null=True)
     estado = models.CharField(max_length=20, default="ingreso")
 
-    # Clave foránea a Producto
+  
     id_producto = models.ForeignKey(
         Producto, on_delete=models.CASCADE, related_name="movimientos_stock"
     )

@@ -79,6 +79,9 @@ export class FormularioProducto implements OnInit {
           },
           error: error => {
             console.error('Error al cargar el producto para edición', error);
+          },
+          complete: () => {
+            console.log('Petición de obtenerProductoPorId completada');
           }
         });
       }
@@ -98,7 +101,14 @@ export class FormularioProducto implements OnInit {
       return;
     }
 
-    const producto: Iproducto = this.productoForm.value;
+    const producto: Iproducto = {
+      ...this.productoForm.value,
+      unidad_medida: Number(this.productoForm.value.unidad_medida),
+      proveedor: Number(this.productoForm.value.proveedor),
+      categoria: Number(this.productoForm.value.categoria),
+      fecha_creacion: new Date().toISOString()
+    };
+
     const ahora = new Date().toISOString()
     // Fecha y hora actual en formato ISO
     if (this.esEdicion) {
@@ -126,6 +136,7 @@ export class FormularioProducto implements OnInit {
       }
     } else {
       producto.fecha_creacion = ahora
+      console.log('Datos a enviar:', producto);
       this.productoService.crearProductos(producto).subscribe({
         next: () => {
           this.mensaje = 'El producto se guardó correctamente';

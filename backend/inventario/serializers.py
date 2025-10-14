@@ -3,6 +3,8 @@ from .models import Categoria, Producto
 
 
 class ProductoSerializer(serializers.ModelSerializer):
+    unidad_medida_nombre = serializers.CharField(source='unidad_medida.nombre', read_only=True)
+    
     class Meta:
         model = Producto
         fields = [
@@ -12,6 +14,7 @@ class ProductoSerializer(serializers.ModelSerializer):
             "marca",
             "modelo",
             "unidad_medida",
+            "unidad_medida_nombre",
             "descripcion",
             "fecha_creacion",
             "fecha_actualizacion",

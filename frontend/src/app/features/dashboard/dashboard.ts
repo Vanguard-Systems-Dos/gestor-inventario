@@ -49,21 +49,32 @@ export class Dashboard implements OnInit {
   }
 
 
-eliminarProducto(prod: Iproducto) {
-  const mensaje = `¿Desea eliminar "${prod.nombre}" con ID ${prod.id}?`;
-  if (confirm(mensaje)) {
-    this.productoServicio.eliminarProducto(prod.id!.toString()).subscribe({
-      next: () => {
-        this.listarProductos = this.listarProductos.filter(p => p.id !== prod.id);
-        this.filtrarProductos()
-        console.log('Producto eliminado correctamente');
-      },
-      error: (err) => {
-        console.error('Error al eliminar el producto', err);
-      }
-    });
+  eliminarProducto(prod: Iproducto) {
+    const mensaje = `¿Desea eliminar "${prod.nombre}" con ID ${prod.id_producto}?`;
+    if (confirm(mensaje)) {
+      this.productoServicio.eliminarProducto(prod.id_producto!.toString()).subscribe({
+        next: () => {
+          this.listarProductos = this.listarProductos.filter(p => p.id_producto !== prod.id_producto);
+          this.filtrarProductos()
+          console.log('Producto eliminado correctamente');
+        },
+        error: (err) => {
+          console.error('Error al eliminar el producto', err);
+        }
+      });
+    }
   }
-}
+
+  obtenerEstado(codigo: string): string {
+    switch (codigo) {
+      case 'A':
+        return 'Activo'
+      case 'I':
+        return 'Inactivo'
+      default:
+        return 'Desconicido'
+    }
+  }
 
 
   // Datos simulados

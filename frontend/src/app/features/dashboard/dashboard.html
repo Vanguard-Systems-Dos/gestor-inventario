@@ -36,8 +36,8 @@
               <button [routerLink]="'/registrar-salida'">Registrar Salidas</button>
             </div>
             <div class="derecha d-flex align-items-center gap-2">
-              <input type="text" class="form-control input-busqueda-producto" placeholder="Buscar producto..." [(ngModel)]="filtro"
-                (input)="filtrarProductos()" style="max-width: 200px;" />
+              <input type="text" class="form-control input-busqueda-producto" placeholder="Buscar producto..."
+                [(ngModel)]="filtro" (input)="filtrarProductos()" style="max-width: 200px;" />
               <button [routerLink]="'/formulario-producto'">Añadir Producto</button>
             </div>
           </div>
@@ -68,18 +68,18 @@
                 <td>{{ prod.codigo_producto }}</td>
                 <td>{{ prod.marca}}</td>
                 <td>{{ prod.modelo}}</td>
-                <td>{{ prod.unidad_medida}}</td>
+                <td>{{ prod.unidad_medida_nombre}}</td>
                 <td>{{ prod.descripcion}}</td>
                 <td>{{ prod.fecha_creacion | date:'short'}}</td>
                 <td>{{ prod.fecha_actualizacion | date: 'short'}}</td>
-                <td>{{ prod.estado}}</td>
+                <td>{{ obtenerEstado(prod.estado)}}</td>
                 <td>{{ prod.stock_actual}}</td>
                 <td class="acciones">
                   <button class="btn btn-sm btn-outline-primary editar" title="Editar"
-                    [routerLink]="['/formulario-producto', prod.id]">Editar
+                    [routerLink]="['/formulario-producto', prod.id_producto]">Editar
                     <i class="bi bi-pencil"></i>
                   </button>
-                  <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar" 
+                  <button class="btn btn-sm btn-outline-danger eliminar" title="Eliminar"
                     (click)="eliminarProducto(prod)">
                     Eliminar <i class="bi bi-trash"></i>
                   </button>
