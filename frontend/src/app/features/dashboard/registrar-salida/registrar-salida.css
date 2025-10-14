@@ -1,310 +1,56 @@
-/* Styles for the form container */
-.cuadro-tabla-dashboard {
-  background-color: var(--card-bg, #ffffff);
-  padding: 1.5em;
-  border-radius: 0.75em;
-  box-shadow: 0 2px 6px var(--card-bg, rgba(0, 0, 0, 0.1));
-  max-width: 1000px;
-  margin: 2em auto;
-  border: 1px solid var(--card-border, #e0e0e0);
-}
-
-/* Styles for the form header */
-.encabezado-dashboard {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.encabezado-dashboard h2 {
-  font-size: 2rem;
-  color: #333;
-  margin: 0;
-  font-weight: 500;
-}
-
-/* Form group and labels */
-.form-group {
-  width: 100%;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #555;
-}
-
-/* Input styles */
-.form-group input,
-.login-form input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  border: 1px solid var(--card-border, #ccc);
-  border-radius: var(--border-radius, 6px);
-  box-sizing: border-box;
-  background-color: var(--input-bg-color, #fff);
-  color: var(--text-dark, #000);
-  font-family: var(--font-main, inherit);
-  transition: border 0.2s ease, box-shadow 0.2s ease;
-}
-
-.form-group input:focus,
-.login-form input:focus {
-  outline: none;
-  border-color: var(--input-border-color-focus, #007bff);
-  box-shadow: 0 0 5px var(--input-shadow-focus, rgba(0, 123, 255, 0.5));
-}
-
-.login-form input:hover {
-  box-shadow: 0 0 5px var(--input-shadow-hover);
-}
-
-.login-form input::placeholder {
-  color: var(--placeholder-color);
-}
-
-/* Button styles */
-.btn-login {
-  display: inline-block;
-  width: 100%;
-  max-width: 300px;
-  padding: 0.9rem 2.2rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  background: linear-gradient(90deg, var(--primary-color-1, #007bff), var(--primary-color-2, #0056b3));
-  color: var(--bg-color, #fff);
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s;
-  box-shadow: 0 10px 20px var(--primary-color-1, #007bff);
-}
-
-.btn-login:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 30px var(--primary-color-2, #0056b3);
-}
-
-.btn-login:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-  opacity: 0.7;
-  transform: none;
-}
-
-.button-login {
-  background-color: var(--primary-color-1);
-  color: var(--highlight-color);
-  padding: 0.9rem 2.2rem;
-  font-size: 1.125rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  text-align: center;
-  margin-top: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.button-login:hover {
-  transform: translateY(-2px);
-  background-color: var(--primary-color-2);
-  box-shadow: var(--button-shadow-hover);
-}
-
-/* General layout */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.tabla-dashboard {
-  overflow-y: auto;
-  border: 1px solid var(--card-border);
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid var(--card-border);
-}
-
-.tabla-con-borde {
-  border: 1px solid #333;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.tabla-con-borde th,
-.tabla-con-borde td {
-  border: 1px solid #ccc;
-  padding: 8px;
-  text-align: left;
-}
-
-.footer-table {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  border: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-table-button {
-  background-color: var(--card-bg);
-  border-color: var(--primary-color-2);
-  color: var(--primary-color-2);
-  margin: 2px;
-}
-
-/* Botones de acción izquierda/derecha */
-.izquierda input[type="button"],
-.derecha input[type="button"] {
-  padding: 0.6em 1.5em;
-  font-size: 1rem;
-  border: none;
-  border-radius: 0.5em;
+.btn-dashboard {
   background-color: var(--primary-color-2);
   color: white;
+  border: none;
+  padding: 0.6em 1.5em;
+  border-radius: 0.5em;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.izquierda input[type="button"]:hover,
-.derecha input[type="button"]:hover {
+.btn-dashboard:hover {
   background-color: var(--primary-color-1);
 }
 
-.izquierda input[type="button"]:disabled,
-.derecha input[type="button"]:disabled {
+.btn-dashboard:disabled {
   background-color: #cbd5e1;
   color: #6b7280;
   cursor: not-allowed;
   opacity: 0.7;
 }
 
-/* Login form */
-.login-form {
+.mensaje {
+  margin: 1rem auto 0;
+  padding: 1.25rem 1rem 0.5rem;/* menos padding vertical y lateral */
+  background-color: #e0ffe0;
+  border: 1px solid #00aa00;
+  color: #006600;
+  border-radius: 4px;
+  width: 40%;
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
   align-items: center;
-  width: 100%;
-}
-
-.login-form div {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.login-form label {
-  color: var(--highlight-color);
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-/* Form container */
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
-}
-
-.form-container form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  background-color: var(--card-bg);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--card-border);
-  width: 100%;
-  max-width: 500px;
-  color: var(--text-color);
-}
-
-.form-container form h2 {
+  justify-content: center;/* centra horizontalmente */
   text-align: center;
-  color: var(--primary-color-2);
-  font-size: 1.5rem;
-  margin: 1.5rem 0 0;
+  min-height: 40px;/* altura mínima más baja */
 }
 
-.form-container form button[type="submit"] {
-  background-color: var(--primary-color-2);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  max-width: 200px;
-  margin: 0 auto;
-  display: block;
+@media (max-width: 576px) {
+  .btn-dashboard {
+    width: 100%;
+  }
+
+  .salir-btn {
+    margin-left: 0 !important; /* anula el ms-auto en pantallas pequeñas */
+    text-align: center;
+  }
 }
 
-.form-container form button[type="submit"]:hover {
-  background-color: var(--primary-color-2-hover, #0056b3);
+
+select.form-control,
+input.form-control {
+    height: calc(2.375rem + 2px); /* iguala altura entre input y select */
 }
 
-.form-container form label.checkbox-container {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  font-size: 0.9rem;
-  color: var(--text-color);
-  gap: 0.5rem;
-}
 
-.form-container form label.checkbox-container input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-  accent-color: var(--primary-color-2);
-}
 
-.form-container form label.checkbox-container a {
-  color: var(--primary-color-2);
-  text-decoration: none;
-}
-
-/* Botón acción (íconos) */
-.btn-accion {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-accion img {
-  width: 24px;
-  height: 24px;
-}
-
-.btn-accion:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  filter: grayscale(100%) brightness(80%);
-}

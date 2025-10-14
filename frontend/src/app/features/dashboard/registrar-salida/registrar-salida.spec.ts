@@ -1,18 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RegistrarSalidaComponent } from './registrar-salida';
 
-import { RegistrarSalida } from './registrar-salida';
-
-describe('RegistrarSalida', () => {
-  let component: RegistrarSalida;
-  let fixture: ComponentFixture<RegistrarSalida>;
+describe('RegistrarSalidaComponent', () => {
+  let component: RegistrarSalidaComponent;
+  let fixture: ComponentFixture<RegistrarSalidaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RegistrarSalida]
-    })
-    .compileComponents();
+      imports: [RegistrarSalidaComponent]
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(RegistrarSalida);
+    fixture = TestBed.createComponent(RegistrarSalidaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

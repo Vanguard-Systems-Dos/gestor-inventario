@@ -1,63 +1,123 @@
 <main>
   <section>
-    <div class="cuadro-tabla-dashboard">
-      <div class="encabezado-dashboard">
-        <h2>Registrar Salida de Producto</h2>
-        <form [formGroup]="salidaForm" (ngSubmit)="onRegistrar()" class="formulario-busqueda">
-          <div class="form-group">
-            <label for="nombre">Nombre del Producto:</label>
-            <input type="text" id="nombre" formControlName="nombre" placeholder="Ej. ProductoX">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+      <div class="col-12 col-md-8 col-lg-6">
+        <h2 class="text-center mb-4">Registrar Salida de Inventario</h2>
+
+        <form [formGroup]="salidaForm" class="formularioSalida" (ngSubmit)="registrarSalida()">
+
+          <!-- Código de Producto -->
+          <div class="mb-3">
+            <label for="codigo_producto" class="form-label">Código de Producto:</label>
+            <input
+              formControlName="codigo_producto"
+              type="number"
+              class="form-control"
+              id="codigo_producto"
+              (blur)="codigo_producto?.markAsTouched()"
+              [ngClass]="{'error': codigo_producto?.touched && codigo_producto?.invalid}"
+            >
+            @if (codigo_producto?.touched && codigo_producto?.invalid) {
+              <div>
+                @if (codigo_producto?.errors?.['required']) {
+                  <small>Campo Requerido</small>
+                }
+              </div>
+            }
           </div>
 
-          <div class="form-group">
-            <label for="categoria">Categoría:</label>
-            <input type="text" id="categoria" formControlName="categoria" placeholder="Ej. Categoria#X">
+          <!-- Categoría -->
+          <div class="mb-3">
+            <label for="categoria" class="form-label">Categoría:</label>
+            <select
+              formControlName="categoria"
+              id="categoria"
+              class="form-select"
+              (blur)="categoria?.markAsTouched()"
+              [ngClass]="{'is-invalid': categoria?.touched && categoria?.invalid}"
+            >
+              <option value="" disabled selected>-- Seleccione categoría --</option>
+              <option value="Insumos">Insumos</option>
+              <option value="Herramientas">Herramientas</option>
+              <option value="Equipos">Equipos</option>
+            </select>
+            @if (categoria?.touched && categoria?.invalid) {
+              <div>
+                @if (categoria?.errors?.['required']) {
+                  <small>Campo Requerido</small>
+                }
+              </div>
+            }
           </div>
 
-          <div class="form-group">
-            <label for="cantidad">Cantidad a Retirar:</label>
-            <input type="number" id="cantidad" formControlName="cantidad" min="1" placeholder="Ej. 10">
+          <!-- Cantidad -->
+          <div class="mb-3">
+            <label for="cantidad" class="form-label">Cantidad:</label>
+            <input
+              formControlName="cantidad"
+              type="number"
+              class="form-control"
+              id="cantidad"
+              (blur)="cantidad?.markAsTouched()"
+              [ngClass]="{'is-invalid': cantidad?.touched && cantidad?.invalid}"
+            >
+            @if (cantidad?.touched && cantidad?.invalid) {
+              <div>
+                @if (cantidad?.errors?.['required']) {
+                  <small>Campo Requerido</small>
+                }
+                @if (cantidad?.errors?.['min']) {
+                  <small>La cantidad debe ser 1 o mayor</small>
+                }
+              </div>
+            }
           </div>
 
-          <div class="form-group">
-            <label for="ubicacion">Ubicación:</label>
-            <input type="text" id="ubicacion" formControlName="ubicacion" placeholder="Ej. Depósito A1">
+          <!-- Ubicación -->
+          <div class="mb-3">
+            <label for="ubicacion" class="form-label">Ubicación:</label>
+            <input
+              formControlName="ubicacion"
+              type="text"
+              class="form-control"
+              id="ubicacion"
+              (blur)="primeraLetraMayuscula('ubicacion')"
+            >
           </div>
 
-          <div class="form-group">
-            <button type="submit" class="btn-login" [disabled]="salidaForm.invalid">Registrar Salida</button>
+          <!-- Observaciones -->
+          <div class="mb-3">
+            <label for="observaciones" class="form-label">Observaciones:</label>
+            <textarea
+              formControlName="observaciones"
+              id="observaciones"
+              class="form-control"
+              rows="4"
+              placeholder="Ingrese observaciones o detalles adicionales..."
+            ></textarea>
+          </div>
+
+          <!-- Botones -->
+          <div class="d-flex flex-wrap w-100 gap-2">
+            <button type="submit" class="btn-dashboard">
+              Registrar Salida
+            </button>
+            <button type="button" (click)="cancelarFormulario()" class="btn-dashboard">
+              Cancelar
+            </button>
+            <button [routerLink]="'/dashboard'" type="button" class="btn-dashboard salir-btn ms-auto">
+              Salir
+            </button>
           </div>
         </form>
-      </div>
 
-      <!-- tabla de confirmación con @if y @for -->
-      @if (salidasRegistradas.length > 0) {
-        <div class="tabla-dashboard">
-          <h3>Salidas Registradas</h3>
-          <table class="tabla-con-borde">
-            <thead>
-              <tr>
-                <th>Producto</th>
-                <th>Categoría</th>
-                <th>Cantidad</th>
-                <th>Ubicación</th>
-                <th>Fecha</th>
-              </tr>
-            </thead>
-            <tbody>
-              @for (item of salidasRegistradas; track $index) {
-                <tr>
-                  <td>{{ item.nombre }}</td>
-                  <td>{{ item.categoria }}</td>
-                  <td>{{ item.cantidad }}</td>
-                  <td>{{ item.ubicacion }}</td>
-                  <td>{{ item.fecha | date:'short' }}</td>
-                </tr>
-              }
-            </tbody>
-          </table>
-        </div>
-      }
+        @if (mensaje) {
+          <div class="mensaje">
+            <p>{{mensaje}}</p>
+          </div>
+        }
+
+      </div>
     </div>
   </section>
 </main>

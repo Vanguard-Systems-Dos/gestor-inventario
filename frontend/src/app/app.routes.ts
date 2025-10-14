@@ -20,5 +20,6 @@ export const routes: Routes = [
     { path: 'buscar-producto', component: BuscarProductoComponent },
     { path: 'registrar-salida', component: RegistrarSalidaComponent },
     { path: 'formulario-producto', component: FormularioProducto },
+    { path: 'formulario-producto/:id', component: FormularioProducto },
     { path: '**', redirectTo: '' }
 ];

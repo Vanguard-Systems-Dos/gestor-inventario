@@ -8,7 +8,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductoService {
 
-  private apiUrl = 'http://localhost:3001/productos'
+  // private apiUrl = 'https://backend-inventario.onrender.com/inventario/productos'
+
+  private apiUrl = 'http://localhost:8000/inventario/productos/'
+
 
   constructor(private http: HttpClient) { }
 
@@ -29,5 +32,35 @@ export class ProductoService {
       })
     )
   }
+
+  obtenerProductoPorId(id: string): Observable<Iproducto> {
+    return this.http.get<Iproducto>(`${this.apiUrl}${id}`).pipe(
+      catchError(err => {
+        console.error(`No se pudo obtener el producto con id ${id}`, err);
+        return throwError(() => new Error('Error al obtener el producto por ID'));
+      })
+    );
+  }
+
+  actualizarProducto(id: string, producto: Iproducto): Observable<Iproducto> {
+    //clonar el producto y eliminar fecha_creacion, f creacion no se modifica
+    const productoActualizado = {...producto}
+    delete productoActualizado.fecha_creacion
+    return this.http.put<Iproducto>(`${this.apiUrl}${id}/`, producto).pipe(
+      catchError(err => {
+        console.error('Error al actualizar el producto', err);
+        return throwError(() => new Error('No se pudo actualizar el producto'));
+      })
+    );
+  }
+
+eliminarProducto(id: string): Observable<void> {
+  return this.http.delete<void>(`${this.apiUrl}${id}/`).pipe(
+    catchError(err => {
+      console.error(`Error al eliminar el producto con id ${id}`, err);
+      return throwError(() => new Error('No se pudo eliminar el producto'));
+    })
+  );
+}
 
 }
