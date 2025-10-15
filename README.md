@@ -22,25 +22,28 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 
 ---
 
-## 🛠️ Estado del proyecto
+## 🛠️ Estado del Proyecto
 
-🛠️ Estado del Proyecto
-✅ Sprint 1
+### ✅ Sprint 1
 Documentación y diseño general del sistema.
-✅ Sprint 2
+
+### ✅ Sprint 2
 Maquetado con HTML5, CSS y Bootstrap.
-✅ Sprint 3
+
+### ✅ Sprint 3
 SPA estática en Angular con landing page, registro/login, dashboard, CRUD y sección "quiénes somos". Implementación de routing y formularios reactivos.
-✅ Sprint 4
+
+### ✅ Sprint 4
 SPA fullstack con Angular. Implementación de Servicios que consumen APIs de prueba para los GET. Diseño de Base de Datos completo (Conceptual, Lógico y Físico) con script incluido.
-✅ Sprint 5
+
+### ✅ Sprint 5
 App SPA fullstack funcional con conexión a API REST Django utilizando arquitectura limpia. Incluye:
-HOME (Landing Page)
-Registro e Inicio de Sesión
-Dashboard
-Gestión de Contenido (CRUD)
-Quiénes Somos
-Implementación completa de lógica de autenticación y flujo de trabajo.
+- HOME (Landing Page)
+- Registro e Inicio de Sesión
+- Dashboard
+- Gestión de Contenido (CRUD)
+- Quiénes Somos
+- Implementación completa de lógica de autenticación y flujo de trabajo
 
 ---
 
@@ -136,13 +139,9 @@ gestor-inventario/
 |**Patricio Esteban Rodriguez**|[![Correo](https://img.shields.io/badge/correo-red?style=for-the-badge&logo=gmail&logoColor=white)](Mailto:rpatricioesteban@gmail.com)| [![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/1PatoRod)|
 |**Carlos Maximiliano Scarpatti Vazquez**|[![Correo](https://img.shields.io/badge/correo-red?style=for-the-badge&logo=gmail&logoColor=white)](mailto:maxi.scarpatti@gmail.com)| [![GitHub](https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MaxiScarpatti)|
 
-## 🚀 Próximos pasos
-
-El objetivo es evolucionar la aplicación hacia una **App SPA Fullstack** con frontend en Angular y backend en Django (arquitectura limpia).  
+## 🚀 Próximos pasos (Foco: Despliegue de Producción)
 
 ### 🔹 Funcionalidades a implementar
-
-## 🚀 Próximos Pasos (Foco: Despliegue de Producción)
 
 El objetivo actual es el despliegue final en Render, aprovechando la base de datos PostgreSQL ya configurada.
 
