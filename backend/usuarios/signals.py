@@ -16,24 +16,28 @@ def cargar_usuarios_post_migrate(sender, **kwargs):
         {
             "nombre": "Maximiliano Scarpatti",
             "dni": "30812080",
+            "email": "maxi@example.com",
             "rol": "admin",
             "password": "Abc1234$",
         },
         {
             "nombre": "Aldo A Minoldo",
             "dni": "20873426",
+            "email": "aldo@example.com",
             "rol": "admin",
             "password": "aam1234",
         },
         {
             "nombre": "Nicolas Minoldo",
             "dni": "45690598",
+            "email": "nicolas@example.com",
             "rol": "admin",
             "password": "Aei123+",
         },
         {
             "nombre": "Patricio Rodriguez",
             "dni": "43997975",
+            "email": "pato@example.com",
             "rol": "admin",
             "password": "Pato123",
         },
@@ -43,7 +47,11 @@ def cargar_usuarios_post_migrate(sender, **kwargs):
         for data in usuarios_data:
             usuario, created = Usuario.objects.get_or_create(
                 dni=data["dni"],
-                defaults={"nombre": data["nombre"], "rol": data["rol"]},
+                defaults={
+                    "nombre": data["nombre"],
+                    "rol": data["rol"],
+                    "email": data["email"],
+                },
             )
             if created:
                 usuario.set_password(data["password"])

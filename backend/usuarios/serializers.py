@@ -9,6 +9,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
             "id_usuario",
             "nombre",
             "dni",
+            "email",
             "rol",
             "password",
             "fecha_creacion",
