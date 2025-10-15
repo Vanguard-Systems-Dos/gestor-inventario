@@ -2,8 +2,10 @@ from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView as ApiView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Usuario
+from .models import Usuario, Sesion
 from .serializers import UsuarioSerializer
+from datetime import timedelta
+from django.utils import timezone
 
 
 class UsuarioView(ApiView):
@@ -41,24 +43,27 @@ class UsuarioDetalleView(ApiView):
 
 
 class LoginView(ApiView):
-    """
-    Login sin JWT ni sesión persistente: valida el DNI y contraseña,
-    devolviendo datos básicos del usuario.
-    """
-
     def post(self, request):
         dni = request.data.get("dni")
         password = request.data.get("password")
         usuario = Usuario.objects.filter(dni=dni, activo=True).first()
 
         if usuario and usuario.check_password(password):
+            # Crear sesión válida por 1 hora
+            sesion = Sesion.objects.create(
+                usuario=usuario, fecha_expiracion=timezone.now() + timedelta(hours=1)
+            )
+
             data = {
                 "id_usuario": usuario.id_usuario,
                 "nombre": usuario.nombre,
                 "dni": usuario.dni,
                 "rol": usuario.rol,
+                "token": str(sesion.token),
+                "fecha_expiracion": sesion.fecha_expiracion,
             }
             return Response(data, status=status.HTTP_200_OK)
+
         return Response(
             {"detail": "Credenciales inválidas"}, status=status.HTTP_401_UNAUTHORIZED
         )

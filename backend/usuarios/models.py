@@ -1,6 +1,8 @@
+# usuarios/models.py
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.hashers import make_password, check_password
+import uuid
 
 
 class Usuario(models.Model):
@@ -29,3 +31,41 @@ class Usuario(models.Model):
 
     def check_password(self, raw_password):
         return check_password(raw_password, self.password)
+
+    # Métodos de tu diagrama
+    def crearUsuario(self):
+        self.save()
+        return self
+
+    def actualizarUsuario(self, **kwargs):
+        for k, v in kwargs.items():
+            setattr(self, k, v)
+        self.save()
+        return True
+
+    def eliminarUsuario(self):
+        self.activo = False
+        self.save()
+        return True
+
+    def usuarioNoEncontrado(self):
+        return f"Usuario con id {self.id_usuario} no encontrado"
+
+
+class Sesion(models.Model):
+    usuario = models.ForeignKey(
+        Usuario, related_name="sesiones", on_delete=models.CASCADE
+    )
+    token = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
+    fecha_inicio = models.DateTimeField(default=timezone.now)
+    fecha_expiracion = models.DateTimeField()
+
+    def validarSesion(self):
+        return self.fecha_expiracion > timezone.now()
+
+    def cerrarSesion(self):
+        self.fecha_expiracion = timezone.now()
+        self.save()
+
+    def sesionExpirada(self):
+        return timezone.now() > self.fecha_expiracion
