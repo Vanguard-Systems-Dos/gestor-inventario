@@ -8,7 +8,7 @@ import { IUnidadMedida } from '../models/iunidad-medida';
 })
 export class UnidadMedidaService {
 
-  private apiUrl = 'http://localhost:8000/movimientos/unidadmedida/'
+  private apiUrl = 'http://localhost:8000/api/v1/movimientos/unidadmedida/'
 
   constructor(private http: HttpClient) { }
 

@@ -10,7 +10,7 @@ export class ProductoService {
 
   // private apiUrl = 'https://backend-inventario.onrender.com/inventario/productos'
 
-  private apiUrl = 'http://localhost:8000/inventario/productos/'
+  private apiUrl = 'http://localhost:8000/api/v1/inventario/productos/'
 
 
   constructor(private http: HttpClient) { }
