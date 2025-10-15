@@ -24,12 +24,23 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 
 ## 🛠️ Estado del proyecto
 
-- ✅ Sprint 1: documentación y diseño general del sistema  
-- 🛠️ Sprint 2 (en curso): maquetado con HTML5, CSS y Bootstrap  
-- 🔜 Sprint 3: SPA estática en Angular (landing, registro/login, dashboard, CRUD y "quiénes somos") con routing y formularios reactivos  
-- 🔜 Sprint 4: SPA fullstack con Angular. Implementación de Servicios que consumen APIs de prueba para los Get. No se aceptan datos en duro o hardcodeados.   
- Diseño de Base de Datos: Diseño de base de datos: Conceptual (DER), Lógico (Modelo Relacional) y Físico. Entregar además el script de la base de datos.
-
+🛠️ Estado del Proyecto
+✅ Sprint 1
+Documentación y diseño general del sistema.
+✅ Sprint 2
+Maquetado con HTML5, CSS y Bootstrap.
+✅ Sprint 3
+SPA estática en Angular con landing page, registro/login, dashboard, CRUD y sección "quiénes somos". Implementación de routing y formularios reactivos.
+✅ Sprint 4
+SPA fullstack con Angular. Implementación de Servicios que consumen APIs de prueba para los GET. Diseño de Base de Datos completo (Conceptual, Lógico y Físico) con script incluido.
+✅ Sprint 5
+App SPA fullstack funcional con conexión a API REST Django utilizando arquitectura limpia. Incluye:
+HOME (Landing Page)
+Registro e Inicio de Sesión
+Dashboard
+Gestión de Contenido (CRUD)
+Quiénes Somos
+Implementación completa de lógica de autenticación y flujo de trabajo.
 
 ---
 
@@ -46,86 +57,73 @@ Este proyecto se desarrolla aplicando metodologías ágiles y buenas prácticas 
 ```bash
 gestor-inventario/
 ├── backend/
+│   ├── gestor_de_inventarios/  # Configuración principal del proyecto (Django)
+│   │   ├── __init__.py
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── productos/            # Aplicación para la gestión de productos
+│   │   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py         # Definiciones del modelo Producto, etc.
+│   │   ├── tests.py
+│   │   ├── urls.py           # Endpoints de la API para productos
+│   │   └── views.py          # Lógica de la API (vistas)
+│   ├── usuarios/             # Aplicación para gestión de usuarios y autenticación
+│   │   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   ├── movimientos/          # Aplicación para registrar movimientos de inventario
+│   │   ├── migrations/
+│   │   └── ...
+│   ├── proveedores/          # Aplicación para gestión de proveedores
+│   │   ├── migrations/
+│   │   └── ...
+│   ├── db.sqlite3            # Base de datos local (puede variar)
+│   ├── manage.py             # Herramienta de línea de comandos de Django
+│   └── requirements.txt      # Dependencias de Python
 │
-├── frontend/
-│   ├── node_modules/
-│   │
-│   ├── public/
-│   │   ├── img/
-│   │   ├── portfolio/
-│   │   └── favicon.ico
-│   │
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── features/
-│   │   │   │   ├── dashboard/
-│   │   │   │   │   ├── dashboard.css
-│   │   │   │   │   ├── dashboard.html
-│   │   │   │   │   ├── dashboard.spec.ts
-│   │   │   │   │   └── dashboard.ts
-│   │   │   │   │
-│   │   │   │   ├── formulario-de-registro/
-│   │   │   │   │   ├── formulario-de-registro.css
-│   │   │   │   │   ├── formulario-de-registro.html
-│   │   │   │   │   ├── formulario-de-registro.spec.ts
-│   │   │   │   │   └── formulario-de-registro.ts
-│   │   │   │   │
-│   │   │   │   ├── home/
-│   │   │   │   │   ├── home.css
-│   │   │   │   │   ├── home.html
-│   │   │   │   │   ├── home.spec.ts
-│   │   │   │   │   └── home.ts
-│   │   │   │   │
-│   │   │   │   ├── login/
-│   │   │   │   │   ├── login.css
-│   │   │   │   │   ├── login.html
-│   │   │   │   │   ├── login.spec.ts
-│   │   │   │   │   └── login.ts
-│   │   │   │   │
-│   │   │   │   └── quienes-somos/
-│   │   │   │       ├── quienes-somos.css
-│   │   │   │       ├── quienes-somos.html
-│   │   │   │       ├── quienes-somos.spec.ts
-│   │   │   │       └── quienes-somos.ts
-│   │   │   │
-│   │   │   ├── img/
-│   │   │   ├── models/
-│   │   │   │   ├── producto.ts
-│   │   │   │   ├── productos.ts
-│   │   │   │   ├── prueba.ts
-│   │   │   │   └── unidad-medida.ts
-│   │   │   │
-│   │   │   ├── services/
-│   │   │   │   ├── producto.service.ts
-│   │   │   │   ├── producto.service.spec.ts
-│   │   │   │   ├── prueba.service.ts
-│   │   │   │   ├── prueba.service.spec.ts
-│   │   │   │   ├── unidad-medida.service.ts
-│   │   │   │   └── unidad-medida.service.spec.ts
-│   │   │   │
-│   │   │   └── shared/
-│   │   │
-│   │   ├── app.config.server.ts
-│   │   ├── app.config.ts
-│   │   ├── app.routes.ts
-│   │   ├── app.ts
-│   │   ├── app.spec.ts
-│   │   ├── index.html
-│   │   ├── main.ts
-│   │   ├── server.ts
-│   │   ├── styles.css
-│   │   └── tsconfig.app.json
-│   │
-│   ├── angular.json
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── tsconfig.spec.json
-│   └── README.md
+├── frontend/                 # Proyecto Angular
+│   ├── node_modules/
+│   ├── public/
+│   │   ├── img/
+│   │   ├── portfolio/
+│   │   └── favicon.ico
+│   │
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── features/
+│   │   │   │   ├── dashboard/
+│   │   │   │   └── login/
+│   │   │   │
+│   │   │   ├── models/       # Interfaces y modelos de TypeScript
+│   │   │   │   ├── producto.ts
+│   │   │   │   └── unidad-medida.ts
+│   │   │   │
+│   │   │   ├── services/     # Servicios para interactuar con el backend
+│   │   │   │   ├── producto.service.ts
+│   │   │   │   └── unidad-medida.service.ts
+│   │   │   │
+│   │   │   └── shared/
+│   │   │
+│   │   ├── app.config.ts
+│   │   ├── main.ts
+│   │   └── styles.css
+│   │
+│   ├── angular.json
+│   ├── package.json
+│   └── README.md
 │
 ├── maqueta/
-│   └── bootstrap-5.3.6/
+│   └── bootstrap-5.3.6/
 │
 └── db.json
+
 
 ```
 
@@ -140,37 +138,39 @@ gestor-inventario/
 
 ## 🚀 Próximos pasos
 
-## 🚀 Próximos pasos
-
 El objetivo es evolucionar la aplicación hacia una **App SPA Fullstack** con frontend en Angular y backend en Django (arquitectura limpia).  
 
 ### 🔹 Funcionalidades a implementar
-- **Mejoras en Páginas**:
-  - Home (Landing Page)
-  - Registro e Inicio de Sesión
-  - Dashboard
-  - Gestión de Contenido (CRUD de productos, categorías, proveedores)
-  - Quiénes Somos
 
-- **Backend (Django + DRF)**:
-  - Implementar API Rest siguiendo principios de **arquitectura limpia**.  
-  - Endpoints para registro, login (JWT), y manejo de sesiones.  
-  - Endpoints CRUD para productos, categorías, proveedores y movimientos de stock.  
-  - Validaciones y manejo de errores.  
+## 🚀 Próximos Pasos (Foco: Despliegue de Producción)
 
-- **Frontend (Angular)**:
-  - Conexión a la API Rest mediante **servicios**.  
-  - Reemplazo de datos mockeados (`db.json`) por consumo de API real.  
-  - Integración de formularios con validaciones para registro, login y CRUD.  
+El objetivo actual es el despliegue final en Render, aprovechando la base de datos PostgreSQL ya configurada.
 
-### 🔹 Infraestructura
-- Configuración de **Docker** para levantar frontend + backend + base de datos (PostgreSQL).  
-- Despliegue inicial en **Vercel (frontend)** y **Railway / Render / DockerHub (backend y DB)**.  
+### 🔹 Fase 1: Backend (Django)
 
-### 🔹 QA / Testing
-- Pruebas unitarias en Angular (`.spec.ts`).  
-- Pruebas unitarias y de integración en Django (pytest / unittest).  
-- Postman Collection para probar endpoints de la API.  
+- Ajustar `settings.py` para producción y configurar la conexión a la DB de Render.
+- Crear el servicio Web Service en Render y ejecutar migraciones.
+- Desplegar la API y verificar la accesibilidad de todos los endpoints.
+
+### 🔹 Fase 2: Frontend (Angular)
+
+- Actualizar todas las URLs de la API por la URL de producción de Render.
+- Realizar el build final y desplegar la SPA.
+- Ejecutar pruebas End-to-End para validar el flujo completo.
+
+## 🛠️ Tareas de Estabilidad y Futuras Implementaciones
+
+### 🔹 Tareas de Estabilidad (Inmediatas)
+
+- Implementar Pruebas Unitarias/Integración (Python/TS).
+- Refinar la documentación de los endpoints.
+- Refactorización de código para arquitectura limpia.
+
+### 🔹 Funcionalidades Post-MVP (Excluidas de la versión actual)
+
+- **Usuarios Avanzados:** Recuperación de contraseña, Gestión de perfiles y Gestión de usuarios (Admin).
+- **Métricas:** Dashboard con indicadores clave (stock bajo, frecuencia de reposición).
+- **Seguridad y Alcance:** Autenticación avanzada (JWT), Soporte multilingüe, e Integración con sistemas de terceros.
 
 ### 🔹 Documentación
 - Actualizar la wiki con endpoints de la API (contratos).  
