@@ -8,14 +8,15 @@ class UsuarioSerializer(serializers.ModelSerializer):
         fields = [
             "id_usuario",
             "nombre",
-            "dni",
             "email",
             "rol",
             "password",
-            "fecha_creacion",
             "activo",
         ]
-        extra_kwargs = {"password": {"write_only": True}}
+        extra_kwargs = {
+            "password": {"write_only": True},
+            "activo": {"read_only": True},  # opcional: para evitar que se modifique desde fuera
+        }
 
     def create(self, validated_data):
         password = validated_data.pop("password")
@@ -37,4 +38,10 @@ class UsuarioSerializer(serializers.ModelSerializer):
 class SesionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sesion
-        fields = ["token", "usuario", "fecha_inicio", "fecha_expiracion"]
+        fields = [
+            "token",
+            "usuario",
+            "fecha_inicio",
+            "fecha_expiracion"
+        ]
+        read_only_fields = ["token", "fecha_inicio"]
