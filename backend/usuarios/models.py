@@ -4,7 +4,6 @@ from django.utils import timezone
 from django.contrib.auth.hashers import make_password, check_password
 import uuid
 
-
 class Usuario(models.Model):
     ROLES = [
         ("admin", "Administrador"),
@@ -14,26 +13,25 @@ class Usuario(models.Model):
     id_usuario = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     email = models.EmailField(max_length=255, unique=True, null=True, blank=True)
-    dni = models.CharField(max_length=20, unique=True)
+    password = models.CharField(max_length=128)  # necesario para set/check password
     rol = models.CharField(max_length=20, choices=ROLES, default="basico")
-    password = models.CharField(max_length=128)
-    fecha_creacion = models.DateTimeField(default=timezone.now)
-    activo = models.BooleanField(default=True)
+    activo = models.BooleanField(default=True)  # necesario para "eliminar" lógicamente
 
     class Meta:
         verbose_name = "Usuario"
         verbose_name_plural = "Usuarios"
 
     def __str__(self):
-        return f"{self.nombre} ({self.dni})"
+        return f"{self.nombre} ({self.email})"
 
+    # Seguridad
     def set_password(self, raw_password):
         self.password = make_password(raw_password)
 
     def check_password(self, raw_password):
         return check_password(raw_password, self.password)
 
-    # Métodos de tu diagrama
+    # Métodos de negocio
     def crearUsuario(self):
         self.save()
         return self
@@ -50,7 +48,7 @@ class Usuario(models.Model):
         return True
 
     def usuarioNoEncontrado(self):
-        return f"Usuario con id {self.id_usuario} no encontrado"
+        return f"Usuario con ID {self.id_usuario} no encontrado"
 
 
 class Sesion(models.Model):
@@ -70,3 +68,6 @@ class Sesion(models.Model):
 
     def sesionExpirada(self):
         return timezone.now() > self.fecha_expiracion
+
+    def __str__(self):
+        return f"Sesión de {self.usuario.nombre} iniciada el {self.fecha_inicio}"

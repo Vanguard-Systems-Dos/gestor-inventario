@@ -4,10 +4,16 @@
     <h2 class="login-title"> Inicio de sesión</h2>
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+
+      @if (loginError) {
+      <div class="login-error-message">
+        {{ loginError }}
+      </div>
+      }
       <div>
         <label>Correo Electronico:</label>
-        <input formControlName="email" type="email" (blur)="email?.markAsTouched()"
-          placeholder="Email@direccion.com" [ngClass]="{'error': email?.touched &&
+        <input formControlName="email" type="email" (blur)="email?.markAsTouched()" placeholder="Email@direccion.com"
+          [ngClass]="{'error': email?.touched &&
            email?.invalid}">
 
         @if (email?.touched && email?.invalid) {
@@ -24,8 +30,8 @@
 
       <div>
         <label>Contraseña:</label>
-        <input formControlName="password" type="password" (blur)="password?.markAsTouched()"
-          placeholder="Contraseña" [ngClass]="{'error': password?.touched &&
+        <input formControlName="password" type="password" (blur)="password?.markAsTouched()" placeholder="Contraseña"
+          [ngClass]="{'error': password?.touched &&
             password?.invalid
           }">
 

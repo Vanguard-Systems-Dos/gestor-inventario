@@ -4,24 +4,24 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Router, RouterModule } from '@angular/router';
 import { UsuarioService } from '../../../services/usuario.service';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @Component({
   standalone: true,
   selector: 'app-login',
-  imports: [CommonModule, ReactiveFormsModule, RouterModule, HttpClientModule, MatSnackBarModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, HttpClientModule],
   templateUrl: './login.html',
   styleUrls: ['./login.css'],
 })
 export class Login implements OnInit {
   loginForm!: FormGroup;
+  loginError: string | null = null;
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private usuarioService: UsuarioService,
-    private snackBar: MatSnackBar
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -39,12 +39,9 @@ export class Login implements OnInit {
   }
 
   onSubmit(): void {
+    this.loginError = null;
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched();
-      this.snackBar.open('Por favor, completá todos los campos correctamente.', 'Cerrar', {
-        duration: 3000,
-        panelClass: ['snackbar-warning'],
-      });
       return;
     }
 
@@ -52,18 +49,15 @@ export class Login implements OnInit {
 
     this.usuarioService.login(email, password).subscribe({
       next: (usuario) => {
-        this.snackBar.open('Inicio de sesión exitoso 🎉', 'Cerrar', {
-          duration: 3000,
-          panelClass: ['snackbar-success'],
-        });
         this.router.navigate(['/dashboard']);
       },
       error: (err) => {
         console.error('Error de login:', err);
-        this.snackBar.open('Credenciales inválidas 😞', 'Cerrar', {
-          duration: 3000,
-          panelClass: ['snackbar-error'],
-        });
+        if (err.status = 401) {
+          this.loginError = 'Correo o contraseña incorrectos'
+        } else {
+          this.loginError = 'Error al intentar iniciar sesión. Intente más tarde.';
+        }
       },
     });
   }
