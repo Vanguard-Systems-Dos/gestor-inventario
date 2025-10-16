@@ -93,7 +93,7 @@ DATABASES = {
 }
 
 # Solo para depuración temporal:
-print("🔌 Conectando a DB:", config('DB_NAME'), "en", config('DB_HOST'))
+print("🔌 Conectando a DB:", config("DB_NAME"), "en", config("DB_HOST"))
 
 
 # Password validation
@@ -142,4 +142,3 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",  # Angular
     # "http://127.0.0.1:8000",
 ]
-
