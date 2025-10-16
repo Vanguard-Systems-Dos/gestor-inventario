@@ -13,6 +13,7 @@ class Usuario(models.Model):
 
     id_usuario = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
+    email = models.EmailField(max_length=255, unique=True, null=True, blank=True)
     dni = models.CharField(max_length=20, unique=True)
     rol = models.CharField(max_length=20, choices=ROLES, default="basico")
     password = models.CharField(max_length=128)

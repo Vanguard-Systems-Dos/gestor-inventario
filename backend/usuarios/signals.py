@@ -1,6 +1,7 @@
 from django.db.models.signals import post_migrate
 from django.dispatch import receiver
 from usuarios.models import Usuario
+from django.db import ProgrammingError, OperationalError
 
 usuarios_cargados = False  # variable global para controlar ejecución
 
@@ -15,40 +16,52 @@ def cargar_usuarios_post_migrate(sender, **kwargs):
         {
             "nombre": "Maximiliano Scarpatti",
             "dni": "30812080",
+            "email": "maxi@example.com",
             "rol": "admin",
             "password": "Abc1234$",
         },
         {
             "nombre": "Aldo A Minoldo",
             "dni": "20873426",
+            "email": "aldo@example.com",
             "rol": "admin",
             "password": "aam1234",
         },
         {
             "nombre": "Nicolas Minoldo",
             "dni": "45690598",
+            "email": "nicolas@example.com",
             "rol": "admin",
             "password": "Aei123+",
         },
         {
             "nombre": "Patricio Rodriguez",
             "dni": "43997975",
+            "email": "pato@example.com",
             "rol": "admin",
             "password": "Pato123",
         },
     ]
 
-    for data in usuarios_data:
-        usuario, created = Usuario.objects.get_or_create(
-            dni=data["dni"],
-            defaults={"nombre": data["nombre"], "rol": data["rol"]},
-        )
-        if created:
-            usuario.set_password(data["password"])
-            usuario.save()
-            print(f"✅ Usuario {usuario.nombre} creado automáticamente.")
-        else:
-            print(f"⚠️ Usuario {usuario.nombre} ya existe, se omitió.")
+    try:
+        for data in usuarios_data:
+            usuario, created = Usuario.objects.get_or_create(
+                dni=data["dni"],
+                defaults={
+                    "nombre": data["nombre"],
+                    "rol": data["rol"],
+                    "email": data["email"],
+                },
+            )
+            if created:
+                usuario.set_password(data["password"])
+                usuario.save()
+                print(f"✅ Usuario {usuario.nombre} creado automáticamente.")
+            else:
+                print(f"⚠️ Usuario {usuario.nombre} ya existe, se omitió.")
 
-    usuarios_cargados = True
-    print("✅ Usuarios cargados.")
+        usuarios_cargados = True
+        print("✅ Usuarios cargados.")
+
+    except (ProgrammingError, OperationalError) as e:
+        print(f"⚠️ No se pudo cargar usuarios automáticamente: {e}")

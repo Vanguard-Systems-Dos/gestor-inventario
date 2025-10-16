@@ -44,9 +44,9 @@ class UsuarioDetalleView(ApiView):
 
 class LoginView(ApiView):
     def post(self, request):
-        dni = request.data.get("dni")
+        email = request.data.get("email")
         password = request.data.get("password")
-        usuario = Usuario.objects.filter(dni=dni, activo=True).first()
+        usuario = Usuario.objects.filter(email=email, activo=True).first()
 
         if usuario and usuario.check_password(password):
             # Crear sesión válida por 1 hora
@@ -57,6 +57,7 @@ class LoginView(ApiView):
             data = {
                 "id_usuario": usuario.id_usuario,
                 "nombre": usuario.nombre,
+                "email": usuario.email,
                 "dni": usuario.dni,
                 "rol": usuario.rol,
                 "token": str(sesion.token),
